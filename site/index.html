@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-page="home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <link rel="canonical" href="" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <script src="/js/site.config.js"></script>
+    <script src="/js/head.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page-ambient" aria-hidden="true">
+      <div class="page-ambient__orb page-ambient__orb--one"></div>
+      <div class="page-ambient__orb page-ambient__orb--two"></div>
+      <div class="page-ambient__grid"></div>
+    </div>
+
+    <header class="site-header" data-header></header>
+
+    <main class="page-main">
+      <section class="hero hero--home section-shell">
+        <div class="hero__copy">
+          <span class="eyebrow" data-text="home.hero.eyebrow"></span>
+          <h1 class="hero__title" data-animate>
+            <span data-text="home.hero.title"></span>
+            <em data-text="home.hero.highlight"></em>
+          </h1>
+          <p class="hero__description" data-text="home.hero.description" data-animate></p>
+          <div class="hero__actions" data-animate>
+            <a class="button button-primary" data-cta="home.hero.primaryCta" href="#"></a>
+            <a class="button button-secondary" data-cta="home.hero.secondaryCta" href="#"></a>
+          </div>
+        </div>
+
+        <div class="hero__panel panel" data-animate>
+          <div class="hero__visual">
+            <img data-src="assets.heroPrimary" data-alt="home.hero.imageAlt" alt="" />
+          </div>
+          <div class="hero__note">
+            <span class="eyebrow" data-text="brand.foundedLabel"></span>
+            <h2 data-text="home.hero.asideTitle"></h2>
+            <p data-text="home.hero.asideText"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" data-section-page="home" data-section="stats">
+        <div class="section-heading">
+          <span class="eyebrow" data-text="home.statsIntro.eyebrow"></span>
+          <h2 data-text="home.statsIntro.title"></h2>
+          <p data-text="home.statsIntro.description"></p>
+        </div>
+        <div class="metric-grid" data-render="home.stats"></div>
+      </section>
+
+      <section class="section-shell section-block" data-section-page="home" data-section="services">
+        <div class="section-heading">
+          <span class="eyebrow" data-text="home.services.eyebrow"></span>
+          <h2 data-text="home.services.title"></h2>
+          <p data-text="home.services.description"></p>
+        </div>
+        <div class="stack-grid" data-render="home.services.items"></div>
+      </section>
+
+      <section class="section-shell section-block" data-section-page="home" data-section="portfolio">
+        <div class="section-heading">
+          <span class="eyebrow" data-text="home.portfolio.eyebrow"></span>
+          <h2 data-text="home.portfolio.title"></h2>
+          <p data-text="home.portfolio.description"></p>
+        </div>
+        <div class="portfolio-grid" data-render="home.portfolio.items"></div>
+      </section>
+
+      <section class="section-shell section-block section-block--split" data-section-page="home" data-section="process">
+        <div class="section-heading section-heading--sticky">
+          <span class="eyebrow" data-text="home.process.eyebrow"></span>
+          <h2 data-text="home.process.title"></h2>
+          <p data-text="home.process.description"></p>
+        </div>
+        <div class="process-list" data-render="home.process.steps"></div>
+      </section>
+
+      <section class="section-shell section-block" data-section-page="home" data-section="testimonials">
+        <div class="section-heading">
+          <span class="eyebrow" data-text="home.testimonials.eyebrow"></span>
+          <h2 data-text="home.testimonials.title"></h2>
+          <p data-text="home.testimonials.description"></p>
+        </div>
+        <div class="quote-grid" data-render="home.testimonials.items"></div>
+      </section>
+
+      <section class="section-shell section-block" data-section-page="home" data-section="faq">
+        <div class="section-heading">
+          <span class="eyebrow" data-text="home.faq.eyebrow"></span>
+          <h2 data-text="home.faq.title"></h2>
+          <p data-text="home.faq.description"></p>
+        </div>
+        <div class="faq-list" data-render="home.faq.items"></div>
+      </section>
+
+      <section class="section-shell section-cta panel" data-animate>
+        <div>
+          <span class="eyebrow" data-text="home.cta.eyebrow"></span>
+          <h2 data-text="home.cta.title"></h2>
+          <p data-text="home.cta.description"></p>
+        </div>
+        <div class="section-cta__actions">
+          <a class="button button-primary" data-cta="home.cta.primaryCta" href="#"></a>
+          <a class="button button-secondary" data-cta="home.cta.secondaryCta" href="#"></a>
+        </div>
+      </section>
+
+      <section class="section-shell section-block contact-layout" data-section-page="home" data-section="contact">
+        <div class="contact-layout__info">
+          <div class="section-heading section-heading--left">
+            <span class="eyebrow" data-text="home.contact.eyebrow"></span>
+            <h2 data-text="home.contact.title"></h2>
+            <p data-text="home.contact.description"></p>
+          </div>
+
+          <ul class="contact-channel-list" data-render="contact.channels"></ul>
+
+          <div class="panel contact-aside" data-animate>
+            <span class="eyebrow" data-text="home.contact.asideTitle"></span>
+            <ul class="bullet-list" data-render="home.contact.asidePoints"></ul>
+          </div>
+        </div>
+
+        <form class="contact-form panel" data-contact-form data-animate>
+          <div class="contact-form__grid">
+            <label class="field">
+              <span data-text="contact.form.fields.name.label"></span>
+              <input
+                type="text"
+                name="name"
+                data-placeholder="contact.form.fields.name.placeholder"
+                placeholder=""
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span data-text="contact.form.fields.email.label"></span>
+              <input
+                type="email"
+                name="email"
+                data-placeholder="contact.form.fields.email.placeholder"
+                placeholder=""
+                required
+              />
+            </label>
+
+            <label class="field field--full">
+              <span data-text="contact.form.fields.company.label"></span>
+              <input
+                type="text"
+                name="company"
+                data-placeholder="contact.form.fields.company.placeholder"
+                placeholder=""
+              />
+            </label>
+
+            <label class="field field--full">
+              <span data-text="contact.form.fields.message.label"></span>
+              <textarea
+                name="message"
+                rows="5"
+                data-placeholder="contact.form.fields.message.placeholder"
+                placeholder=""
+                required
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="contact-form__footer">
+            <button class="button button-primary" type="submit" data-text="contact.form.submitLabel"></button>
+            <p class="contact-form__status" data-form-status></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" data-footer></footer>
+    <script src="/js/template.js" defer></script>
+  </body>
+</html>

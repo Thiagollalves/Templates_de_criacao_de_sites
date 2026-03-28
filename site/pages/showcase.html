@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-page="showcase">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <link rel="canonical" href="" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <script src="/js/site.config.js"></script>
+    <script src="/js/head.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page-ambient" aria-hidden="true">
+      <div class="page-ambient__orb page-ambient__orb--one"></div>
+      <div class="page-ambient__orb page-ambient__orb--two"></div>
+      <div class="page-ambient__grid"></div>
+    </div>
+
+    <header class="site-header" data-header></header>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <span class="eyebrow" data-text="pages.showcase.hero.eyebrow"></span>
+        <h1 data-text="pages.showcase.hero.title" data-animate></h1>
+        <p class="page-hero__description" data-text="pages.showcase.hero.description" data-animate></p>
+        <div class="hero__actions" data-animate>
+          <a class="button button-primary" data-cta="pages.showcase.hero.primaryCta" href="#"></a>
+          <a class="button button-secondary" data-cta="pages.showcase.hero.secondaryCta" href="#"></a>
+        </div>
+      </section>
+
+      <section class="section-shell section-block">
+        <div class="section-heading section-heading--left">
+          <span class="eyebrow" data-text="pages.showcase.intro.eyebrow"></span>
+          <h2 data-text="pages.showcase.intro.title"></h2>
+          <p data-text="pages.showcase.intro.description"></p>
+        </div>
+        <div class="filter-bar" data-render="pages.showcase.filters"></div>
+        <div class="showcase-grid" data-render="pages.showcase.items"></div>
+      </section>
+
+      <section class="section-shell section-cta panel" data-animate>
+        <div>
+          <span class="eyebrow">Expansao</span>
+          <h2 data-text="pages.showcase.closing.title"></h2>
+          <p data-text="pages.showcase.closing.description"></p>
+        </div>
+        <div class="section-cta__actions">
+          <a class="button button-primary" href="/">Voltar para a home</a>
+          <a class="button button-secondary" href="/landing.html">Abrir landing</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" data-footer></footer>
+    <script src="/js/template.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
+  "scripts": {
+    "dev": "serve site",
+    "start": "serve site",
+    "test": "node scripts/validate-template.js"
+  },
+  "keywords": [
+    "template",
+    "static-site",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
