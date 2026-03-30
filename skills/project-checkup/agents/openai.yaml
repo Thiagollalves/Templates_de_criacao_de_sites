@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Checkup"
+  short_description: "Audit web project health, risk, and quality"
+  default_prompt: "Use $project-checkup to audit this web project and deliver a prioritized technical action plan."

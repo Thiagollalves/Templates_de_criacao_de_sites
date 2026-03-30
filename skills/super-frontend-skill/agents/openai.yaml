@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super Frontend Skill"
+  short_description: "Premium frontend composition and motion guidance"
+  default_prompt: "Use $super-frontend-skill to design a visually strong landing page with clear hierarchy and restrained motion."
