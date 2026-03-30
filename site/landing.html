@@ -33,28 +33,42 @@
     <header class="site-header" data-header></header>
 
     <main class="page-main">
-      <section class="hero hero--landing section-shell hero--compact">
-        <div class="hero__copy">
-          <span class="eyebrow" data-text="landing.hero.eyebrow"></span>
-          <h1 class="hero__title" data-animate>
-            <span data-text="landing.hero.title"></span>
-            <em data-text="landing.hero.highlight"></em>
-          </h1>
-          <p class="hero__description" data-text="landing.hero.description" data-animate></p>
-          <div class="hero__actions" data-animate>
-            <a class="button button-primary" data-cta="landing.hero.primaryCta" href="#"></a>
-            <a class="button button-secondary" data-cta="landing.hero.secondaryCta" href="#"></a>
+      <section class="hero hero--landing hero--compact">
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="hero__shell section-shell">
+          <div class="hero__copy">
+            <span class="eyebrow" data-text="landing.hero.eyebrow"></span>
+            <div class="hero__brandline" data-animate>
+              <strong class="hero__brand" data-text="brand.shortName"></strong>
+              <span class="hero__brand-divider"></span>
+              <span class="hero__brand-tag" data-text="landing.contact.title"></span>
+            </div>
+            <h1 class="hero__title" data-animate>
+              <span data-text="landing.hero.title"></span>
+              <em data-text="landing.hero.highlight"></em>
+            </h1>
+            <p class="hero__description" data-text="landing.hero.description" data-animate></p>
+            <div class="hero__actions" data-animate>
+              <a class="button button-primary" data-cta="landing.hero.primaryCta" href="#"></a>
+              <a class="button button-secondary" data-cta="landing.hero.secondaryCta" href="#"></a>
+            </div>
           </div>
-        </div>
 
-        <div class="hero__panel panel" data-animate>
-          <div class="hero__visual">
-            <img data-src="assets.heroSecondary" data-alt="landing.hero.imageAlt" alt="" />
-          </div>
-          <div class="hero__note">
-            <span class="eyebrow" data-text="brand.shortName"></span>
-            <h2 data-text="landing.contact.title"></h2>
-            <p data-text="landing.contact.description"></p>
+          <div class="hero__stage" data-animate>
+            <div class="hero__visual">
+              <img data-src="assets.heroSecondary" data-alt="landing.hero.imageAlt" alt="" />
+            </div>
+            <div class="hero__stage-marquee" aria-hidden="true">
+              <span>campanha</span>
+              <span>prova</span>
+              <span>cta</span>
+              <span>contato</span>
+            </div>
+            <div class="hero__note">
+              <span class="eyebrow" data-text="brand.shortName"></span>
+              <h2 data-text="landing.contact.title"></h2>
+              <p data-text="landing.contact.description"></p>
+            </div>
           </div>
         </div>
       </section>
@@ -95,7 +109,7 @@
         <div class="faq-list" data-render="landing.faq.items"></div>
       </section>
 
-      <section class="section-shell section-cta panel" data-animate>
+      <section class="section-shell section-cta" data-animate>
         <div>
           <span class="eyebrow" data-text="landing.cta.eyebrow"></span>
           <h2 data-text="landing.cta.title"></h2>
@@ -107,7 +121,11 @@
         </div>
       </section>
 
-      <section class="section-shell section-block contact-layout contact-layout--single" data-section-page="landing" data-section="contact">
+      <section
+        class="section-shell section-block contact-layout contact-layout--single"
+        data-section-page="landing"
+        data-section="contact"
+      >
         <div class="section-heading section-heading--left">
           <span class="eyebrow" data-text="landing.contact.eyebrow"></span>
           <h2 data-text="landing.contact.title"></h2>

@@ -94,7 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((item) => {
         const isActive = item.page === state.page;
         return `
-          <a class="site-nav__link ${isActive ? "is-active" : ""}" href="${escapeHtml(item.href)}">
+          <a class="site-nav__link ${isActive ? "is-active" : ""}" href="${escapeHtml(
+            item.href
+          )}" ${isActive ? 'aria-current="page"' : ""}>
             ${escapeHtml(item.label)}
           </a>
         `;
@@ -263,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="metric-card panel" data-animate>
+          <article class="metric-card" data-animate>
             <strong>${escapeHtml(item.value)}</strong>
             <span>${escapeHtml(item.label)}</span>
             <p>${escapeHtml(item.detail)}</p>
@@ -277,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="stack-card panel" data-animate>
+          <article class="stack-card" data-animate>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
           </article>
@@ -290,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="portfolio-card panel" data-animate>
+          <article class="portfolio-card" data-animate>
             <div class="portfolio-card__media">
               <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             </div>
@@ -326,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="quote-card panel" data-animate>
+          <article class="quote-card" data-animate>
             <p class="quote-card__text">"${escapeHtml(item.quote)}"</p>
             <div class="quote-card__meta">
               <strong>${escapeHtml(item.author)}</strong>
@@ -342,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item, index) => `
-          <article class="faq-item panel ${index === 0 ? "is-open" : ""}" data-faq-item data-animate>
+          <article class="faq-item ${index === 0 ? "is-open" : ""}" data-faq-item data-animate>
             <button class="faq-item__button" type="button" data-faq-trigger>
               <span>${escapeHtml(item.question)}</span>
               <span class="faq-item__icon">+</span>
@@ -387,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="insight-card panel" data-animate>
+          <article class="insight-card" data-animate>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
           </article>
@@ -413,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="offer-card panel" data-animate>
+          <article class="offer-card" data-animate>
             <span class="offer-card__badge">${escapeHtml(item.badge)}</span>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
@@ -427,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="outcome-card panel" data-animate>
+          <article class="outcome-card" data-animate>
             <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
@@ -453,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="showcase-card panel" data-animate>
+          <article class="showcase-card" data-animate>
             <div class="showcase-card__media">
               <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             </div>
@@ -485,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "landing.outcomes.items": () => renderOutcomeCards(config.landing.outcomes.items),
     "landing.faq.items": () => renderFaq(config.landing.faq.items),
     "contact.channels": () => renderChannels(config.contact.channels),
-    "pages.company.highlights": () => renderHighlights(config.pages.company.highlights),
+    "pages.company.highlights": () => renderSimpleCards(config.pages.company.highlights),
     "pages.company.values": () => renderHighlights(config.pages.company.values),
     "pages.company.timeline": () => renderTimeline(config.pages.company.timeline),
     "pages.showcase.filters": () => renderShowcaseFilters(config.pages.showcase.filters),
@@ -542,6 +544,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function setupHeaderState() {
+    const updateHeaderState = () => {
+      document.body.classList.toggle("has-scrolled", window.scrollY > 18);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  }
+
   function setupNavigation() {
     const toggle = document.querySelector("[data-nav-toggle]");
     const menu = document.querySelector("[data-nav-menu]");
@@ -553,13 +564,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = menu.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
   }
 
   function setupAnimations(root = document) {
-    const animated = root.querySelectorAll("[data-animate]");
+    const animated = Array.from(root.querySelectorAll("[data-animate]"));
     if (!animated.length) {
       return;
     }
+
+    animated.forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * 70, 350)}ms`;
+    });
 
     const observer = new IntersectionObserver(
       (entries, currentObserver) => {
@@ -659,6 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applySectionVisibility();
   bindYear();
   setupFaq();
+  setupHeaderState();
   setupNavigation();
   setupAnimations();
   setupForm();

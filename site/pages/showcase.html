@@ -33,13 +33,21 @@
     <header class="site-header" data-header></header>
 
     <main class="page-main">
-      <section class="page-hero section-shell">
-        <span class="eyebrow" data-text="pages.showcase.hero.eyebrow"></span>
-        <h1 data-text="pages.showcase.hero.title" data-animate></h1>
-        <p class="page-hero__description" data-text="pages.showcase.hero.description" data-animate></p>
-        <div class="hero__actions" data-animate>
-          <a class="button button-primary" data-cta="pages.showcase.hero.primaryCta" href="#"></a>
-          <a class="button button-secondary" data-cta="pages.showcase.hero.secondaryCta" href="#"></a>
+      <section class="page-hero page-hero--detail section-shell">
+        <div class="page-hero__content">
+          <span class="eyebrow" data-text="pages.showcase.hero.eyebrow"></span>
+          <h1 data-text="pages.showcase.hero.title" data-animate></h1>
+          <p class="page-hero__description" data-text="pages.showcase.hero.description" data-animate></p>
+          <div class="hero__actions" data-animate>
+            <a class="button button-primary" data-cta="pages.showcase.hero.primaryCta" href="#"></a>
+            <a class="button button-secondary" data-cta="pages.showcase.hero.secondaryCta" href="#"></a>
+          </div>
+          <div class="page-hero__rail" data-animate>
+            <span>home</span>
+            <span>landing</span>
+            <span>institucional</span>
+            <span>grade</span>
+          </div>
         </div>
       </section>
 
@@ -53,15 +61,15 @@
         <div class="showcase-grid" data-render="pages.showcase.items"></div>
       </section>
 
-      <section class="section-shell section-cta panel" data-animate>
+      <section class="section-shell section-cta" data-animate>
         <div>
-          <span class="eyebrow">Expansao</span>
+          <span class="eyebrow" data-text="pages.showcase.closing.eyebrow"></span>
           <h2 data-text="pages.showcase.closing.title"></h2>
           <p data-text="pages.showcase.closing.description"></p>
         </div>
         <div class="section-cta__actions">
-          <a class="button button-primary" href="/">Voltar para a home</a>
-          <a class="button button-secondary" href="/landing.html">Abrir landing</a>
+          <a class="button button-primary" data-cta="pages.showcase.closing.primaryCta" href="#"></a>
+          <a class="button button-secondary" data-cta="pages.showcase.closing.secondaryCta" href="#"></a>
         </div>
       </section>
     </main>
