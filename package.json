@@ -4,8 +4,8 @@
   "private": true,
   "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
   "scripts": {
-    "dev": "serve site",
-    "start": "serve site",
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js",
     "test": "node scripts/validate-template.js"
   },
   "keywords": [

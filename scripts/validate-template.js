@@ -66,6 +66,7 @@ const requiredGroups = [
   "home",
   "landing",
   "pages",
+  "product",
   "contact",
   "social",
   "assets",
@@ -92,10 +93,14 @@ assert(
 const expectedFiles = [
   "site/index.html",
   "site/landing.html",
+  "site/login.html",
+  "site/app.html",
   "site/pages/company.html",
   "site/pages/showcase.html",
   "site/css/styles.css",
+  "scripts/dev-server.js",
   "site/js/head.js",
+  "site/js/app.js",
   "site/js/template.js",
   "site/examples/marcelo-moveis/index.html",
 ];
@@ -108,6 +113,7 @@ const possibleAssetPaths = collectStringPaths({
   seo: config.seo,
   assets: config.assets,
   pages: config.pages,
+  product: config.product,
   home: config.home,
   landing: config.landing,
 });

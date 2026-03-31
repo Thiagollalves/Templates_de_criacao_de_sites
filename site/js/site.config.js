@@ -2,9 +2,9 @@ const SITE_TEMPLATE_CONFIG = {
   theme: "studio",
   seo: {
     siteName: "Atlas Frame",
-    defaultTitle: "Atlas Frame | Front para criar sites e landing pages",
+    defaultTitle: "Atlas Frame | Portal e templates para criar sites",
     defaultDescription:
-      "Base estatica com front forte, home, landing, paginas internas e configuracao central para sites comerciais.",
+      "Software com site publico, portal do cliente e workspace para criar, revisar e publicar sites comerciais.",
     baseUrl: "https://example.com",
     favicon: "/assets/favicon.svg",
     ogImage: "/assets/og-template.svg",
@@ -33,20 +33,32 @@ const SITE_TEMPLATE_CONFIG = {
           "Vitrine de rotas e modelos para adaptar a mesma base em home, landing e paginas de apoio.",
         path: "/pages/showcase.html",
       },
+      login: {
+        title: "Entrar | Atlas Frame",
+        description:
+          "Acesse o portal do cliente para editar branding, narrativa, paginas e publicacao do site.",
+        path: "/login.html",
+      },
+      app: {
+        title: "Workspace | Atlas Frame",
+        description:
+          "Ambiente autenticado para operar o template, revisar as paginas e preparar a publicacao.",
+        path: "/app.html",
+      },
     },
   },
   brand: {
     name: "Atlas Frame",
     shortName: "Atlas",
-    eyebrow: "App para criar sites comerciais",
-    tagline: "Marca, paginas e CTA prontos em um fluxo visual unico.",
+    eyebrow: "Software para criar sites comerciais",
+    tagline: "Site publico, portal do cliente e publish no mesmo fluxo.",
     summary:
-      "Uma frente clara para montar home, landing e paginas internas sem cair em layouts genericos nem depender de CMS.",
+      "Atlas Frame conecta vitrine publica, login do cliente e workspace para montar, revisar e publicar sites sem depender de CMS.",
     location: "Operacao remota com entrega estatica.",
     legalName: "Atlas Frame App",
-    foundedLabel: "Fluxo pronto",
+    foundedLabel: "Portal ativo",
     footerNote:
-      "Troque textos, ativos e contatos no config central para adaptar o front ao seu produto.",
+      "Ajuste conteudo, credenciais demo e rotas no config central para adaptar o produto ao seu app.",
   },
   navigation: {
     items: [
@@ -54,6 +66,7 @@ const SITE_TEMPLATE_CONFIG = {
       { label: "Plataforma", href: "/pages/company.html", page: "company", enabled: true },
       { label: "Modelos", href: "/pages/showcase.html", page: "showcase", enabled: true },
       { label: "Captacao", href: "/landing.html", page: "landing", enabled: true },
+      { label: "Entrar", href: "/login.html", page: "login", enabled: true },
     ],
     footerGroups: [
       {
@@ -75,91 +88,90 @@ const SITE_TEMPLATE_CONFIG = {
       {
         title: "Operacao",
         items: [
-          { label: "CTA central", href: "/landing.html" },
-          { label: "Conteudo modular", href: "/pages/showcase.html" },
+          { label: "Portal do cliente", href: "/login.html" },
+          { label: "Workspace do template", href: "/app.html" },
           { label: "Config unico", href: "/pages/company.html" },
         ],
       },
     ],
     cta: {
-      label: "Pedir uma primeira versao",
-      kind: "whatsapp",
-      message: "Ola, quero adaptar o Atlas Frame para o meu app ou site.",
+      label: "Entrar no portal",
+      href: "/login.html",
     },
   },
   home: {
     hero: {
-      eyebrow: "Front para montar, apresentar e publicar sites",
-      title: "Transforme briefing em um site com cara de produto.",
-      highlight: "Sem recomecar a interface.",
+      eyebrow: "Software para vender e operar sites com area do cliente",
+      title: "Venda o template e entregue um portal para cada conta.",
+      highlight: "Login, editor e publish no mesmo app.",
       description:
-        "Atlas Frame organiza home, landing e paginas internas em uma linguagem unica. O conteudo continua editavel, mas o front ja nasce com hierarquia, CTA e ritmo visual.",
+        "Atlas Frame organiza o site publico que vende o produto e a area autenticada onde o cliente ajusta branding, narrativa, paginas e publicacao. O front continua leve, mas a experiencia vira software.",
       primaryCta: {
-        label: "Explorar a plataforma",
-        href: "/pages/company.html",
+        label: "Entrar no ambiente",
+        href: "/login.html",
       },
       secondaryCta: {
-        label: "Ver pagina de captacao",
-        href: "/landing.html",
+        label: "Ver como funciona",
+        href: "/pages/company.html",
       },
       imageAlt: "Mockup abstrato representando o front do aplicativo Atlas Frame",
-      asideTitle: "Do arquivo de config para a publicacao",
+      asideTitle: "Do login ao publish",
       asideText:
-        "Troque marca, narrativa, ativos e contato em um so fluxo. O sistema visual cuida da consistencia entre as rotas.",
+        "Cada conta entra no portal, edita o template e acompanha o preparo do site sem sair do mesmo fluxo visual.",
     },
     statsIntro: {
       eyebrow: "Sistema de operacao",
-      title: "Tudo que precisa existir na frente do app ja esta desenhado.",
+      title: "Site publico na frente, workspace do cliente por dentro.",
       description:
-        "A base foi organizada para apresentar o produto, aprofundar contexto e conduzir o clique sem desmontar a experiencia.",
+        "A base foi organizada para vender o produto, autenticar o cliente e operar a entrega em um unico sistema visual.",
     },
     stats: [
       {
         value: "01",
-        label: "config central",
-        detail: "marca, SEO, CTA e secoes no mesmo arquivo",
+        label: "portal por cliente",
+        detail: "login, sessao e acesso ao workspace",
       },
       {
-        value: "03",
-        label: "rotas chave",
-        detail: "home, captacao e paginas internas de apoio",
+        value: "05",
+        label: "paineis internos",
+        detail: "controle, identidade, conteudo, paginas e publish",
       },
       {
-        value: "02",
-        label: "modos de contato",
-        detail: "WhatsApp ou endpoint HTTP",
+        value: "04",
+        label: "rotas prontas",
+        detail: "home, captacao, institucional e vitrine",
       },
       {
         value: "100%",
-        label: "entrega estatica",
-        detail: "leve para publicar e simples para manter",
+        label: "base editavel",
+        detail: "preview, checklist e conteudo salvos no navegador",
       },
     ],
     services: {
       eyebrow: "O que o front resolve",
-      title: "A experiencia foi desenhada para vender, orientar e capturar.",
+      title: "A experiencia foi desenhada para vender o produto e operar a entrega.",
       description:
-        "Cada faixa da pagina tem uma funcao: apresentar, aprofundar, provar ou converter, sem virar um mosaico de cards genericos.",
+        "O site publico apresenta a oferta; o portal autenticado coloca o cliente dentro do fluxo para configurar, revisar e publicar.",
       items: [
         {
-          title: "Primeira dobra forte",
+          title: "Portal autenticado",
           description:
-            "A home abre com marca, argumento e CTA em uma composicao dominante, com visual de produto em vez de layout de vitrine comum.",
+            "Cada conta acessa com login e senha e entra num ambiente proprio para operar o template sem depender do codigo bruto.",
         },
         {
-          title: "Navegacao curta",
+          title: "Editor do template",
           description:
-            "As rotas principais ficam claras desde o topo, mantendo o usuario orientado entre apresentacao, modelos e captacao.",
+            "Branding, hero, CTA, paginas e modo de contato ficam organizados em paineis claros, com persistencia local.",
         },
         {
-          title: "Paginas internas coerentes",
+          title: "Preview vivo",
           description:
-            "A plataforma e a vitrine de modelos aprofundam contexto sem quebrar o tom, a tipografia ou a hierarquia do conjunto.",
+            "O cliente ajusta texto, tema e paginas enquanto acompanha uma previa do template em tempo real.",
         },
         {
-          title: "Contato reutilizavel",
+          title: "Trilha de publicacao",
           description:
-            "CTAs e formulario reaproveitam a mesma logica de envio para manter o fluxo comercial consistente em qualquer rota.",
+            "O ambiente interno organiza dominio, checklist e status para transformar o template em uma entrega de software.",
         },
       ],
     },
@@ -171,9 +183,9 @@ const SITE_TEMPLATE_CONFIG = {
       items: [
         {
           eyebrow: "Entrada",
-          title: "Pagina inicial do app",
+          title: "Site publico do produto",
           description:
-            "Apresenta a proposta, organiza o discurso comercial e puxa o usuario para a rota certa sem excesso de contexto.",
+            "Apresenta a proposta, organiza o discurso comercial e conduz o clique para a plataforma ou para o portal.",
           image: "/assets/gallery-narrative.svg",
           alt: "Ilustracao abstrata da pagina inicial do Atlas Frame",
           link: {
@@ -182,15 +194,15 @@ const SITE_TEMPLATE_CONFIG = {
           },
         },
         {
-          eyebrow: "Captacao",
-          title: "Landing de oferta",
+          eyebrow: "Portal",
+          title: "Workspace do cliente",
           description:
-            "Condensa prova, escopo e contato em uma pagina curta, ideal para campanha, lead gen ou pagina de apoio comercial.",
-          image: "/assets/gallery-conversion.svg",
-          alt: "Ilustracao abstrata de uma landing page focada em captacao",
+            "Entrega o produto vendavel: login, navegacao lateral, preview vivo e trilha de publicacao para usar o template.",
+          image: "/assets/workspace-console.svg",
+          alt: "Ilustracao do workspace autenticado do Atlas Frame",
           link: {
-            label: "Abrir captacao",
-            href: "/landing.html",
+            label: "Abrir portal",
+            href: "/login.html",
           },
         },
         {
@@ -209,33 +221,39 @@ const SITE_TEMPLATE_CONFIG = {
     },
     process: {
       eyebrow: "Fluxo",
-      title: "Quatro etapas para colocar a frente do seu app no ar.",
+      title: "Cinco etapas para vender e operar o template.",
       description:
-        "A proposta do Atlas Frame nao e esconder o HTML, e reduzir a repeticao de decisoes estruturais antes da publicacao.",
+        "A proposta do Atlas Frame nao e esconder o HTML, e transformar a adaptacao do template em um fluxo claro para o cliente.",
       steps: [
         {
           step: "01",
-          title: "Defina marca e tema",
+          title: "Libere o acesso",
           description:
-            "Atualize nome, resumo, favicon, contatos e escolha a direcao visual que mais combina com o produto.",
+            "Crie o acesso do cliente e leve a conta para dentro do portal com sessao, status e ponto de partida definidos.",
         },
         {
           step: "02",
-          title: "Ajuste a narrativa",
+          title: "Defina marca e tema",
           description:
-            "Troque os textos da home, da captacao e das paginas internas para alinhar promessa, prova e proximo passo.",
+            "Atualize nome, resumo, favicon e direcao visual para alinhar o workspace com a identidade do projeto.",
         },
         {
           step: "03",
-          title: "Substitua ativos e CTA",
+          title: "Ajuste a narrativa",
           description:
-            "Aponte imagens reais, revise links e escolha se o contato principal segue por WhatsApp ou por endpoint.",
+            "Troque hero, proposta, CTA e contato dentro do editor para aproximar a oferta da realidade do cliente.",
         },
         {
           step: "04",
-          title: "Valide e publique",
+          title: "Revise paginas e secoes",
           description:
-            "Revise responsividade, formularios, titulos, descriptions e envie a base estatica para a hospedagem.",
+            "Escolha as rotas ativas, ligue ou desligue secoes e valide o escopo antes de ir para publicacao.",
+        },
+        {
+          step: "05",
+          title: "Prepare o publish",
+          description:
+            "Revise dominio, checklist, modo de contato e entregue a versao pronta para deploy.",
         },
       ],
     },
@@ -246,19 +264,19 @@ const SITE_TEMPLATE_CONFIG = {
         "As frases abaixo funcionam como prova operacional e ajudam a explicar por que a base foi organizada dessa forma.",
       items: [
         {
-          quote: "A home explica o produto sem virar mural de cards nem esconder a acao principal.",
-          author: "Marketing",
-          role: "Entrada de campanha",
-        },
-        {
-          quote: "A landing reaproveita CTA, contato e prova sem desmontar o sistema visual.",
-          author: "Comercial",
-          role: "Captacao de leads",
-        },
-        {
-          quote: "As paginas internas seguram contexto e portfolio quando a dobra precisa ficar limpa.",
+          quote: "O site vende a oferta e o portal segura a operacao sem quebrar a linguagem visual.",
           author: "Produto",
-          role: "Operacao de conteudo",
+          role: "Estrutura comercial",
+        },
+        {
+          quote: "Login, editor e preview vivo transformam o template em algo claramente vendavel.",
+          author: "Operacoes",
+          role: "Onboarding do cliente",
+        },
+        {
+          quote: "O cliente entende o que precisa fazer porque cada painel tem uma funcao objetiva.",
+          author: "CS",
+          role: "Acompanhamento de publish",
         },
       ],
     },
@@ -292,12 +310,12 @@ const SITE_TEMPLATE_CONFIG = {
     },
     cta: {
       eyebrow: "Pronto para adaptar",
-      title: "O trabalho pesado do front fica resolvido antes do ajuste fino.",
+      title: "A camada comercial do app fica pronta antes da automacao pesada.",
       description:
-        "Quando a estrutura ja nasce forte, a energia do time pode ir para copy, prova, assets e validacao do produto.",
+        "Com portal, editor e preview no lugar, a energia do time pode ir para onboarding, integracao e escala do produto.",
       primaryCta: {
-        label: "Abrir modelos",
-        href: "/pages/showcase.html",
+        label: "Abrir area do cliente",
+        href: "/login.html",
       },
       secondaryCta: {
         label: "Conversar sobre a adaptacao",
@@ -307,15 +325,15 @@ const SITE_TEMPLATE_CONFIG = {
     },
     contact: {
       eyebrow: "Contato central",
-      title: "Use o mesmo bloco para briefing, venda ou suporte.",
+      title: "Venda, onboard e suporte no mesmo produto.",
       description:
-        "A secao combina canais diretos e formulario com envio configuravel. O mesmo componente pode aparecer na home e na captacao.",
+        "A secao combina canais diretos e formulario com envio configuravel para apresentar a oferta e sustentar o pos-venda.",
       asideTitle: "O que normalmente muda",
       asidePoints: [
-        "Branding, favicon e tema visual",
-        "Mensagem principal da dobra e CTA inicial",
-        "Lista de provas, modelos e perguntas frequentes",
-        "Destino do formulario e numero do WhatsApp",
+        "Credenciais demo e fluxo de acesso",
+        "Branding, tema e narrativa da primeira dobra",
+        "Rotas disponiveis no workspace do cliente",
+        "Checklist, dominio e modo de publicacao",
       ],
     },
   },
@@ -464,12 +482,12 @@ const SITE_TEMPLATE_CONFIG = {
     company: {
       hero: {
         eyebrow: "Plataforma",
-        title: "Entenda a logica do produto sem perder o ritmo da venda.",
+        title: "Entenda como o site publico e o portal formam um unico produto.",
         description:
-          "Esta rota aprofunda o metodo, mostra o que muda por projeto e explica como a estrutura continua consistente.",
+          "Esta rota aprofunda o metodo, mostra a area autenticada e explica como a estrutura continua consistente da venda ao publish.",
         primaryCta: {
-          label: "Ver modelos",
-          href: "/pages/showcase.html",
+          label: "Entrar no portal",
+          href: "/login.html",
         },
         secondaryCta: {
           label: "Falar no WhatsApp",
@@ -485,19 +503,19 @@ const SITE_TEMPLATE_CONFIG = {
       },
       highlights: [
         {
-          title: "Posicionamento legivel",
+          title: "Portal autenticado",
           description:
-            "Espaco para explicar nicho, recorte de publico, tipo de entrega e valor percebido sem tirar a clareza do conjunto.",
+            "Cada cliente entra com login e senha e encontra um ambiente proprio para operar o template com mais autonomia.",
         },
         {
-          title: "Metodo replicavel",
+          title: "Editor guiado",
           description:
-            "Blocos para mostrar como a frente do produto e montada, validada, publicada e mantida depois do lancamento.",
+            "Os paineis organizam branding, copy, paginas e publicacao em etapas legiveis para quem nao quer lidar com o HTML.",
         },
         {
-          title: "Contexto sem excesso",
+          title: "Entrega acompanhada",
           description:
-            "A pagina interna segura mais texto, mais nuance e mais prova sem comprometer a leveza da home principal.",
+            "Preview, checklist e status deixam claro o que ja esta pronto e o que ainda falta para publicar o site.",
         },
       ],
       valuesIntro: {
@@ -508,19 +526,19 @@ const SITE_TEMPLATE_CONFIG = {
       },
       values: [
         {
-          title: "Hierarquia forte",
+          title: "Operacao com estado",
           description:
-            "Marca, argumento e CTA aparecem primeiro. O restante aprofunda sem disputar a mesma prioridade visual.",
+            "O cliente volta ao portal e encontra o mesmo contexto salvo, com campos, toggles e proximos passos preservados.",
         },
         {
-          title: "Menos friccao",
+          title: "Preview editavel",
           description:
-            "A experiencia evita ornamento desnecessario para que quem opera o site entenda o que esta vendo em segundos.",
+            "O ambiente interno traduz campos de configuracao em uma previa imediata do template, sem idas e vindas desnecessarias.",
         },
         {
           title: "Consistencia entre rotas",
           description:
-            "Tema, navegacao, footer, formulario e comportamento continuam alinhados entre home, captacao e paginas internas.",
+            "Tema, navegacao, paginas e publish continuam alinhados entre site publico, modelos e area autenticada.",
         },
       ],
       timelineIntro: {
@@ -553,12 +571,12 @@ const SITE_TEMPLATE_CONFIG = {
       ],
       closing: {
         eyebrow: "Fechamento",
-        title: "A pagina institucional segura profundidade para a home continuar objetiva.",
+        title: "A pagina institucional segura profundidade enquanto o portal cuida da operacao.",
         description:
-          "Com isso, a primeira dobra fica comercial e a explicacao detalhada ganha uma rota propria, mais calma e mais legivel.",
+          "Com isso, a home continua comercial, a explicacao detalhada ganha uma rota propria e o cliente trabalha dentro de um ambiente autenticado.",
         primaryCta: {
-          label: "Abrir captacao",
-          href: "/landing.html",
+          label: "Abrir portal",
+          href: "/login.html",
         },
         secondaryCta: {
           label: "Voltar para a home",
@@ -569,12 +587,12 @@ const SITE_TEMPLATE_CONFIG = {
     showcase: {
       hero: {
         eyebrow: "Modelos",
-        title: "Veja como a mesma base pode virar home, landing e paginas de apoio.",
+        title: "Veja como a mesma base vira site publico, portal e paginas de apoio.",
         description:
-          "Este modelo serve para portfolio, vitrine de servicos, biblioteca de blocos ou qualquer grade orientada por narrativa e CTA.",
+          "Este modelo serve para portfolio, vitrine de servicos, biblioteca de blocos e tambem para a area autenticada do produto.",
         primaryCta: {
-          label: "Voltar para a home",
-          href: "/",
+          label: "Entrar no portal",
+          href: "/login.html",
         },
         secondaryCta: {
           label: "Solicitar adaptacao",
@@ -584,11 +602,11 @@ const SITE_TEMPLATE_CONFIG = {
       },
       intro: {
         eyebrow: "Estrutura replicavel",
-        title: "Cards so quando eles realmente ajudam a leitura.",
+        title: "Rotas diferentes, mesma linguagem operacional.",
         description:
-          "O mesmo layout pode virar vitrine de paginas, colecao de servicos, listagem editorial ou repertorio de blocos reutilizaveis.",
+          "A mesma base pode vender o produto, entregar um ambiente autenticado e sustentar as paginas que cercam o fluxo.",
       },
-      filters: ["Todos", "Home", "Landing", "Institucional", "Vitrine"],
+      filters: ["Todos", "Home", "Portal", "Landing", "Institucional", "Vitrine"],
       items: [
         {
           category: "Home",
@@ -601,6 +619,19 @@ const SITE_TEMPLATE_CONFIG = {
           cta: {
             label: "Abrir home",
             href: "/",
+          },
+        },
+        {
+          category: "Portal",
+          title: "Workspace do cliente",
+          description:
+            "Ambiente autenticado com login, navegacao lateral, painel de edicao e preview vivo para operar o template.",
+          metric: "Sessao ativa",
+          image: "/assets/workspace-console.svg",
+          alt: "Composicao do workspace autenticado do Atlas Frame",
+          cta: {
+            label: "Entrar no portal",
+            href: "/login.html",
           },
         },
         {
@@ -645,18 +676,103 @@ const SITE_TEMPLATE_CONFIG = {
       ],
       closing: {
         eyebrow: "Expansao",
-        title: "Quando precisar de novas rotas, a estrutura ja esta pronta para duplicar.",
+        title: "Quando precisar vender o produto ou operar a entrega, a estrutura ja esta pronta.",
         description:
-          "Basta usar um dos modelos como base, criar o conteudo correspondente no config e registrar o link na navegacao.",
+          "Basta usar um dos modelos como base, criar o conteudo correspondente no config e registrar o link publico ou autenticado.",
         primaryCta: {
-          label: "Abrir captacao",
-          href: "/landing.html",
+          label: "Abrir portal",
+          href: "/login.html",
         },
         secondaryCta: {
           label: "Voltar para a home",
           href: "/",
         },
       },
+    },
+  },
+  product: {
+    access: {
+      loginPath: "/login.html",
+      appPath: "/app.html",
+      sessionStorageKey: "atlas-frame-session",
+      workspaceStorageKey: "atlas-frame-workspace",
+      demoUser: {
+        email: "cliente@atlasframe.app",
+        password: "Atlas123!",
+        name: "Camila Rocha",
+        role: "Gestora de implantacao",
+      },
+    },
+    login: {
+      eyebrow: "Area vendavel",
+      title: "Entre para configurar, revisar e publicar o seu site.",
+      description:
+        "Cada cliente acessa um portal proprio para ajustar marca, copy, paginas e publicacao do template sem depender do codigo bruto.",
+      benefits: [
+        "Login e sessao persistida no navegador",
+        "Workspace com painel, preview e checklist",
+        "Fluxo de publicacao orientado por etapas",
+      ],
+      demoTitle: "Acesso demonstrativo",
+      demoDescription:
+        "Use as credenciais abaixo para validar a experiencia comercial do app e navegar pela area autenticada.",
+    },
+    workspace: {
+      title: "Console do template",
+      description:
+        "Edite branding, narrativa, paginas e publicacao do seu site sem sair do mesmo fluxo.",
+      panels: [
+        {
+          key: "overview",
+          label: "Controle",
+          description: "status geral e proximo passo",
+        },
+        {
+          key: "identity",
+          label: "Identidade",
+          description: "marca, tema e resumo",
+        },
+        {
+          key: "content",
+          label: "Conteudo",
+          description: "hero, CTA e oferta",
+        },
+        {
+          key: "pages",
+          label: "Paginas",
+          description: "rotas e secoes ativas",
+        },
+        {
+          key: "publish",
+          label: "Publish",
+          description: "dominio, modo e checklist",
+        },
+      ],
+      checklist: [
+        "Marca revisada",
+        "Hero alinhado com a oferta",
+        "Paginas essenciais ligadas",
+        "Modo de contato definido",
+        "Dominio pronto para publicacao",
+      ],
+      milestones: [
+        {
+          label: "Acesso liberado",
+          description: "cliente autenticado no portal",
+        },
+        {
+          label: "Narrativa ajustada",
+          description: "copy principal revisada",
+        },
+        {
+          label: "Escopo validado",
+          description: "rotas e secoes selecionadas",
+        },
+        {
+          label: "Publish encaminhado",
+          description: "dominio e checklist revisados",
+        },
+      ],
     },
   },
   contact: {
@@ -735,6 +851,7 @@ const SITE_TEMPLATE_CONFIG = {
     },
     heroPrimary: "/assets/hero-primary.svg",
     heroSecondary: "/assets/hero-secondary.svg",
+    workspaceConsole: "/assets/workspace-console.svg",
     gallery: [
       "/assets/gallery-narrative.svg",
       "/assets/gallery-grid.svg",

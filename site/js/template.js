@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/'/g, "&#39;");
   }
 
+  function normalizeKey(value) {
+    return String(value ?? "").trim().toLowerCase();
+  }
+
   function getValue(path) {
     if (!path) {
       return undefined;
@@ -443,9 +447,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item, index) => `
-          <span class="filter-pill ${index === 0 ? "is-active" : ""}" data-animate>${escapeHtml(
-            item
-          )}</span>
+          <button
+            class="filter-pill ${index === 0 ? "is-active" : ""}"
+            type="button"
+            data-filter="${escapeHtml(normalizeKey(item))}"
+            data-animate
+          >
+            ${escapeHtml(item)}
+          </button>
         `
       )
       .join("");
@@ -455,7 +464,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="showcase-card" data-animate>
+          <article class="showcase-card" data-showcase-item data-category="${escapeHtml(
+            normalizeKey(item.category)
+          )}" data-animate>
             <div class="showcase-card__media">
               <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             </div>
@@ -573,6 +584,72 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function setupShowcaseFilters() {
+    const filters = Array.from(document.querySelectorAll("[data-filter]"));
+    const cards = Array.from(document.querySelectorAll("[data-showcase-item]"));
+
+    if (!filters.length || !cards.length) {
+      return;
+    }
+
+    const applyFilter = (filterValue) => {
+      filters.forEach((filter) => {
+        filter.classList.toggle("is-active", filter.dataset.filter === filterValue);
+      });
+
+      cards.forEach((card) => {
+        const matches = filterValue === "todos" || card.dataset.category === filterValue;
+        card.hidden = !matches;
+      });
+    };
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", () => applyFilter(filter.dataset.filter || "todos"));
+    });
+  }
+
+  function setupHeroStageMotion() {
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !window.matchMedia("(pointer: fine)").matches
+    ) {
+      return;
+    }
+
+    document.querySelectorAll(".hero__stage").forEach((stage) => {
+      const note = stage.querySelector(".hero__note");
+      const marquee = stage.querySelector(".hero__stage-marquee");
+
+      stage.addEventListener("pointermove", (event) => {
+        const bounds = stage.getBoundingClientRect();
+        const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 12;
+        const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 12;
+
+        stage.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+
+        if (note) {
+          note.style.transform = `translate3d(${x * -0.45}px, ${y * -0.45}px, 0)`;
+        }
+
+        if (marquee) {
+          marquee.style.transform = `translate3d(${x * -0.3}px, ${y * -0.3}px, 0)`;
+        }
+      });
+
+      stage.addEventListener("pointerleave", () => {
+        stage.style.transform = "";
+
+        if (note) {
+          note.style.transform = "";
+        }
+
+        if (marquee) {
+          marquee.style.transform = "";
+        }
+      });
+    });
+  }
+
   function setupAnimations(root = document) {
     const animated = Array.from(root.querySelectorAll("[data-animate]"));
     if (!animated.length) {
@@ -683,6 +760,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFaq();
   setupHeaderState();
   setupNavigation();
+  setupShowcaseFilters();
+  setupHeroStageMotion();
   setupAnimations();
   setupForm();
 });

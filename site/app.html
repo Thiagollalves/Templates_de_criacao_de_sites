@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-page="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <link rel="canonical" href="" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <script src="/js/site.config.js"></script>
+    <script src="/js/head.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="workspace-body">
+    <div class="workspace-shell">
+      <aside class="workspace-sidebar">
+        <a class="workspace-brand" href="/">
+          <img src="/assets/logo-mark.svg" alt="Atlas Frame" />
+          <div>
+            <span class="workspace-brand__eyebrow">Atlas Frame</span>
+            <strong class="workspace-brand__name">Area do cliente</strong>
+          </div>
+        </a>
+
+        <div class="workspace-sidebar__block">
+          <span class="workspace-sidebar__label">Workspace</span>
+          <nav class="workspace-nav" data-workspace-nav aria-label="Painel interno"></nav>
+        </div>
+
+        <div class="workspace-sidebar__footer">
+          <div class="workspace-account">
+            <span class="workspace-account__eyebrow">Sessao ativa</span>
+            <strong data-session-name></strong>
+            <span data-session-role></span>
+            <span data-session-email></span>
+          </div>
+
+          <button class="button button-secondary button-small" type="button" data-logout>
+            Encerrar sessao
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace-main">
+        <header class="workspace-topbar">
+          <div class="workspace-topbar__copy">
+            <span class="eyebrow">Ambiente autenticado</span>
+            <h1 data-workspace-title></h1>
+            <p data-workspace-description></p>
+          </div>
+
+          <div class="workspace-topbar__actions">
+            <span class="workspace-pill" data-current-theme-label></span>
+            <a class="button button-ghost button-small" href="/" target="_blank" rel="noopener">
+              Site publico
+            </a>
+            <a class="button button-primary button-small" href="/pages/showcase.html" target="_blank" rel="noopener">
+              Modelos
+            </a>
+          </div>
+        </header>
+
+        <div class="workspace-grid">
+          <section class="workspace-surface">
+            <article class="workspace-panel is-active" data-panel="overview">
+              <div class="workspace-panel__heading">
+                <div>
+                  <span class="workspace-panel__eyebrow">Controle</span>
+                  <h2>Status geral</h2>
+                </div>
+                <p>Veja o que ja esta configurado e qual e o proximo passo para publicar.</p>
+              </div>
+
+              <div class="workspace-metrics" data-workspace-metrics></div>
+
+              <div class="workspace-overview-grid">
+                <section class="workspace-strip">
+                  <div class="workspace-strip__heading">
+                    <h3>Etapas do fluxo</h3>
+                    <p>Marcos usados para acompanhar a conta dentro do portal.</p>
+                  </div>
+                  <div class="workspace-timeline" data-workspace-milestones></div>
+                </section>
+
+                <section class="workspace-strip">
+                  <div class="workspace-strip__heading">
+                    <h3>Paginas e cobertura</h3>
+                    <p>Rotas ativas e secoes essenciais do template.</p>
+                  </div>
+                  <div class="workspace-status-list" data-workspace-page-status></div>
+                </section>
+              </div>
+            </article>
+
+            <article class="workspace-panel" data-panel="identity">
+              <div class="workspace-panel__heading">
+                <div>
+                  <span class="workspace-panel__eyebrow">Identidade</span>
+                  <h2>Marca e tema</h2>
+                </div>
+                <p>Defina como o template sera apresentado dentro da conta.</p>
+              </div>
+
+              <form class="workspace-form">
+                <div class="workspace-form__grid">
+                  <label class="workspace-field">
+                    <span>Nome da marca</span>
+                    <input type="text" data-bind="brandName" />
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Nome curto</span>
+                    <input type="text" data-bind="shortName" />
+                  </label>
+
+                  <label class="workspace-field workspace-field--full">
+                    <span>Tagline</span>
+                    <input type="text" data-bind="tagline" />
+                  </label>
+
+                  <label class="workspace-field workspace-field--full">
+                    <span>Resumo operacional</span>
+                    <textarea rows="4" data-bind="summary"></textarea>
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Tema</span>
+                    <select data-bind="theme">
+                      <option value="studio">Studio</option>
+                      <option value="editorial">Editorial</option>
+                      <option value="corporate">Corporate</option>
+                    </select>
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Janela de lancamento</span>
+                    <input type="text" data-bind="launchWindow" />
+                  </label>
+                </div>
+              </form>
+            </article>
+
+            <article class="workspace-panel" data-panel="content">
+              <div class="workspace-panel__heading">
+                <div>
+                  <span class="workspace-panel__eyebrow">Conteudo</span>
+                  <h2>Hero e CTA</h2>
+                </div>
+                <p>Ajuste a mensagem principal e o destino da acao primaria.</p>
+              </div>
+
+              <form class="workspace-form">
+                <div class="workspace-form__grid">
+                  <label class="workspace-field workspace-field--full">
+                    <span>Titulo principal</span>
+                    <input type="text" data-bind="heroTitle" />
+                  </label>
+
+                  <label class="workspace-field workspace-field--full">
+                    <span>Destaque</span>
+                    <input type="text" data-bind="heroHighlight" />
+                  </label>
+
+                  <label class="workspace-field workspace-field--full">
+                    <span>Descricao</span>
+                    <textarea rows="5" data-bind="heroDescription"></textarea>
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Label do CTA</span>
+                    <input type="text" data-bind="primaryCtaLabel" />
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Destino do CTA</span>
+                    <input type="text" data-bind="primaryCtaHref" />
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Modo de contato</span>
+                    <select data-bind="contactMode">
+                      <option value="whatsapp">WhatsApp</option>
+                      <option value="http">HTTP</option>
+                    </select>
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Responsavel pelo lancamento</span>
+                    <input type="text" data-bind="launchOwner" />
+                  </label>
+                </div>
+              </form>
+            </article>
+
+            <article class="workspace-panel" data-panel="pages">
+              <div class="workspace-panel__heading">
+                <div>
+                  <span class="workspace-panel__eyebrow">Paginas</span>
+                  <h2>Rotas e secoes</h2>
+                </div>
+                <p>Escolha quais paginas entram no escopo e o que fica visivel na home.</p>
+              </div>
+
+              <div class="workspace-toggle-group">
+                <div class="workspace-strip__heading">
+                  <h3>Rotas ativas</h3>
+                  <p>Controle o pacote entregue para a conta.</p>
+                </div>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Home</strong>
+                    <span>Pagina principal do produto</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="pages.home" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Landing</strong>
+                    <span>Pagina curta para campanha e captacao</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="pages.landing" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Institucional</strong>
+                    <span>Pagina para metodo, contexto e profundidade</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="pages.company" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Vitrine</strong>
+                    <span>Biblioteca de modelos e blocos</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="pages.showcase" />
+                </label>
+              </div>
+
+              <div class="workspace-toggle-group">
+                <div class="workspace-strip__heading">
+                  <h3>Secoes da home</h3>
+                  <p>Defina o que permanece na versao principal do site.</p>
+                </div>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Metricas</strong>
+                    <span>Bloco com numeros de orientacao</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="sections.stats" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Servicos</strong>
+                    <span>Faixa com o que o produto resolve</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="sections.services" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>FAQ</strong>
+                    <span>Respostas rapidas para duvidas comuns</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="sections.faq" />
+                </label>
+
+                <label class="workspace-toggle">
+                  <div>
+                    <strong>Contato</strong>
+                    <span>Formulario e canais centrais</span>
+                  </div>
+                  <input type="checkbox" data-bind-checked="sections.contact" />
+                </label>
+              </div>
+            </article>
+
+            <article class="workspace-panel" data-panel="publish">
+              <div class="workspace-panel__heading">
+                <div>
+                  <span class="workspace-panel__eyebrow">Publish</span>
+                  <h2>Dominio e checklist</h2>
+                </div>
+                <p>Organize o que precisa acontecer antes de enviar a conta para deploy.</p>
+              </div>
+
+              <form class="workspace-form">
+                <div class="workspace-form__grid">
+                  <label class="workspace-field">
+                    <span>Dominio previsto</span>
+                    <input type="text" data-bind="domain" />
+                  </label>
+
+                  <label class="workspace-field">
+                    <span>Canal principal</span>
+                    <select data-bind="contactMode">
+                      <option value="whatsapp">WhatsApp</option>
+                      <option value="http">HTTP</option>
+                    </select>
+                  </label>
+
+                  <label class="workspace-field workspace-field--full">
+                    <span>Observacoes de lancamento</span>
+                    <textarea rows="5" data-bind="launchNotes"></textarea>
+                  </label>
+                </div>
+              </form>
+
+              <div class="workspace-strip">
+                <div class="workspace-strip__heading">
+                  <h3>Checklist de readiness</h3>
+                  <p>Itens usados para fechar a configuracao da conta.</p>
+                </div>
+                <div class="workspace-checklist" data-workspace-checklist></div>
+              </div>
+            </article>
+          </section>
+
+          <aside class="workspace-preview">
+            <div class="workspace-preview__header">
+              <div>
+                <span class="workspace-preview__eyebrow">Preview ao vivo</span>
+                <strong>Resumo do template</strong>
+              </div>
+              <span class="workspace-pill workspace-pill--subtle" data-preview-theme-label></span>
+            </div>
+
+            <div class="workspace-preview__surface" data-preview-surface data-preview-theme="studio">
+              <div class="workspace-preview__chrome">
+                <span class="workspace-dot"></span>
+                <span class="workspace-dot"></span>
+                <span class="workspace-dot"></span>
+              </div>
+
+              <div class="workspace-preview__hero">
+                <span class="workspace-preview__brand" data-preview-brand></span>
+                <h2>
+                  <span data-preview-title></span>
+                  <em data-preview-highlight></em>
+                </h2>
+                <p data-preview-description></p>
+              </div>
+
+              <div class="workspace-preview__actions">
+                <span class="workspace-preview__cta" data-preview-cta></span>
+                <span class="workspace-preview__mode" data-preview-contact-mode></span>
+              </div>
+
+              <div class="workspace-preview__stack">
+                <div>
+                  <span class="workspace-preview__label">Tagline</span>
+                  <strong data-preview-tagline></strong>
+                </div>
+                <div>
+                  <span class="workspace-preview__label">Dominio</span>
+                  <strong data-preview-domain></strong>
+                </div>
+              </div>
+
+              <div class="workspace-preview__divider"></div>
+
+              <div class="workspace-preview__section">
+                <span class="workspace-preview__label">Rotas ativas</span>
+                <div class="workspace-preview__chips" data-preview-pages></div>
+              </div>
+
+              <div class="workspace-preview__section">
+                <span class="workspace-preview__label">Cobertura da home</span>
+                <div class="workspace-preview__coverage" data-preview-sections></div>
+              </div>
+            </div>
+
+            <div class="workspace-preview__footer">
+              <span data-last-saved></span>
+              <a href="/landing.html" target="_blank" rel="noopener">Abrir landing</a>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>
