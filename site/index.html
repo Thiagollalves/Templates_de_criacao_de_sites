@@ -33,28 +33,28 @@
     <header class="site-header" data-header></header>
 
     <main class="page-main">
-      <section class="hero hero--home section-shell">
-        <div class="hero__copy">
-          <span class="eyebrow" data-text="home.hero.eyebrow"></span>
-          <h1 class="hero__title" data-animate>
-            <span data-text="home.hero.title"></span>
-            <em data-text="home.hero.highlight"></em>
-          </h1>
-          <p class="hero__description" data-text="home.hero.description" data-animate></p>
-          <div class="hero__actions" data-animate>
-            <a class="button button-primary" data-cta="home.hero.primaryCta" href="#"></a>
-            <a class="button button-secondary" data-cta="home.hero.secondaryCta" href="#"></a>
-          </div>
+      <section class="hero hero--immersive hero--home">
+        <div class="hero__backdrop" aria-hidden="true">
+          <img data-src="assets.heroPrimary" data-alt="home.hero.imageAlt" alt="" />
+          <div class="hero__veil"></div>
         </div>
 
-        <div class="hero__panel panel" data-animate>
-          <div class="hero__visual">
-            <img data-src="assets.heroPrimary" data-alt="home.hero.imageAlt" alt="" />
+        <div class="hero__content section-shell">
+          <div class="hero__copy">
+            <span class="eyebrow" data-text="home.hero.eyebrow"></span>
+            <h1 class="hero__title" data-animate>
+              <span data-text="home.hero.title"></span>
+              <em data-text="home.hero.highlight"></em>
+            </h1>
+            <p class="hero__description" data-text="home.hero.description" data-animate></p>
+            <div class="hero__actions" data-animate>
+              <a class="button button-primary" data-cta="home.hero.primaryCta" href="#"></a>
+              <a class="button button-secondary" data-cta="home.hero.secondaryCta" href="#"></a>
+            </div>
           </div>
-          <div class="hero__note">
-            <span class="eyebrow" data-text="brand.foundedLabel"></span>
-            <h2 data-text="home.hero.asideTitle"></h2>
-            <p data-text="home.hero.asideText"></p>
+
+          <div class="hero__signals" data-animate>
+            <div class="hero__signals-grid" data-render="home.hero.signals"></div>
           </div>
         </div>
       </section>

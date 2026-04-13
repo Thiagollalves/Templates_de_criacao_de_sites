@@ -1,15 +1,31 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" rx="36" fill="#13202B"/>
-  <circle cx="1016" cy="116" r="118" fill="#86F2C6" fill-opacity="0.9"/>
-  <circle cx="126" cy="562" r="144" fill="#C96C47" fill-opacity="0.84"/>
-  <rect x="80" y="76" width="144" height="144" rx="32" fill="#FFF7EE"/>
-  <path d="M118 172L154 92H186L222 172H197L187 147H153L143 172H118Z" fill="#13202B"/>
-  <path d="M164 126L155 144H187L178 126H164Z" fill="#C96C47"/>
-  <path d="M296 146H762" stroke="#FFF7EE" stroke-width="24" stroke-linecap="round"/>
-  <path d="M296 204H1022" stroke="#FFF7EE" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
-  <path d="M296 246H930" stroke="#FFF7EE" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
-  <path d="M296 288H818" stroke="#FFF7EE" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
-  <rect x="296" y="354" width="276" height="180" rx="28" fill="#FFF7EE"/>
-  <rect x="596" y="354" width="238" height="180" rx="28" fill="#1B3044"/>
-  <rect x="858" y="354" width="262" height="180" rx="28" fill="#C96C47"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jetsales Brasil</title>
+  <desc id="desc">Open Graph image for the Jetsales Brasil institutional site.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#07121C"/>
+      <stop offset="100%" stop-color="#0E2030"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3BE89B"/>
+      <stop offset="100%" stop-color="#16BF78"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="170" fill="#30DD91" opacity="0.15"/>
+  <circle cx="180" cy="560" r="180" fill="#4C7FFF" opacity="0.12"/>
+  <rect x="78" y="78" width="1044" height="474" rx="34" fill="#0C1723" opacity="0.82" stroke="#213444"/>
+  <rect x="126" y="126" width="88" height="88" rx="26" fill="#0A1420"/>
+  <path d="M178 145v33c0 10.8-7.9 18.5-19.1 18.5-7.4 0-13.2-2.8-17.9-8.4l9.3-7.5c2.6 2.9 5.2 4.3 8.4 4.3 5.3 0 8.7-2.8 8.7-9.4V145H178Z" fill="#F5FBF8"/>
+  <circle cx="189" cy="150" r="6" fill="#3BE89B"/>
+  <text x="252" y="168" fill="#9AB1C1" font-family="Arial, Helvetica, sans-serif" font-size="26" letter-spacing="4">JETSALES BRASIL</text>
+  <text x="126" y="314" fill="#F3FAF7" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Atendimento, automacao e vendas</text>
+  <text x="126" y="394" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">no WhatsApp oficial</text>
+  <text x="126" y="458" fill="#A2B6C5" font-family="Arial, Helvetica, sans-serif" font-size="28">Canais conectados, equipes em contexto e operacao mais governavel.</text>
+  <rect x="760" y="190" width="260" height="170" rx="22" fill="#111F2B" stroke="#213444"/>
+  <rect x="790" y="228" width="108" height="10" rx="5" fill="#F5FBF8" opacity="0.9"/>
+  <rect x="790" y="252" width="164" height="10" rx="5" fill="#688091"/>
+  <rect x="790" y="292" width="200" height="12" rx="6" fill="#1C3140"/>
+  <rect x="790" y="320" width="168" height="12" rx="6" fill="#1C3140"/>
+  <rect x="920" y="408" width="100" height="18" rx="9" fill="#30DD91"/>
 </svg>
