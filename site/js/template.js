@@ -140,7 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const items = group.items
           .map(
             (item) => `
-              <li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a></li>
+              <li><a href="${escapeHtml(item.href)}" ${
+                isExternalLink(item.href) ? 'target="_blank" rel="noopener"' : ""
+              }>${escapeHtml(item.label)}</a></li>
             `
           )
           .join("");
@@ -164,6 +166,28 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
+    const footerItems = (config.contact.footerItems || [])
+      .map((item) => {
+        if (item.href) {
+          return `
+            <li>
+              <span>${escapeHtml(item.label)}:</span>
+              <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener">${escapeHtml(
+            item.value
+          )}</a>
+            </li>
+          `;
+        }
+
+        return `
+          <li>
+            <span>${escapeHtml(item.label)}:</span>
+            <strong>${escapeHtml(item.value)}</strong>
+          </li>
+        `;
+      })
+      .join("");
+
     mountPoint.innerHTML = `
       <div class="site-footer__grid">
         <div class="site-footer__brand">
@@ -179,16 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="footer-group">
           <h3>Contato</h3>
-          <ul>
-            <li><a href="mailto:${escapeHtml(config.contact.email)}">${escapeHtml(
-      config.contact.email
-    )}</a></li>
-            <li><a href="${escapeHtml(buildWhatsAppLink())}" target="_blank" rel="noopener">${escapeHtml(
-      config.contact.phoneLabel
-    )}</a></li>
-            <li>${escapeHtml(config.contact.address)}</li>
-            <li>${escapeHtml(config.contact.availability)}</li>
-          </ul>
+          <ul>${footerItems}</ul>
         </div>
       </div>
 
@@ -263,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="metric-card panel" data-animate>
+          <article class="metric-card" data-animate>
             <strong>${escapeHtml(item.value)}</strong>
             <span>${escapeHtml(item.label)}</span>
             <p>${escapeHtml(item.detail)}</p>
@@ -277,9 +292,22 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="stack-card panel" data-animate>
+          <article class="stack-card" data-animate>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  function renderHeroSignals(items) {
+    return items
+      .map(
+        (item) => `
+          <article class="hero-signal" data-animate>
+            <strong>${escapeHtml(item.title)}</strong>
+            <p>${escapeHtml(item.detail)}</p>
           </article>
         `
       )
@@ -363,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <li class="contact-channel" data-animate>
             <span>${escapeHtml(item.label)}</span>
             <a href="${escapeHtml(item.href)}" ${
-          item.href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""
+          /^(https?:|mailto:)/i.test(item.href) ? 'target="_blank" rel="noopener"' : ""
         }>
               ${escapeHtml(item.value)}
             </a>
@@ -387,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="insight-card panel" data-animate>
+          <article class="insight-card" data-animate>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
           </article>
@@ -413,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="offer-card panel" data-animate>
+          <article class="offer-card" data-animate>
             <span class="offer-card__badge">${escapeHtml(item.badge)}</span>
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
@@ -473,6 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const renderMap = {
+    "home.hero.signals": () => renderHeroSignals(config.home.hero.signals),
     "home.stats": () => renderStatCards(config.home.stats),
     "home.services.items": () => renderSimpleCards(config.home.services.items),
     "home.portfolio.items": () => renderPortfolioCards(config.home.portfolio.items),
@@ -481,6 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "home.faq.items": () => renderFaq(config.home.faq.items),
     "home.contact.asidePoints": () => renderStringList(config.home.contact.asidePoints),
     "landing.proof.items": () => renderStatCards(config.landing.proof.items),
+    "landing.hero.signals": () => renderHeroSignals(config.landing.hero.signals),
     "landing.offer.items": () => renderLandingCards(config.landing.offer.items),
     "landing.outcomes.items": () => renderOutcomeCards(config.landing.outcomes.items),
     "landing.faq.items": () => renderFaq(config.landing.faq.items),
@@ -595,12 +625,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
       const mode = config.contact.form.mode;
+      const introMessage =
+        config.contact.form.introMessage || `Ola, vim pelo site da ${config.brand.shortName}.`;
       const messageLines = [
-        "Ola, vim do formulario do template.",
+        introMessage,
         `Nome: ${payload.name || ""}`,
         `Email: ${payload.email || ""}`,
-        `Projeto: ${payload.company || ""}`,
-        `Mensagem: ${payload.message || ""}`,
+        `Empresa: ${payload.company || ""}`,
+        `Contexto: ${payload.message || ""}`,
         `Pagina: ${window.location.pathname}`,
       ];
 

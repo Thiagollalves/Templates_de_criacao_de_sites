@@ -33,28 +33,28 @@
     <header class="site-header" data-header></header>
 
     <main class="page-main">
-      <section class="hero hero--landing section-shell hero--compact">
-        <div class="hero__copy">
-          <span class="eyebrow" data-text="landing.hero.eyebrow"></span>
-          <h1 class="hero__title" data-animate>
-            <span data-text="landing.hero.title"></span>
-            <em data-text="landing.hero.highlight"></em>
-          </h1>
-          <p class="hero__description" data-text="landing.hero.description" data-animate></p>
-          <div class="hero__actions" data-animate>
-            <a class="button button-primary" data-cta="landing.hero.primaryCta" href="#"></a>
-            <a class="button button-secondary" data-cta="landing.hero.secondaryCta" href="#"></a>
-          </div>
+      <section class="hero hero--immersive hero--landing">
+        <div class="hero__backdrop" aria-hidden="true">
+          <img data-src="assets.heroSecondary" data-alt="landing.hero.imageAlt" alt="" />
+          <div class="hero__veil"></div>
         </div>
 
-        <div class="hero__panel panel" data-animate>
-          <div class="hero__visual">
-            <img data-src="assets.heroSecondary" data-alt="landing.hero.imageAlt" alt="" />
+        <div class="hero__content section-shell">
+          <div class="hero__copy">
+            <span class="eyebrow" data-text="landing.hero.eyebrow"></span>
+            <h1 class="hero__title" data-animate>
+              <span data-text="landing.hero.title"></span>
+              <em data-text="landing.hero.highlight"></em>
+            </h1>
+            <p class="hero__description" data-text="landing.hero.description" data-animate></p>
+            <div class="hero__actions" data-animate>
+              <a class="button button-primary" data-cta="landing.hero.primaryCta" href="#"></a>
+              <a class="button button-secondary" data-cta="landing.hero.secondaryCta" href="#"></a>
+            </div>
           </div>
-          <div class="hero__note">
-            <span class="eyebrow" data-text="brand.shortName"></span>
-            <h2 data-text="landing.contact.title"></h2>
-            <p data-text="landing.contact.description"></p>
+
+          <div class="hero__signals hero__signals--compact" data-animate>
+            <div class="hero__signals-grid" data-render="landing.hero.signals"></div>
           </div>
         </div>
       </section>
