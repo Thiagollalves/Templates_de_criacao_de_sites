@@ -1,687 +1,663 @@
 const SITE_TEMPLATE_CONFIG = {
   theme: "studio",
   seo: {
-    siteName: "Atlas Frame",
-    defaultTitle: "Atlas Frame | Portal e templates para criar sites",
+    siteName: "Jetsales Brasil",
+    defaultTitle: "Jetsales Brasil | Atendimento, automacao e vendas no WhatsApp oficial",
     defaultDescription:
-      "Software com site publico, portal do cliente e workspace para criar, revisar e publicar sites comerciais.",
-    baseUrl: "https://example.com",
+      "A Jetsales organiza atendimento, automacao, IA aplicada e vendas no WhatsApp oficial com mais governanca, contexto comercial e controle operacional.",
+    baseUrl: "https://jetsalesbrasil.com.br",
     favicon: "/assets/favicon.svg",
     ogImage: "/assets/og-template.svg",
     pages: {
       home: {
-        title: "Atlas Frame | Crie sites com cara de produto",
+        title: "Jetsales Brasil | Operacao comercial no WhatsApp oficial",
         description:
-          "Front para apresentar, captar e publicar sites comerciais com tema, CTA e estrutura prontos.",
+          "Centralize atendimento, automacao, equipes e canais Meta em uma operacao mais clara, rastreavel e orientada a vendas.",
         path: "/",
       },
       landing: {
-        title: "Captacao focada | Atlas Frame",
+        title: "Agende uma demonstracao | Jetsales Brasil",
         description:
-          "Landing curta e clara para validar oferta, captar leads e conduzir o usuario ate o proximo clique.",
+          "Converse com a Jetsales e veja como estruturar atendimento, IA e automacoes no WhatsApp oficial sem promessas cinzas.",
         path: "/landing.html",
       },
       company: {
-        title: "Plataforma | Atlas Frame",
+        title: "Como a Jetsales opera | Jetsales Brasil",
         description:
-          "Pagina interna para explicar metodo, sistema visual e operacao sem pesar a home principal.",
+          "Conheca a operacao da Jetsales, os principios de governanca dos canais e a estrutura de onboarding para times comerciais.",
         path: "/pages/company.html",
       },
       showcase: {
-        title: "Modelos | Atlas Frame",
+        title: "Solucoes e casos de uso | Jetsales Brasil",
         description:
-          "Vitrine de rotas e modelos para adaptar a mesma base em home, landing e paginas de apoio.",
+          "Explore os fluxos que a Jetsales aplica em atendimento, automacao e vendas para diferentes segmentos e estruturas comerciais.",
         path: "/pages/showcase.html",
-      },
-      login: {
-        title: "Entrar | Atlas Frame",
-        description:
-          "Acesse o portal do cliente para editar branding, narrativa, paginas e publicacao do site.",
-        path: "/login.html",
-      },
-      app: {
-        title: "Workspace | Atlas Frame",
-        description:
-          "Ambiente autenticado para operar o template, revisar as paginas e preparar a publicacao.",
-        path: "/app.html",
       },
     },
   },
   brand: {
-    name: "Atlas Frame",
-    shortName: "Atlas",
-    eyebrow: "Software para criar sites comerciais",
-    tagline: "Site publico, portal do cliente e publish no mesmo fluxo.",
+    name: "Jetsales Brasil",
+    shortName: "Jetsales",
+    eyebrow: "WhatsApp oficial, IA aplicada e multiatendimento",
+    tagline: "Atendimento, automacao e vendas no WhatsApp oficial com mais governanca.",
     summary:
-      "Atlas Frame conecta vitrine publica, login do cliente e workspace para montar, revisar e publicar sites sem depender de CMS.",
-    location: "Operacao remota com entrega estatica.",
-    legalName: "Atlas Frame App",
-    foundedLabel: "Portal ativo",
+      "A Jetsales conecta canais, equipes, IA e operacao comercial em uma estrutura mais clara para atender, vender e acompanhar performance.",
+    location: "Aracaju, Sergipe - Brasil.",
+    legalName: "Jetsales Sistemas e Tecnologia Ltda.",
+    foundedLabel: "Desde 2021",
     footerNote:
-      "Ajuste conteudo, credenciais demo e rotas no config central para adaptar o produto ao seu app.",
+      "Automacoes, campanhas e mensagens devem respeitar consentimento, templates aprovados, alternativas de suporte humano e governanca dos ativos Meta.",
   },
   navigation: {
     items: [
       { label: "Inicio", href: "/", page: "home", enabled: true },
-      { label: "Plataforma", href: "/pages/company.html", page: "company", enabled: true },
-      { label: "Modelos", href: "/pages/showcase.html", page: "showcase", enabled: true },
-      { label: "Captacao", href: "/landing.html", page: "landing", enabled: true },
-      { label: "Entrar", href: "/login.html", page: "login", enabled: true },
+      { label: "Demonstracao", href: "/landing.html", page: "landing", enabled: true },
+      { label: "Operacao", href: "/pages/company.html", page: "company", enabled: true },
+      { label: "Solucoes", href: "/pages/showcase.html", page: "showcase", enabled: true },
     ],
     footerGroups: [
       {
         title: "Produto",
         items: [
           { label: "Inicio", href: "/" },
-          { label: "Plataforma", href: "/pages/company.html" },
-          { label: "Modelos", href: "/pages/showcase.html" },
+          { label: "Demonstracao", href: "/landing.html" },
+          { label: "Central de ajuda", href: "https://tutoriais.jetsalesbrasil.com.br/" },
         ],
       },
       {
-        title: "Fluxo",
+        title: "Governanca",
         items: [
-          { label: "Narrativa principal", href: "/" },
-          { label: "Rota de captacao", href: "/landing.html" },
-          { label: "Paginas de apoio", href: "/pages/company.html" },
+          { label: "Operacao e onboarding", href: "/pages/company.html" },
+          { label: "Solucoes por segmento", href: "/pages/showcase.html" },
+          { label: "Politica de cookies", href: "https://jetsalesbrasil.com.br/politica-de-cookies/" },
         ],
       },
       {
-        title: "Operacao",
+        title: "Canais",
         items: [
-          { label: "Portal do cliente", href: "/login.html" },
-          { label: "Workspace do template", href: "/app.html" },
-          { label: "Config unico", href: "/pages/company.html" },
+          { label: "Site oficial", href: "https://jetsalesbrasil.com.br/" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/company/jetsales-brasil" },
+          { label: "Instagram", href: "https://www.instagram.com/jetsalesbrasil/" },
         ],
       },
     ],
     cta: {
-      label: "Entrar no portal",
-      href: "/login.html",
+      label: "Agendar demonstracao",
+      kind: "whatsapp",
+      message: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
     },
   },
   home: {
     hero: {
-      eyebrow: "Software para vender e operar sites com area do cliente",
-      title: "Venda o template e entregue um portal para cada conta.",
-      highlight: "Login, editor e publish no mesmo app.",
+      eyebrow: "JetGO para operacao comercial em canais oficiais",
+      title: "Jetsales centraliza atendimento, automacao e vendas",
+      highlight: "sem perder governanca do canal.",
       description:
-        "Atlas Frame organiza o site publico que vende o produto e a area autenticada onde o cliente ajusta branding, narrativa, paginas e publicacao. O front continua leve, mas a experiencia vira software.",
+        "Organize WhatsApp oficial, Instagram, Facebook, webchat, IA e multiatendimento em uma operacao mais rastreavel, com mensagens consentidas e mais contexto para o time comercial.",
       primaryCta: {
-        label: "Entrar no ambiente",
-        href: "/login.html",
+        label: "Agendar demonstracao",
+        kind: "whatsapp",
+        message: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
       },
       secondaryCta: {
-        label: "Ver como funciona",
-        href: "/pages/company.html",
+        label: "Ver o fluxo comercial",
+        href: "/landing.html",
       },
-      imageAlt: "Mockup abstrato representando o front do aplicativo Atlas Frame",
-      asideTitle: "Do login ao publish",
-      asideText:
-        "Cada conta entra no portal, edita o template e acompanha o preparo do site sem sair do mesmo fluxo visual.",
+      imageAlt: "Ilustracao da plataforma Jetsales com inbox, funis e indicadores",
+      signals: [
+        {
+          title: "API oficial da Meta",
+          detail: "WhatsApp Business, Instagram e Facebook conectados com mais previsibilidade operacional.",
+        },
+        {
+          title: "Equipe no mesmo fluxo",
+          detail: "Um unico numero, varios atendentes, departamentos e acompanhamento de desempenho.",
+        },
+        {
+          title: "IA e automacoes com contexto",
+          detail: "Fluxos pensados para organizar atendimento e vendas sem incentivar spam ou atalhos fora de politica.",
+        },
+      ],
     },
     statsIntro: {
-      eyebrow: "Sistema de operacao",
-      title: "Site publico na frente, workspace do cliente por dentro.",
+      eyebrow: "Estrutura operacional",
+      title: "Uma base para vender melhor e operar com menos ruido.",
       description:
-        "A base foi organizada para vender o produto, autenticar o cliente e operar a entrega em um unico sistema visual.",
+        "A plataforma combina canais oficiais, distribuicao de atendimento, automacoes e acompanhamento gerencial em um fluxo unico.",
     },
     stats: [
       {
-        value: "01",
-        label: "portal por cliente",
-        detail: "login, sessao e acesso ao workspace",
+        value: "1",
+        label: "operacao central",
+        detail: "inbox, gestao e acompanhamento no mesmo ambiente",
       },
       {
-        value: "05",
-        label: "paineis internos",
-        detail: "controle, identidade, conteudo, paginas e publish",
+        value: "Meta",
+        label: "canais oficiais",
+        detail: "WhatsApp, Instagram e Facebook no mesmo desenho operacional",
       },
       {
-        value: "04",
-        label: "rotas prontas",
-        detail: "home, captacao, institucional e vitrine",
+        value: "IA",
+        label: "apoio ao atendimento",
+        detail: "triagem, ganho de velocidade e contexto para o proximo passo",
       },
       {
-        value: "100%",
-        label: "base editavel",
-        detail: "preview, checklist e conteudo salvos no navegador",
+        value: "Times",
+        label: "multiusuario real",
+        detail: "departamentos, filas e visibilidade para a lideranca",
       },
     ],
     services: {
-      eyebrow: "O que o front resolve",
-      title: "A experiencia foi desenhada para vender o produto e operar a entrega.",
+      eyebrow: "Capacidades principais",
+      title: "A Jetsales estrutura a operacao do canal, nao apenas o envio da mensagem.",
       description:
-        "O site publico apresenta a oferta; o portal autenticado coloca o cliente dentro do fluxo para configurar, revisar e publicar.",
+        "A proposta combina tecnologia, atendimento e governanca para transformar o WhatsApp em um canal comercial mais previsivel.",
       items: [
         {
-          title: "Portal autenticado",
+          title: "Conexao oficial dos canais",
           description:
-            "Cada conta acessa com login e senha e entra num ambiente proprio para operar o template sem depender do codigo bruto.",
+            "Conecte WhatsApp oficial, Instagram, Facebook e webchat a uma operacao unica, com menos troca de ferramenta e menos perda de contexto.",
         },
         {
-          title: "Editor do template",
+          title: "Automacoes com regra clara",
           description:
-            "Branding, hero, CTA, paginas e modo de contato ficam organizados em paineis claros, com persistencia local.",
+            "Organize respostas, jornadas, redistribuicao e funis respeitando consentimento, janela operacional e uso de templates aprovados.",
         },
         {
-          title: "Preview vivo",
+          title: "Gestao do time de atendimento",
           description:
-            "O cliente ajusta texto, tema e paginas enquanto acompanha uma previa do template em tempo real.",
+            "Acompanhe desempenho dos colaboradores, distribuicao entre departamentos e gargalos do fluxo comercial em um mesmo dashboard.",
         },
         {
-          title: "Trilha de publicacao",
+          title: "Operacao orientada a venda",
           description:
-            "O ambiente interno organiza dominio, checklist e status para transformar o template em uma entrega de software.",
+            "Transforme o atendimento em uma esteira mais profissional, com mais velocidade, padrao de resposta e visibilidade para o gestor.",
         },
       ],
     },
     portfolio: {
-      eyebrow: "Rotas em uso",
-      title: "Um pequeno ecossistema de paginas para o mesmo produto.",
+      eyebrow: "Onde a operacao ganha forma",
+      title: "Do canal oficial ao acompanhamento do time, cada bloco responde a um problema real.",
       description:
-        "Cada rota cumpre um papel especifico, mas todas compartilham o mesmo sistema visual, o mesmo CTA e o mesmo contrato de conteudo.",
+        "A Jetsales trabalha a operacao comercial de ponta a ponta: conexao, atendimento, automacao, governanca e leitura de desempenho.",
       items: [
         {
-          eyebrow: "Entrada",
-          title: "Site publico do produto",
+          eyebrow: "Canal oficial",
+          title: "WhatsApp, Instagram e Facebook no mesmo fluxo",
           description:
-            "Apresenta a proposta, organiza o discurso comercial e conduz o clique para a plataforma ou para o portal.",
+            "Centralize os pontos de contato mais usados pelo cliente sem perder historico, contexto nem visibilidade do atendimento.",
           image: "/assets/gallery-narrative.svg",
-          alt: "Ilustracao abstrata da pagina inicial do Atlas Frame",
+          alt: "Ilustracao de canais conectados na plataforma Jetsales",
           link: {
-            label: "Rever a home",
-            href: "/",
+            label: "Entender a operacao",
+            href: "/pages/company.html",
           },
         },
         {
-          eyebrow: "Portal",
-          title: "Workspace do cliente",
+          eyebrow: "Governanca",
+          title: "Mensageria com mais controle e menos improviso",
           description:
-            "Entrega o produto vendavel: login, navegacao lateral, preview vivo e trilha de publicacao para usar o template.",
-          image: "/assets/workspace-console.svg",
-          alt: "Ilustracao do workspace autenticado do Atlas Frame",
+            "Ownership da pagina, permissao correta, politicas do WhatsApp e configuracoes dos ativos entram no mesmo raciocinio de implantacao.",
+          image: "/assets/gallery-structure.svg",
+          alt: "Ilustracao de governanca e monitoramento de canais",
           link: {
-            label: "Abrir portal",
-            href: "/login.html",
+            label: "Ver principios de operacao",
+            href: "/pages/company.html",
           },
         },
         {
-          eyebrow: "Biblioteca",
-          title: "Modelos e paginas internas",
+          eyebrow: "Vendas",
+          title: "Automacao, IA e atendimento a servico da conversao",
           description:
-            "Mostra como a mesma base pode virar pagina institucional, grade de servicos, portfolio ou biblioteca de blocos.",
-          image: "/assets/gallery-grid.svg",
-          alt: "Ilustracao abstrata da vitrine de modelos do aplicativo",
+            "A meta nao e automatizar por automatizar, e sim reduzir tempo de resposta, organizar follow-up e manter o time comercial mais responsivo.",
+          image: "/assets/gallery-launch.svg",
+          alt: "Ilustracao de funis e automacoes comerciais",
           link: {
-            label: "Ver modelos",
-            href: "/pages/showcase.html",
+            label: "Ver demonstracao comercial",
+            href: "/landing.html",
           },
         },
       ],
     },
     process: {
-      eyebrow: "Fluxo",
-      title: "Cinco etapas para vender e operar o template.",
+      eyebrow: "Da implantacao ao ganho de ritmo",
+      title: "Quatro etapas para sair do atendimento pulverizado para uma operacao comercial mais clara.",
       description:
-        "A proposta do Atlas Frame nao e esconder o HTML, e transformar a adaptacao do template em um fluxo claro para o cliente.",
+        "A logica da implementacao precisa alinhar canais, permissao, times, regras de contato e acompanhamento de resultado.",
       steps: [
         {
           step: "01",
-          title: "Libere o acesso",
+          title: "Diagnostico do canal e da jornada",
           description:
-            "Crie o acesso do cliente e leve a conta para dentro do portal com sessao, status e ponto de partida definidos.",
+            "Mapear onde as conversas chegam, como as equipes respondem hoje e quais pontos geram perda de contexto, atraso ou retrabalho.",
         },
         {
           step: "02",
-          title: "Defina marca e tema",
+          title: "Conexao oficial e ownership correto",
           description:
-            "Atualize nome, resumo, favicon e direcao visual para alinhar o workspace com a identidade do projeto.",
+            "Estruturar canais Meta, ownership de paginas e acessos de parceiros sem deslocar a titularidade do ativo para terceiros.",
         },
         {
           step: "03",
-          title: "Ajuste a narrativa",
+          title: "Fila, automacao e regra de mensagem",
           description:
-            "Troque hero, proposta, CTA e contato dentro do editor para aproximar a oferta da realidade do cliente.",
+            "Distribuir atendimento, configurar respostas, definir templates aprovados e desenhar opt-in, opt-out e janelas de contato.",
         },
         {
           step: "04",
-          title: "Revise paginas e secoes",
+          title: "Leitura de performance e melhoria continua",
           description:
-            "Escolha as rotas ativas, ligue ou desligue secoes e valide o escopo antes de ir para publicacao.",
-        },
-        {
-          step: "05",
-          title: "Prepare o publish",
-          description:
-            "Revise dominio, checklist, modo de contato e entregue a versao pronta para deploy.",
+            "Acompanhar time, resposta, gargalos, qualidade do atendimento e oportunidades de venda para evoluir a operacao sem prometer o que a politica nao permite.",
         },
       ],
     },
     testimonials: {
-      eyebrow: "Leitura rapida",
-      title: "Quem entra no projeto precisa entender a estrutura em segundos.",
-      description:
-        "As frases abaixo funcionam como prova operacional e ajudam a explicar por que a base foi organizada dessa forma.",
-      items: [
-        {
-          quote: "O site vende a oferta e o portal segura a operacao sem quebrar a linguagem visual.",
-          author: "Produto",
-          role: "Estrutura comercial",
-        },
-        {
-          quote: "Login, editor e preview vivo transformam o template em algo claramente vendavel.",
-          author: "Operacoes",
-          role: "Onboarding do cliente",
-        },
-        {
-          quote: "O cliente entende o que precisa fazer porque cada painel tem uma funcao objetiva.",
-          author: "CS",
-          role: "Acompanhamento de publish",
-        },
-      ],
+      eyebrow: "Sinais de confianca",
+      title: "",
+      description: "",
+      items: [],
     },
     faq: {
-      eyebrow: "FAQ do front",
-      title: "Perguntas comuns antes de adaptar a base.",
+      eyebrow: "Perguntas que precisam estar claras",
+      title: "A operacao so escala quando a regra do canal tambem escala.",
       description:
-        "Use este bloco para responder duvidas sobre o produto, a implantacao ou o funcionamento da experiencia.",
+        "A copy do site e a estrutura comercial precisam deixar evidente o que e permitido, o que exige aprovacao e o que depende de consentimento do usuario.",
       items: [
         {
-          question: "Preciso usar todas as secoes da home?",
+          question: "A Jetsales trabalha com mensagens fora das politicas do WhatsApp?",
           answer:
-            "Nao. O grupo sections.home controla quais blocos aparecem. O HTML continua disponivel para ajustes finos.",
+            "Nao. O desenho correto envolve consentimento, uso de templates aprovados fora da janela permitida, opt-out claro e uma alternativa de suporte humano quando necessario.",
         },
         {
-          question: "Posso usar so a landing de captacao?",
+          question: "Ownership de pagina e Instagram realmente importa para a operacao?",
           answer:
-            "Sim. A landing funciona sozinha e compartilha o mesmo tema, o mesmo header, o mesmo footer e a mesma logica de formulario.",
+            "Sim. Pagina, Instagram comercial e acessos de parceiros precisam seguir ownership coerente para evitar bloqueios, perda de controle e ruido em anuncios ou integracoes.",
         },
         {
-          question: "A base depende de framework?",
+          question: "Automacao significa volume sem criterio?",
           answer:
-            "Nao. Ela usa HTML, CSS e JavaScript vanilla para manter a hospedagem estatica e a manutencao simples.",
+            "Nao. A automacao precisa servir ao atendimento e ao funil com segmentacao, consentimento e governanca. Promessa vaga de volume sem criterio e atalho ruim para o negocio e para a plataforma.",
         },
         {
-          question: "Como eu crio novas rotas para o app?",
+          question: "Como a API oficial entra nesse processo?",
           answer:
-            "Duplique um dos modelos em site/pages, ajuste o data-page, registre a rota na navegacao e crie o conteudo correspondente no config.",
+            "Ela e a base para integrar o canal oficial, organizar operacao e reduzir improviso tecnico. A implementacao ainda precisa respeitar politicas, limites e boas praticas da Meta.",
         },
       ],
     },
     cta: {
-      eyebrow: "Pronto para adaptar",
-      title: "A camada comercial do app fica pronta antes da automacao pesada.",
+      eyebrow: "Proximo passo",
+      title: "Se o WhatsApp ja e canal de venda, ele precisa de operacao a altura.",
       description:
-        "Com portal, editor e preview no lugar, a energia do time pode ir para onboarding, integracao e escala do produto.",
+        "Converse com a Jetsales para revisar canal oficial, distribuir atendimento, estruturar automacoes e ganhar mais leitura sobre o que acontece na jornada comercial.",
       primaryCta: {
-        label: "Abrir area do cliente",
-        href: "/login.html",
+        label: "Agendar demonstracao",
+        kind: "whatsapp",
+        message: "Ola, quero agendar uma demonstracao da Jetsales.",
       },
       secondaryCta: {
-        label: "Conversar sobre a adaptacao",
-        kind: "whatsapp",
-        message: "Ola, quero adaptar o Atlas Frame para o meu produto.",
+        label: "Explorar solucoes",
+        href: "/pages/showcase.html",
       },
     },
     contact: {
-      eyebrow: "Contato central",
-      title: "Venda, onboard e suporte no mesmo produto.",
+      eyebrow: "Fale com a Jet",
+      title: "Abra a conversa pelo WhatsApp e chegue com o contexto certo.",
       description:
-        "A secao combina canais diretos e formulario com envio configuravel para apresentar a oferta e sustentar o pos-venda.",
-      asideTitle: "O que normalmente muda",
+        "Use o formulario para iniciar um contato comercial. O envio abre o WhatsApp oficial com a mensagem preenchida para reduzir friccao no primeiro atendimento.",
+      asideTitle: "O que a conversa inicial normalmente cobre",
       asidePoints: [
-        "Credenciais demo e fluxo de acesso",
-        "Branding, tema e narrativa da primeira dobra",
-        "Rotas disponiveis no workspace do cliente",
-        "Checklist, dominio e modo de publicacao",
+        "Canal atual, ownership e permissao dos ativos Meta",
+        "Estrutura da equipe, filas, departamentos e tempo de resposta",
+        "Fluxos de automacao, templates e pontos de consentimento",
+        "Integracoes, acompanhamento de atendimento e objetivo comercial",
       ],
     },
   },
   landing: {
     hero: {
-      eyebrow: "Captacao direta",
-      title: "Conduza a oferta com uma pagina curta, clara e pronta para clique.",
-      highlight: "Pensada para conversao.",
+      eyebrow: "Demonstracao comercial",
+      title: "Veja como a Jetsales organiza atendimento e vendas",
+      highlight: "no WhatsApp oficial.",
       description:
-        "Quando voce precisa validar uma oferta, captar leads ou apoiar um lancamento, esta rota concentra argumento, prova e contato sem distrair o usuario.",
+        "A demonstracao foca em operacao real: canais conectados, distribuicao do time, automacoes, IA aplicada, governanca do ativo e proximos passos do seu fluxo comercial.",
       primaryCta: {
-        label: "Solicitar uma primeira versao",
+        label: "Falar no WhatsApp",
         kind: "whatsapp",
-        message: "Ola, quero uma landing baseada no Atlas Frame.",
+        message: "Ola, quero falar com a Jetsales sobre uma demonstracao.",
       },
       secondaryCta: {
         label: "Voltar para a home",
         href: "/",
       },
-      imageAlt: "Mockup abstrato representando uma landing page focada em captacao",
+      imageAlt: "Ilustracao do fluxo comercial da Jetsales em uma tela escura",
+      signals: [
+        {
+          title: "Mensagens consentidas",
+          detail: "O canal precisa crescer com opt-in, opt-out e uso correto de templates.",
+        },
+        {
+          title: "Time e IA no mesmo contexto",
+          detail: "Menos troca de ferramenta e mais clareza sobre quem atende, quando e por qual canal.",
+        },
+      ],
     },
     proof: {
-      eyebrow: "Sinal rapido",
-      title: "A dobra ja entrega contexto, foco e proximo passo.",
+      eyebrow: "Pontos que precisam estar no desenho",
+      title: "Nao basta responder mais rapido. E preciso responder com criterio operacional.",
       description:
-        "A secao pode virar prova numerica, prazo, capacidade de entrega ou qualquer indicio claro de confianca.",
+        "A demonstracao mostra como a estrutura correta reduz ruido de atendimento e melhora a previsibilidade do canal.",
       items: [
         {
-          value: "1",
-          label: "CTA principal",
-          detail: "sem disputar atencao com muitas rotas",
+          value: "API",
+          label: "canal oficial",
+          detail: "integre o WhatsApp Business dentro de uma operacao mais consistente",
         },
         {
-          value: "3",
-          label: "blocos de apoio",
-          detail: "prova curta, oferta e outcomes",
+          value: "24h",
+          label: "janela sensivel",
+          detail: "fora dela, a conversa exige uso correto de templates aprovados",
         },
         {
-          value: "2",
-          label: "caminhos de envio",
-          detail: "WhatsApp ou integracao HTTP",
+          value: "Humano",
+          label: "rota de apoio",
+          detail: "automacao nao elimina a necessidade de um caminho claro para suporte real",
         },
       ],
     },
     offer: {
-      eyebrow: "Oferta modular",
-      title: "O fluxo da pagina cabe em poucos blocos bem definidos.",
+      eyebrow: "O que a conversa precisa cobrir",
+      title: "Uma demonstracao util parte da operacao, nao do discurso.",
       description:
-        "Cada bloco abaixo pode representar plano, etapa do servico, diferencial do produto ou recorte de entrega.",
+        "Cada bloco abaixo representa uma camada que precisa fazer sentido ao mesmo tempo para a operacao ganhar ritmo.",
       items: [
         {
-          badge: "Entrada",
-          title: "Diagnostico rapido",
+          badge: "Canal",
+          title: "Conexao e ownership",
           description:
-            "Use este bloco para explicar o primeiro passo com pouca friccao e sem lotar a dobra com detalhes.",
+            "Revisar pagina, Instagram comercial, acessos e ownership dos ativos para nao construir em cima de um risco estrutural.",
         },
         {
-          badge: "Estrutura",
-          title: "Pagina de campanha",
+          badge: "Equipe",
+          title: "Filas, departamentos e SLA",
           description:
-            "Oferta clara, prova curta, FAQ e formulario no mesmo fluxo para reduzir dispersao e encurtar a conversa.",
+            "Desenhar como as conversas entram, quem assume, quando redistribuir e como acompanhar performance do time.",
         },
         {
-          badge: "Entrega",
-          title: "Publicacao leve",
+          badge: "Fluxo",
+          title: "Automacao com regra de negocio",
           description:
-            "Hospedagem estatica, ativos locais e manutencao simples para colocar a rota no ar rapidamente.",
+            "Usar IA, gatilhos e templates quando isso melhora a jornada, sem apelos vagos a volume cego ou contato fora de contexto.",
         },
       ],
     },
     outcomes: {
-      eyebrow: "Fluxo de conversa",
-      title: "Da campanha ao atendimento sem trocar de base.",
+      eyebrow: "O que melhora quando a base esta certa",
+      title: "Atendimento menos disperso. Conversa mais rastreavel. Time com mais contexto.",
       description:
-        "Os blocos visuais abaixo funcionam como etapas, beneficios, provas ou resultados esperados da pagina.",
+        "A operacao fica mais legivel para quem atende, para quem lidera e para quem depende do canal para vender.",
       items: [
         {
-          title: "Mensagem concentrada",
+          title: "Visibilidade da operacao",
           description:
-            "O visitante entende a oferta antes de tocar no CTA e nao precisa montar o sentido da pagina sozinho.",
+            "Acompanhe onde a conversa entrou, quem respondeu e quais filas precisam de atencao.",
           image: "/assets/gallery-signal.svg",
-          alt: "Composicao abstrata para mensagem concentrada",
+          alt: "Ilustracao de indicadores e monitoramento",
         },
         {
-          title: "Hierarquia mais limpa",
+          title: "Fluxo comercial mais organizado",
           description:
-            "Os componentes ajudam a separar argumento, prova e acao em vez de empilhar blocos com o mesmo peso.",
-          image: "/assets/gallery-structure.svg",
-          alt: "Composicao abstrata para hierarquia limpa",
+            "Menos improviso entre primeiro contato, qualificacao, atendimento e follow-up.",
+          image: "/assets/gallery-grid.svg",
+          alt: "Ilustracao de pipeline comercial e distribuicao de conversas",
         },
         {
-          title: "Contato ja preparado",
+          title: "Governanca desde a mensagem",
           description:
-            "O modo WhatsApp gera link pronto e o modo HTTP envia os campos para o endpoint configurado.",
-          image: "/assets/gallery-launch.svg",
-          alt: "Composicao abstrata para ativacao de contato",
+            "Ownership, permissao, templates e privacidade deixam de ser detalhe e entram no desenho principal.",
+          image: "/assets/gallery-conversion.svg",
+          alt: "Ilustracao de governanca e mensagens autorizadas",
         },
       ],
     },
     faq: {
-      eyebrow: "FAQ da captacao",
-      title: "Respostas curtas para manter o ritmo da conversao.",
+      eyebrow: "Antes de marcar",
+      title: "A conversa comercial precisa partir dos riscos e das metas corretas.",
       description:
-        "Se a rota nao precisar de FAQ, basta desligar a secao em sections.landing.faq.",
+        "Essas perguntas ajudam a separar curiosidade de diagnostico serio da operacao.",
       items: [
         {
-          question: "Posso usar a pagina sem menu principal?",
+          question: "A demonstracao serve so para quem ja usa a API oficial?",
           answer:
-            "Sim. Voce pode simplificar a navegacao no HTML e manter a mesma base de conteudo, CTA e formulario.",
+            "Nao. Ela tambem ajuda empresas que ainda estao reorganizando canal, ownership de pagina ou estrutura do time antes da conexao oficial.",
         },
         {
-          question: "O formulario precisa de integracao imediata?",
+          question: "A Jetsales promete volume de mensagens sem restricao?",
           answer:
-            "Nao. O modo padrao e WhatsApp. Quando houver endpoint, basta mudar contact.form.mode para http.",
+            "Nao. O trabalho serio precisa considerar consentimento, qualidade do contato, uso correto de templates e limites das politicas do WhatsApp Business.",
         },
         {
-          question: "Posso trocar as provas depois?",
+          question: "Posso levar meu time para a conversa?",
           answer:
-            "Sim. Os cards e metricas foram feitos para trocar placeholder por prova real sem refazer o layout.",
+            "Sim. Quanto mais cedo comercial, atendimento e operacao alinham a expectativa, melhor fica o desenho do fluxo.",
         },
       ],
     },
     cta: {
-      eyebrow: "Fechamento",
-      title: "Use a mesma base para campanha, validacao de oferta ou pagina de apoio comercial.",
+      eyebrow: "Conversar com contexto",
+      title: "Leve seu canal atual, seus gargalos e sua meta comercial para a mesa.",
       description:
-        "A estrutura ja prepara copy, CTA e contato. O que muda e a narrativa de cada projeto.",
+        "A melhor demonstracao e a que sai com clareza sobre ownership, canais, equipe, automacoes e proximo passo tecnico.",
       primaryCta: {
-        label: "Falar agora no WhatsApp",
+        label: "Abrir WhatsApp da Jetsales",
         kind: "whatsapp",
-        message: "Ola, quero usar o Atlas Frame em uma landing de captacao.",
+        message: "Ola, quero agendar uma demonstracao da Jetsales para revisar minha operacao.",
       },
       secondaryCta: {
-        label: "Ver a home completa",
-        href: "/",
+        label: "Ver como a operacao funciona",
+        href: "/pages/company.html",
       },
     },
     contact: {
-      eyebrow: "Contato de campanha",
-      title: "Receba leads no WhatsApp ou no endpoint que voce configurar.",
+      eyebrow: "Contato comercial",
+      title: "Inicie pelo WhatsApp oficial da Jetsales.",
       description:
-        "O mesmo formulario respeita o modo definido no config central e pode ser reaproveitado em varias rotas.",
+        "O formulario prepara a conversa com nome, empresa e contexto do seu fluxo atual para o primeiro atendimento.",
     },
   },
   pages: {
     company: {
       hero: {
-        eyebrow: "Plataforma",
-        title: "Entenda como o site publico e o portal formam um unico produto.",
+        eyebrow: "Operacao, onboarding e confianca institucional",
+        title: "Software, canais oficiais e rotina comercial no mesmo desenho operacional.",
         description:
-          "Esta rota aprofunda o metodo, mostra a area autenticada e explica como a estrutura continua consistente da venda ao publish.",
+          "A Jetsales atua como plataforma de software para organizar atendimento, automacao e vendas via WhatsApp, com base em ownership correto, operacao clara e governanca dos canais.",
         primaryCta: {
-          label: "Entrar no portal",
-          href: "/login.html",
+          label: "Agendar demonstracao",
+          kind: "whatsapp",
+          message: "Ola, quero entender como a Jetsales estrutura a operacao comercial.",
         },
         secondaryCta: {
-          label: "Falar no WhatsApp",
-          kind: "whatsapp",
-          message: "Ola, quero adaptar a pagina de plataforma do Atlas Frame.",
+          label: "Ver solucoes por segmento",
+          href: "/pages/showcase.html",
         },
       },
       intro: {
-        eyebrow: "Visao do sistema",
-        title: "Uma pagina interna para metodo, criterio e contexto.",
+        eyebrow: "Como a base se sustenta",
+        title: "A operacao precisa ser confiavel para o cliente, para o time e para o canal.",
         description:
-          "Quando a home precisa ficar objetiva, esta rota recebe a profundidade necessaria para explicar o produto com calma.",
+          "A pagina institucional aprofunda os pilares operacionais que nao cabem na home: ownership, onboarding, time, politica de mensagem e responsabilidade sobre os ativos digitais.",
       },
       highlights: [
         {
-          title: "Portal autenticado",
+          title: "Empresa de software com foco em WhatsApp",
           description:
-            "Cada cliente entra com login e senha e encontra um ambiente proprio para operar o template com mais autonomia.",
+            "A Jetsales se apresenta publicamente como plataforma de gestao, automacao e vendas pelo WhatsApp, com sede em Aracaju e atuacao voltada a operacao comercial.",
         },
         {
-          title: "Editor guiado",
+          title: "Canal oficial e configuracao coerente",
           description:
-            "Os paineis organizam branding, copy, paginas e publicacao em etapas legiveis para quem nao quer lidar com o HTML.",
+            "Conexao tecnica, ownership de pagina, relacionamento com parceiros e coerencia entre pagina e Instagram comercial precisam ser tratados como parte do mesmo problema.",
         },
         {
-          title: "Entrega acompanhada",
+          title: "Atendimento com visibilidade gerencial",
           description:
-            "Preview, checklist e status deixam claro o que ja esta pronto e o que ainda falta para publicar o site.",
+            "Acompanhamento do rendimento dos colaboradores, departamentos e filas ajuda a profissionalizar o atendimento e orientar a melhoria continua.",
         },
       ],
       valuesIntro: {
-        eyebrow: "Principios do sistema",
-        title: "As decisoes visuais seguem um conjunto pequeno e firme de regras.",
+        eyebrow: "Principios de operacao",
+        title: "Tecnologia sem regra de canal vira risco. Regra sem operacao vira gargalo.",
         description:
-          "Esses principios ajudam a manter a interface coesa mesmo quando o conteudo muda de projeto para projeto.",
+          "Os principios abaixo conectam o que a plataforma promete com o que as politicas da Meta e do WhatsApp exigem.",
       },
       values: [
         {
-          title: "Operacao com estado",
+          title: "Ownership correto dos ativos",
           description:
-            "O cliente volta ao portal e encontra o mesmo contexto salvo, com campos, toggles e proximos passos preservados.",
+            "Paginas, Instagram comercial e acessos de parceiros precisam permanecer sob titularidade correta para evitar perda de controle do ativo.",
         },
         {
-          title: "Preview editavel",
+          title: "Mensagens com consentimento",
           description:
-            "O ambiente interno traduz campos de configuracao em uma previa imediata do template, sem idas e vindas desnecessarias.",
+            "Opt-in, opt-out, templates aprovados e canal humano de apoio nao sao detalhe juridico; sao parte do desenho da experiencia.",
         },
         {
-          title: "Consistencia entre rotas",
+          title: "Boas praticas de API e governanca",
           description:
-            "Tema, navegacao, paginas e publish continuam alinhados entre site publico, modelos e area autenticada.",
+            "Versionamento, testes, sandbox, leitura de erros e uso eficiente das chamadas ajudam a construir uma operacao mais resiliente.",
         },
       ],
       timelineIntro: {
-        eyebrow: "Implantacao",
-        title: "Da configuracao inicial ate a publicacao.",
+        eyebrow: "Ritmo de implantacao",
+        title: "Do diagnostico ao acompanhamento, a operacao precisa evoluir em fases claras.",
         description:
-          "A rota abaixo pode representar onboarding, discovery, adaptacao ou qualquer ciclo de entrega do produto.",
+          "Essa linha mostra o tipo de conversa que precisa acontecer para que o canal oficial funcione com menos friccao e mais contexto.",
       },
       timeline: [
         {
           label: "Descoberta",
           description:
-            "Mapeie objetivo, oferta, provas disponiveis, publico e canal principal de contato antes de abrir o layout.",
+            "Mapear canais ativos, ownership, estrutura de equipe, pontos de contato e metas comerciais antes de qualquer configuracao.",
         },
         {
-          label: "Adaptacao",
+          label: "Conexao",
           description:
-            "Troque copy, links, secoes, ativos e revise a direcao visual mais aderente ao que o produto precisa comunicar.",
+            "Organizar canais oficiais, permissoes, ownership de paginas e integracoes sem deixar o ativo principal nas maos erradas.",
         },
         {
-          label: "Validacao",
+          label: "Orquestracao",
           description:
-            "Cheque responsividade, CTA, formularios, links e consistencia de titulo, description e Open Graph.",
+            "Distribuir atendimento, desenhar filas, automacoes, templates e transbordo para humano com regras compreensiveis para o time.",
         },
         {
-          label: "Publicacao",
+          label: "Acompanhamento",
           description:
-            "Suba em Vercel com a base ativa na pasta site e mantenha a operacao leve para futuras iteracoes.",
+            "Ler performance, gargalos, qualidade do atendimento e oportunidades de venda para melhorar a operacao sem violar politicas do canal.",
         },
       ],
       closing: {
-        eyebrow: "Fechamento",
-        title: "A pagina institucional segura profundidade enquanto o portal cuida da operacao.",
+        eyebrow: "Quando a operacao amadurece",
+        title: "O canal deixa de ser improvisado e passa a ser um ativo comercial gerenciavel.",
         description:
-          "Com isso, a home continua comercial, a explicacao detalhada ganha uma rota propria e o cliente trabalha dentro de um ambiente autenticado.",
+          "Essa maturidade depende tanto de tecnologia quanto de ownership, politica de mensagem, fila, time e disciplina de acompanhamento.",
         primaryCta: {
-          label: "Abrir portal",
-          href: "/login.html",
+          label: "Falar com a Jetsales",
+          kind: "whatsapp",
+          message: "Ola, quero conversar com a Jetsales sobre ownership, canais e atendimento.",
+        },
+        secondaryCta: {
+          label: "Explorar solucoes",
+          href: "/pages/showcase.html",
+        },
+      },
+    },
+    showcase: {
+      hero: {
+        eyebrow: "Solucoes por segmento e caso de uso",
+        title: "A estrutura do canal muda de setor para setor, mas a governanca precisa continuar forte.",
+        description:
+          "A Jetsales apresenta solucoes para contextos comerciais diferentes, sempre com o mesmo nucleo: canal oficial, contexto de atendimento, automacao com regra e leitura de performance.",
+        primaryCta: {
+          label: "Agendar demonstracao",
+          kind: "whatsapp",
+          message: "Ola, quero ver como a Jetsales se aplica ao meu segmento.",
         },
         secondaryCta: {
           label: "Voltar para a home",
           href: "/",
         },
       },
-    },
-    showcase: {
-      hero: {
-        eyebrow: "Modelos",
-        title: "Veja como a mesma base vira site publico, portal e paginas de apoio.",
-        description:
-          "Este modelo serve para portfolio, vitrine de servicos, biblioteca de blocos e tambem para a area autenticada do produto.",
-        primaryCta: {
-          label: "Entrar no portal",
-          href: "/login.html",
-        },
-        secondaryCta: {
-          label: "Solicitar adaptacao",
-          kind: "whatsapp",
-          message: "Ola, quero usar os modelos do Atlas Frame em um projeto.",
-        },
-      },
       intro: {
-        eyebrow: "Estrutura replicavel",
-        title: "Rotas diferentes, mesma linguagem operacional.",
+        eyebrow: "Casos de uso",
+        title: "Segmentos diferentes exigem combinacoes diferentes de fila, contexto, follow-up e automacao.",
         description:
-          "A mesma base pode vender o produto, entregar um ambiente autenticado e sustentar as paginas que cercam o fluxo.",
+          "Os blocos abaixo nao sao pacotes prontos. Eles mostram como a mesma base operacional se adapta a contextos comerciais distintos.",
       },
-      filters: ["Todos", "Home", "Portal", "Landing", "Institucional", "Vitrine"],
+      filters: ["Todos", "Atendimento", "Automacao", "Governanca", "Setores"],
       items: [
         {
-          category: "Home",
-          title: "Home de produto",
+          category: "Setores",
+          title: "Industria e producao",
           description:
-            "Estrutura para apresentar a marca, o sistema e a CTA principal sem cair em um dashboard de marketing.",
-          metric: "Dobra forte",
-          image: "/assets/gallery-narrative.svg",
-          alt: "Composicao abstrata para home de produto",
+            "Operacoes com volume, distribuicao entre equipes e necessidade de historico claro para atendimento, cotacao e follow-up.",
+          metric: "Fila + contexto",
+          image: "/assets/gallery-grid.svg",
+          alt: "Ilustracao de operacao industrial com filas de atendimento",
           cta: {
-            label: "Abrir home",
-            href: "/",
-          },
-        },
-        {
-          category: "Portal",
-          title: "Workspace do cliente",
-          description:
-            "Ambiente autenticado com login, navegacao lateral, painel de edicao e preview vivo para operar o template.",
-          metric: "Sessao ativa",
-          image: "/assets/workspace-console.svg",
-          alt: "Composicao do workspace autenticado do Atlas Frame",
-          cta: {
-            label: "Entrar no portal",
-            href: "/login.html",
-          },
-        },
-        {
-          category: "Landing",
-          title: "Landing de oferta",
-          description:
-            "Pagina focada em uma promessa especifica, com prova curta, FAQ e formulario reaproveitavel.",
-          metric: "CTA direto",
-          image: "/assets/gallery-conversion.svg",
-          alt: "Composicao abstrata para landing de oferta",
-          cta: {
-            label: "Abrir captacao",
-            href: "/landing.html",
-          },
-        },
-        {
-          category: "Institucional",
-          title: "Pagina de plataforma",
-          description:
-            "Rota para explicar processo, principios, governanca ou contexto de marca quando a home precisa ficar mais leve.",
-          metric: "Mais contexto",
-          image: "/assets/gallery-structure.svg",
-          alt: "Composicao abstrata para pagina institucional do produto",
-          cta: {
-            label: "Abrir plataforma",
+            label: "Ver como a operacao se organiza",
             href: "/pages/company.html",
           },
         },
         {
-          category: "Vitrine",
-          title: "Biblioteca de modelos",
+          category: "Setores",
+          title: "Seguros e financas",
           description:
-            "Vitrine de layouts e caminhos de uso para mostrar ao time como a mesma base se adapta sem perder consistencia.",
-          metric: "Escala visual",
-          image: "/assets/gallery-grid.svg",
-          alt: "Composicao abstrata para biblioteca de modelos",
+            "Fluxos mais sensiveis pedem criterio de mensagem, ownership bem resolvido e acompanhamento forte sobre qualidade do atendimento.",
+          metric: "Regra + registro",
+          image: "/assets/gallery-conversion.svg",
+          alt: "Ilustracao de operacao financeira com governanca de mensagem",
           cta: {
-            label: "Rever vitrine",
-            href: "/pages/showcase.html",
+            label: "Agendar demonstracao",
+            href: "/landing.html",
+          },
+        },
+        {
+          category: "Setores",
+          title: "Servicos profissionais",
+          description:
+            "Escritorios, consultorias e operacoes B2B ganham velocidade quando centralizam conversa, qualificacao e proximo passo em um fluxo menos fragmentado.",
+          metric: "Qualificacao + follow-up",
+          image: "/assets/gallery-signal.svg",
+          alt: "Ilustracao de funil para servicos profissionais",
+          cta: {
+            label: "Ver jornada comercial",
+            href: "/landing.html",
+          },
+        },
+        {
+          category: "Setores",
+          title: "Saude e bem-estar",
+          description:
+            "Times de atendimento precisam de ritmo, padrao de resposta e governanca de canal para nao transformar demanda em caos operacional.",
+          metric: "SLA + distribuicao",
+          image: "/assets/gallery-structure.svg",
+          alt: "Ilustracao de operacao de atendimento em saude e bem-estar",
+          cta: {
+            label: "Falar com a Jetsales",
+            href: "/landing.html",
           },
         },
       ],
       closing: {
-        eyebrow: "Expansao",
-        title: "Quando precisar vender o produto ou operar a entrega, a estrutura ja esta pronta.",
+        eyebrow: "Adaptacao com criterio",
+        title: "O setor muda. O compromisso com ownership, consentimento e clareza operacional nao.",
         description:
-          "Basta usar um dos modelos como base, criar o conteudo correspondente no config e registrar o link publico ou autenticado.",
+          "Se o seu canal comercial depende de WhatsApp, vale revisar como a Jetsales organiza equipe, automacao e governanca para o seu contexto.",
         primaryCta: {
-          label: "Abrir portal",
-          href: "/login.html",
+          label: "Agendar demonstracao",
+          kind: "whatsapp",
+          message: "Ola, quero entender como a Jetsales se aplica ao meu segmento.",
         },
         secondaryCta: {
           label: "Voltar para a home",
@@ -692,123 +668,144 @@ const SITE_TEMPLATE_CONFIG = {
   },
   product: {
     access: {
+      demoUser: {
+        name: "Equipe Jetsales",
+        role: "Workspace demo",
+        email: "demo@jetsales.local",
+        password: "jetsales-demo",
+      },
+      sessionStorageKey: "jetsales-session",
+      workspaceStorageKey: "jetsales-workspace",
       loginPath: "/login.html",
       appPath: "/app.html",
-      sessionStorageKey: "atlas-frame-session",
-      workspaceStorageKey: "atlas-frame-workspace",
-      demoUser: {
-        email: "cliente@atlasframe.app",
-        password: "Atlas123!",
-        name: "Camila Rocha",
-        role: "Gestora de implantacao",
-      },
     },
     login: {
-      eyebrow: "Area vendavel",
-      title: "Entre para configurar, revisar e publicar o seu site.",
+      eyebrow: "Portal autenticado",
+      title: "Entre no workspace da Jetsales.",
       description:
-        "Cada cliente acessa um portal proprio para ajustar marca, copy, paginas e publicacao do template sem depender do codigo bruto.",
-      benefits: [
-        "Login e sessao persistida no navegador",
-        "Workspace com painel, preview e checklist",
-        "Fluxo de publicacao orientado por etapas",
-      ],
+        "Use o ambiente autenticado para revisar identidade, narrativa, paginas ativas e readiness antes da publicacao.",
       demoTitle: "Acesso demonstrativo",
       demoDescription:
-        "Use as credenciais abaixo para validar a experiencia comercial do app e navegar pela area autenticada.",
+        "Credenciais de exemplo para navegar no workspace estatico do projeto.",
+      benefits: [
+        "Revisar a narrativa principal e o CTA comercial.",
+        "Acompanhar rotas, secoes e readiness do pacote.",
+        "Validar o resumo antes de handoff ou deploy.",
+      ],
     },
     workspace: {
-      title: "Console do template",
+      title: "Workspace Jetsales",
       description:
-        "Edite branding, narrativa, paginas e publicacao do seu site sem sair do mesmo fluxo.",
+        "Edite branding, mensagem principal, escopo de paginas e checklist de publish do projeto.",
       panels: [
         {
           key: "overview",
-          label: "Controle",
-          description: "status geral e proximo passo",
+          label: "Overview",
+          description: "Status geral da entrega",
         },
         {
           key: "identity",
           label: "Identidade",
-          description: "marca, tema e resumo",
+          description: "Marca, tema e posicionamento",
         },
         {
           key: "content",
           label: "Conteudo",
-          description: "hero, CTA e oferta",
+          description: "Hero, CTA e narrativa",
         },
         {
           key: "pages",
           label: "Paginas",
-          description: "rotas e secoes ativas",
+          description: "Rotas e secoes ativas",
         },
         {
           key: "publish",
           label: "Publish",
-          description: "dominio, modo e checklist",
+          description: "Dominio e checklist final",
         },
       ],
       checklist: [
-        "Marca revisada",
-        "Hero alinhado com a oferta",
-        "Paginas essenciais ligadas",
-        "Modo de contato definido",
-        "Dominio pronto para publicacao",
+        "Marca e tema revisados.",
+        "Hero e CTA com mensagem clara.",
+        "Escopo de paginas confirmado.",
+        "Canal de contato definido.",
+        "Dominio e lancamento alinhados.",
       ],
       milestones: [
         {
           label: "Acesso liberado",
-          description: "cliente autenticado no portal",
+          description: "Sessao ativa e workspace disponivel para revisao.",
         },
         {
-          label: "Narrativa ajustada",
-          description: "copy principal revisada",
+          label: "Narrativa revisada",
+          description: "Titulo, destaque e descricao principal validados.",
         },
         {
-          label: "Escopo validado",
-          description: "rotas e secoes selecionadas",
+          label: "Escopo fechado",
+          description: "Paginas e secoes essenciais definidas no pacote.",
         },
         {
           label: "Publish encaminhado",
-          description: "dominio e checklist revisados",
+          description: "Dominio, owner e observacoes finais preenchidos.",
         },
       ],
     },
-  },
-  contact: {
-    email: "contato@example.com",
-    phoneLabel: "+55 (85) 90000-4040",
-    address: "Operacao remota com build e deploy em Vercel.",
-    availability: "Seg a Sex, 09h as 18h.",
+  },  contact: {
+    email: "",
+    phoneLabel: "+55 (79) 99747-4816",
+    address: "Aracaju, Sergipe - Brasil",
+    availability: "Atendimento comercial e demonstracoes sob consulta.",
     whatsapp: {
-      phone: "5585900004040",
-      defaultMessage: "Ola, quero adaptar o Atlas Frame para um novo site.",
+      phone: "5579997474816",
+      defaultMessage: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
     },
     channels: [
       {
-        label: "Email",
-        value: "contato@example.com",
-        href: "mailto:contato@example.com",
+        label: "WhatsApp oficial",
+        value: "+55 (79) 99747-4816",
+        href: "https://wa.me/5579997474816",
       },
       {
-        label: "WhatsApp",
-        value: "+55 (85) 90000-4040",
-        href: "https://wa.me/5585900004040",
+        label: "Site oficial",
+        value: "jetsalesbrasil.com.br",
+        href: "https://jetsalesbrasil.com.br/",
       },
       {
-        label: "Operacao",
-        value: "Build, QA e deploy estatico",
-        href: "/pages/company.html",
+        label: "LinkedIn",
+        value: "Jetsales Brasil",
+        href: "https://www.linkedin.com/company/jetsales-brasil",
+      },
+      {
+        label: "Instagram",
+        value: "@jetsalesbrasil",
+        href: "https://www.instagram.com/jetsalesbrasil/",
+      },
+    ],
+    footerItems: [
+      {
+        label: "WhatsApp oficial",
+        value: "+55 (79) 99747-4816",
+        href: "https://wa.me/5579997474816",
+      },
+      {
+        label: "Base publica",
+        value: "Aracaju, Sergipe - Brasil",
+      },
+      {
+        label: "Site",
+        value: "jetsalesbrasil.com.br",
+        href: "https://jetsalesbrasil.com.br/",
       },
     ],
     form: {
       mode: "whatsapp",
-      endpoint: "https://example.com/api/contact",
+      endpoint: "",
       method: "POST",
+      introMessage: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
       successMessage: "Mensagem preparada. Abra o WhatsApp para concluir o envio.",
       errorMessage:
-        "Nao foi possivel enviar agora. Revise os campos e tente novamente.",
-      submitLabel: "Quero conversar",
+        "Nao foi possivel abrir o WhatsApp agora. Revise os campos e tente novamente.",
+      submitLabel: "Quero falar com a Jet",
       fields: {
         name: {
           label: "Nome",
@@ -819,12 +816,12 @@ const SITE_TEMPLATE_CONFIG = {
           placeholder: "voce@empresa.com",
         },
         company: {
-          label: "Projeto",
-          placeholder: "Nome do app, site ou campanha",
+          label: "Empresa",
+          placeholder: "Empresa, area ou contexto comercial",
         },
         message: {
-          label: "Mensagem",
-          placeholder: "Conte rapidamente o que voce precisa construir.",
+          label: "Contexto",
+          placeholder: "Conte rapidamente como seu atendimento funciona hoje e o que voce quer organizar.",
         },
       },
     },
@@ -832,16 +829,16 @@ const SITE_TEMPLATE_CONFIG = {
   social: {
     links: [
       {
-        label: "Instagram",
-        href: "https://instagram.com/example",
-      },
-      {
         label: "LinkedIn",
-        href: "https://linkedin.com/company/example",
+        href: "https://www.linkedin.com/company/jetsales-brasil",
       },
       {
-        label: "Behance",
-        href: "https://behance.net/example",
+        label: "Instagram",
+        href: "https://www.instagram.com/jetsalesbrasil/",
+      },
+      {
+        label: "Ajuda",
+        href: "https://tutoriais.jetsalesbrasil.com.br/",
       },
     ],
   },
@@ -851,7 +848,6 @@ const SITE_TEMPLATE_CONFIG = {
     },
     heroPrimary: "/assets/hero-primary.svg",
     heroSecondary: "/assets/hero-secondary.svg",
-    workspaceConsole: "/assets/workspace-console.svg",
     gallery: [
       "/assets/gallery-narrative.svg",
       "/assets/gallery-grid.svg",
@@ -867,7 +863,7 @@ const SITE_TEMPLATE_CONFIG = {
       services: true,
       portfolio: true,
       process: true,
-      testimonials: true,
+      testimonials: false,
       faq: true,
       contact: true,
     },
@@ -888,3 +884,4 @@ if (typeof window !== "undefined") {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = SITE_TEMPLATE_CONFIG;
 }
+

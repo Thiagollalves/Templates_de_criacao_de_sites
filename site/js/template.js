@@ -19,10 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/'/g, "&#39;");
   }
 
-  function normalizeKey(value) {
-    return String(value ?? "").trim().toLowerCase();
-  }
-
   function getValue(path) {
     if (!path) {
       return undefined;
@@ -98,9 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((item) => {
         const isActive = item.page === state.page;
         return `
-          <a class="site-nav__link ${isActive ? "is-active" : ""}" href="${escapeHtml(
-            item.href
-          )}" ${isActive ? 'aria-current="page"' : ""}>
+          <a class="site-nav__link ${isActive ? "is-active" : ""}" href="${escapeHtml(item.href)}">
             ${escapeHtml(item.label)}
           </a>
         `;
@@ -146,7 +140,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const items = group.items
           .map(
             (item) => `
-              <li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a></li>
+              <li><a href="${escapeHtml(item.href)}" ${
+                isExternalLink(item.href) ? 'target="_blank" rel="noopener"' : ""
+              }>${escapeHtml(item.label)}</a></li>
             `
           )
           .join("");
@@ -170,6 +166,28 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
+    const footerItems = (config.contact.footerItems || [])
+      .map((item) => {
+        if (item.href) {
+          return `
+            <li>
+              <span>${escapeHtml(item.label)}:</span>
+              <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener">${escapeHtml(
+            item.value
+          )}</a>
+            </li>
+          `;
+        }
+
+        return `
+          <li>
+            <span>${escapeHtml(item.label)}:</span>
+            <strong>${escapeHtml(item.value)}</strong>
+          </li>
+        `;
+      })
+      .join("");
+
     mountPoint.innerHTML = `
       <div class="site-footer__grid">
         <div class="site-footer__brand">
@@ -185,16 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="footer-group">
           <h3>Contato</h3>
-          <ul>
-            <li><a href="mailto:${escapeHtml(config.contact.email)}">${escapeHtml(
-      config.contact.email
-    )}</a></li>
-            <li><a href="${escapeHtml(buildWhatsAppLink())}" target="_blank" rel="noopener">${escapeHtml(
-      config.contact.phoneLabel
-    )}</a></li>
-            <li>${escapeHtml(config.contact.address)}</li>
-            <li>${escapeHtml(config.contact.availability)}</li>
-          </ul>
+          <ul>${footerItems}</ul>
         </div>
       </div>
 
@@ -292,11 +301,24 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 
+  function renderHeroSignals(items) {
+    return items
+      .map(
+        (item) => `
+          <article class="hero-signal" data-animate>
+            <strong>${escapeHtml(item.title)}</strong>
+            <p>${escapeHtml(item.detail)}</p>
+          </article>
+        `
+      )
+      .join("");
+  }
+
   function renderPortfolioCards(items) {
     return items
       .map(
         (item) => `
-          <article class="portfolio-card" data-animate>
+          <article class="portfolio-card panel" data-animate>
             <div class="portfolio-card__media">
               <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             </div>
@@ -332,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="quote-card" data-animate>
+          <article class="quote-card panel" data-animate>
             <p class="quote-card__text">"${escapeHtml(item.quote)}"</p>
             <div class="quote-card__meta">
               <strong>${escapeHtml(item.author)}</strong>
@@ -348,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item, index) => `
-          <article class="faq-item ${index === 0 ? "is-open" : ""}" data-faq-item data-animate>
+          <article class="faq-item panel ${index === 0 ? "is-open" : ""}" data-faq-item data-animate>
             <button class="faq-item__button" type="button" data-faq-trigger>
               <span>${escapeHtml(item.question)}</span>
               <span class="faq-item__icon">+</span>
@@ -369,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <li class="contact-channel" data-animate>
             <span>${escapeHtml(item.label)}</span>
             <a href="${escapeHtml(item.href)}" ${
-          item.href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""
+          /^(https?:|mailto:)/i.test(item.href) ? 'target="_blank" rel="noopener"' : ""
         }>
               ${escapeHtml(item.value)}
             </a>
@@ -433,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="outcome-card" data-animate>
+          <article class="outcome-card panel" data-animate>
             <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
@@ -447,14 +469,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item, index) => `
-          <button
-            class="filter-pill ${index === 0 ? "is-active" : ""}"
-            type="button"
-            data-filter="${escapeHtml(normalizeKey(item))}"
-            data-animate
-          >
-            ${escapeHtml(item)}
-          </button>
+          <span class="filter-pill ${index === 0 ? "is-active" : ""}" data-animate>${escapeHtml(
+            item
+          )}</span>
         `
       )
       .join("");
@@ -464,9 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="showcase-card" data-showcase-item data-category="${escapeHtml(
-            normalizeKey(item.category)
-          )}" data-animate>
+          <article class="showcase-card panel" data-animate>
             <div class="showcase-card__media">
               <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
             </div>
@@ -486,6 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const renderMap = {
+    "home.hero.signals": () => renderHeroSignals(config.home.hero.signals),
     "home.stats": () => renderStatCards(config.home.stats),
     "home.services.items": () => renderSimpleCards(config.home.services.items),
     "home.portfolio.items": () => renderPortfolioCards(config.home.portfolio.items),
@@ -494,11 +510,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "home.faq.items": () => renderFaq(config.home.faq.items),
     "home.contact.asidePoints": () => renderStringList(config.home.contact.asidePoints),
     "landing.proof.items": () => renderStatCards(config.landing.proof.items),
+    "landing.hero.signals": () => renderHeroSignals(config.landing.hero.signals),
     "landing.offer.items": () => renderLandingCards(config.landing.offer.items),
     "landing.outcomes.items": () => renderOutcomeCards(config.landing.outcomes.items),
     "landing.faq.items": () => renderFaq(config.landing.faq.items),
     "contact.channels": () => renderChannels(config.contact.channels),
-    "pages.company.highlights": () => renderSimpleCards(config.pages.company.highlights),
+    "pages.company.highlights": () => renderHighlights(config.pages.company.highlights),
     "pages.company.values": () => renderHighlights(config.pages.company.values),
     "pages.company.timeline": () => renderTimeline(config.pages.company.timeline),
     "pages.showcase.filters": () => renderShowcaseFilters(config.pages.showcase.filters),
@@ -555,15 +572,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function setupHeaderState() {
-    const updateHeaderState = () => {
-      document.body.classList.toggle("has-scrolled", window.scrollY > 18);
-    };
-
-    updateHeaderState();
-    window.addEventListener("scroll", updateHeaderState, { passive: true });
-  }
-
   function setupNavigation() {
     const toggle = document.querySelector("[data-nav-toggle]");
     const menu = document.querySelector("[data-nav-menu]");
@@ -575,90 +583,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = menu.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
-
-    menu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  function setupShowcaseFilters() {
-    const filters = Array.from(document.querySelectorAll("[data-filter]"));
-    const cards = Array.from(document.querySelectorAll("[data-showcase-item]"));
-
-    if (!filters.length || !cards.length) {
-      return;
-    }
-
-    const applyFilter = (filterValue) => {
-      filters.forEach((filter) => {
-        filter.classList.toggle("is-active", filter.dataset.filter === filterValue);
-      });
-
-      cards.forEach((card) => {
-        const matches = filterValue === "todos" || card.dataset.category === filterValue;
-        card.hidden = !matches;
-      });
-    };
-
-    filters.forEach((filter) => {
-      filter.addEventListener("click", () => applyFilter(filter.dataset.filter || "todos"));
-    });
-  }
-
-  function setupHeroStageMotion() {
-    if (
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-      !window.matchMedia("(pointer: fine)").matches
-    ) {
-      return;
-    }
-
-    document.querySelectorAll(".hero__stage").forEach((stage) => {
-      const note = stage.querySelector(".hero__note");
-      const marquee = stage.querySelector(".hero__stage-marquee");
-
-      stage.addEventListener("pointermove", (event) => {
-        const bounds = stage.getBoundingClientRect();
-        const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 12;
-        const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 12;
-
-        stage.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-
-        if (note) {
-          note.style.transform = `translate3d(${x * -0.45}px, ${y * -0.45}px, 0)`;
-        }
-
-        if (marquee) {
-          marquee.style.transform = `translate3d(${x * -0.3}px, ${y * -0.3}px, 0)`;
-        }
-      });
-
-      stage.addEventListener("pointerleave", () => {
-        stage.style.transform = "";
-
-        if (note) {
-          note.style.transform = "";
-        }
-
-        if (marquee) {
-          marquee.style.transform = "";
-        }
-      });
-    });
   }
 
   function setupAnimations(root = document) {
-    const animated = Array.from(root.querySelectorAll("[data-animate]"));
+    const animated = root.querySelectorAll("[data-animate]");
     if (!animated.length) {
       return;
     }
-
-    animated.forEach((element, index) => {
-      element.style.transitionDelay = `${Math.min(index * 70, 350)}ms`;
-    });
 
     const observer = new IntersectionObserver(
       (entries, currentObserver) => {
@@ -694,12 +625,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
       const mode = config.contact.form.mode;
+      const introMessage =
+        config.contact.form.introMessage || `Ola, vim pelo site da ${config.brand.shortName}.`;
       const messageLines = [
-        "Ola, vim do formulario do template.",
+        introMessage,
         `Nome: ${payload.name || ""}`,
         `Email: ${payload.email || ""}`,
-        `Projeto: ${payload.company || ""}`,
-        `Mensagem: ${payload.message || ""}`,
+        `Empresa: ${payload.company || ""}`,
+        `Contexto: ${payload.message || ""}`,
         `Pagina: ${window.location.pathname}`,
       ];
 
@@ -758,10 +691,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applySectionVisibility();
   bindYear();
   setupFaq();
-  setupHeaderState();
   setupNavigation();
-  setupShowcaseFilters();
-  setupHeroStageMotion();
   setupAnimations();
   setupForm();
 });

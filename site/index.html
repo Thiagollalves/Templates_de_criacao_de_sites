@@ -33,16 +33,15 @@
     <header class="site-header" data-header></header>
 
     <main class="page-main">
-      <section class="hero hero--home">
-        <div class="hero__wash" aria-hidden="true"></div>
-        <div class="hero__shell section-shell">
+      <section class="hero hero--immersive hero--home">
+        <div class="hero__backdrop" aria-hidden="true">
+          <img data-src="assets.heroPrimary" data-alt="home.hero.imageAlt" alt="" />
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="hero__content section-shell">
           <div class="hero__copy">
             <span class="eyebrow" data-text="home.hero.eyebrow"></span>
-            <div class="hero__brandline" data-animate>
-              <strong class="hero__brand" data-text="brand.shortName"></strong>
-              <span class="hero__brand-divider"></span>
-              <span class="hero__brand-tag" data-text="brand.tagline"></span>
-            </div>
             <h1 class="hero__title" data-animate>
               <span data-text="home.hero.title"></span>
               <em data-text="home.hero.highlight"></em>
@@ -52,24 +51,10 @@
               <a class="button button-primary" data-cta="home.hero.primaryCta" href="#"></a>
               <a class="button button-secondary" data-cta="home.hero.secondaryCta" href="#"></a>
             </div>
-            <p class="hero__microcopy" data-text="brand.summary" data-animate></p>
           </div>
 
-          <div class="hero__stage" data-animate>
-            <div class="hero__visual">
-              <img data-src="assets.heroPrimary" data-alt="home.hero.imageAlt" alt="" />
-            </div>
-            <div class="hero__stage-marquee" aria-hidden="true">
-              <span>briefing</span>
-              <span>narrativa</span>
-              <span>cta</span>
-              <span>deploy</span>
-            </div>
-            <div class="hero__note">
-              <span class="eyebrow" data-text="brand.foundedLabel"></span>
-              <h2 data-text="home.hero.asideTitle"></h2>
-              <p data-text="home.hero.asideText"></p>
-            </div>
+          <div class="hero__signals" data-animate>
+            <div class="hero__signals-grid" data-render="home.hero.signals"></div>
           </div>
         </div>
       </section>
@@ -101,11 +86,7 @@
         <div class="portfolio-grid" data-render="home.portfolio.items"></div>
       </section>
 
-      <section
-        class="section-shell section-block section-block--split"
-        data-section-page="home"
-        data-section="process"
-      >
+      <section class="section-shell section-block section-block--split" data-section-page="home" data-section="process">
         <div class="section-heading section-heading--sticky">
           <span class="eyebrow" data-text="home.process.eyebrow"></span>
           <h2 data-text="home.process.title"></h2>
@@ -132,7 +113,7 @@
         <div class="faq-list" data-render="home.faq.items"></div>
       </section>
 
-      <section class="section-shell section-cta" data-animate>
+      <section class="section-shell section-cta panel" data-animate>
         <div>
           <span class="eyebrow" data-text="home.cta.eyebrow"></span>
           <h2 data-text="home.cta.title"></h2>
@@ -144,11 +125,7 @@
         </div>
       </section>
 
-      <section
-        class="section-shell section-block contact-layout"
-        data-section-page="home"
-        data-section="contact"
-      >
+      <section class="section-shell section-block contact-layout" data-section-page="home" data-section="contact">
         <div class="contact-layout__info">
           <div class="section-heading section-heading--left">
             <span class="eyebrow" data-text="home.contact.eyebrow"></span>
