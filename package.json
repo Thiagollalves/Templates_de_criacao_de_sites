@@ -4,8 +4,9 @@
   "private": true,
   "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
   "scripts": {
-    "dev": "serve site",
-    "start": "serve site",
+    "sync:content": "node scripts/sync-content.js",
+    "dev": "npm run sync:content && serve site",
+    "start": "npm run sync:content && serve site",
     "test": "node scripts/validate-template.js"
   },
   "keywords": [
