@@ -33,6 +33,12 @@ const SITE_TEMPLATE_CONFIG = {
           "Explore os fluxos que a Jetsales aplica em atendimento, automacao e vendas para diferentes segmentos e estruturas comerciais.",
         path: "/pages/showcase.html",
       },
+      docs: {
+        title: "Politicas e base do projeto | Jetsales Brasil",
+        description:
+          "Documentos usados como base para governanca de canal, ownership e mensagens no WhatsApp Business.",
+        path: "/pages/docs.html",
+      },
     },
   },
   brand: {
@@ -54,6 +60,7 @@ const SITE_TEMPLATE_CONFIG = {
       { label: "Demonstracao", href: "/landing.html", page: "landing", enabled: true },
       { label: "Operacao", href: "/pages/company.html", page: "company", enabled: true },
       { label: "Solucoes", href: "/pages/showcase.html", page: "showcase", enabled: true },
+      { label: "Politicas", href: "/pages/docs.html", page: "docs", enabled: true },
     ],
     footerGroups: [
       {
@@ -69,6 +76,7 @@ const SITE_TEMPLATE_CONFIG = {
         items: [
           { label: "Operacao e onboarding", href: "/pages/company.html" },
           { label: "Solucoes por segmento", href: "/pages/showcase.html" },
+          { label: "Politicas e base", href: "/pages/docs.html" },
           { label: "Politica de cookies", href: "https://jetsalesbrasil.com.br/politica-de-cookies/" },
         ],
       },
@@ -666,6 +674,53 @@ const SITE_TEMPLATE_CONFIG = {
       },
     },
   },
+  docs: {
+    hero: {
+      eyebrow: "Base e compliance",
+      title: "Documentos que guiam ownership, API e mensagens no WhatsApp.",
+      description:
+        "Esta pagina renderiza arquivos sincronizados de `docs/` e `docs/client-info/docs/` para manter a construcao do site alinhada com boas praticas e politicas.",
+      primaryCta: {
+        label: "Abrir WhatsApp",
+        kind: "whatsapp",
+        message: "Ola, quero revisar politicas e governanca do meu canal antes de avancar.",
+      },
+      secondaryCta: {
+        label: "Ver operacao",
+        href: "/pages/company.html",
+      },
+    },
+    documents: [
+      {
+        id: "whatsapp",
+        eyebrow: "WhatsApp Business",
+        title: "Politica de mensagens",
+        description: "Regras de qualidade, consentimento, templates e restricoes por setor.",
+        src: "/content/policies/politica-mensagens-whatsapp.md",
+      },
+      {
+        id: "page-ownership",
+        eyebrow: "Meta Business",
+        title: "Ownership de Pagina",
+        description: "Boas praticas de titularidade, parcerias e coerencia de ativos.",
+        src: "/content/policies/facebook-page-ownership-best-practices.md",
+      },
+      {
+        id: "marketing-api",
+        eyebrow: "Marketing API",
+        title: "Melhores praticas",
+        description: "Paginacao, ETags, sandbox, batches e governanca de integracao.",
+        src: "/content/policies/facebook-marketing-api-best-practices.md",
+      },
+      {
+        id: "client-info",
+        eyebrow: "Cliente",
+        title: "Infos do cliente",
+        description: "Briefing e dados que alimentam conteudo e configuracao do site.",
+        src: "/content/client/Infos%20do%20cliente.md",
+      },
+    ],
+  },
   contact: {
     email: "",
     phoneLabel: "+55 (79) 99747-4816",
@@ -737,7 +792,12 @@ const SITE_TEMPLATE_CONFIG = {
         },
         message: {
           label: "Contexto",
-          placeholder: "Conte rapidamente como seu atendimento funciona hoje e o que voce quer organizar.",
+          placeholder:
+            "Conte rapidamente como seu atendimento funciona hoje. Evite incluir dados sensiveis (cartoes, documentos, senhas).",
+        },
+        consent: {
+          label:
+            "Autorizo receber contato da Jetsales no WhatsApp e entendo que posso recusar/bloquear a qualquer momento.",
         },
       },
     },

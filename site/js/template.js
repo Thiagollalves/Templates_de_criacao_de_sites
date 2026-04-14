@@ -633,6 +633,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `Email: ${payload.email || ""}`,
         `Empresa: ${payload.company || ""}`,
         `Contexto: ${payload.message || ""}`,
+        `Consentimento: ${payload.consent ? "sim" : "nao"}`,
         `Pagina: ${window.location.pathname}`,
       ];
 
