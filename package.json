@@ -4,8 +4,10 @@
   "private": true,
   "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
   "scripts": {
-    "dev": "node scripts/dev-server.js",
-    "start": "node scripts/dev-server.js",
+    "sync:content": "node scripts/sync-content.js",
+    "dev:serve": "node scripts/dev-server.js",
+    "dev": "npm run sync:content && npm run dev:serve",
+    "start": "npm run sync:content && npm run dev:serve",
     "test": "node scripts/validate-template.js"
   },
   "keywords": [

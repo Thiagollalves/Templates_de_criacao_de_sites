@@ -97,11 +97,13 @@ const expectedFiles = [
   "site/app.html",
   "site/pages/company.html",
   "site/pages/showcase.html",
+  "site/pages/docs.html",
   "site/css/styles.css",
   "scripts/dev-server.js",
   "site/js/head.js",
   "site/js/app.js",
   "site/js/template.js",
+  "site/js/docs.js",
   "site/examples/marcelo-moveis/index.html",
 ];
 
