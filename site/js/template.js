@@ -627,12 +627,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const mode = config.contact.form.mode;
       const introMessage =
         config.contact.form.introMessage || `Ola, vim pelo site da ${config.brand.shortName}.`;
+      const fieldLabels = config.contact?.form?.fields || {};
+      const nameLabel = fieldLabels.name?.label || "Nome";
+      const emailLabel = fieldLabels.email?.label || "Email";
+      const companyLabel = fieldLabels.company?.label || "Empresa";
+      const messageLabel = fieldLabels.message?.label || "Mensagem";
       const messageLines = [
         introMessage,
-        `Nome: ${payload.name || ""}`,
-        `Email: ${payload.email || ""}`,
-        `Empresa: ${payload.company || ""}`,
-        `Contexto: ${payload.message || ""}`,
+        `${nameLabel}: ${payload.name || ""}`,
+        `${emailLabel}: ${payload.email || ""}`,
+        `${companyLabel}: ${payload.company || ""}`,
+        `${messageLabel}: ${payload.message || ""}`,
         `Consentimento: ${payload.consent ? "sim" : "nao"}`,
         `Pagina: ${window.location.pathname}`,
       ];
