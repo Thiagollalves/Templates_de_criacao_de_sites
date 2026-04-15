@@ -674,6 +674,91 @@ const SITE_TEMPLATE_CONFIG = {
       },
     },
   },
+  product: {
+    access: {
+      demoUser: {
+        name: "Equipe Jetsales",
+        role: "Workspace demo",
+        email: "demo@jetsales.local",
+        password: "jetsales-demo",
+      },
+      sessionStorageKey: "jetsales-session",
+      workspaceStorageKey: "jetsales-workspace",
+      loginPath: "/login.html",
+      appPath: "/app.html",
+    },
+    login: {
+      eyebrow: "Portal autenticado",
+      title: "Entre no workspace da Jetsales.",
+      description:
+        "Use o ambiente autenticado para revisar identidade, narrativa, paginas ativas e readiness antes da publicacao.",
+      demoTitle: "Acesso demonstrativo",
+      demoDescription:
+        "Credenciais de exemplo para navegar no workspace estatico do projeto.",
+      benefits: [
+        "Revisar a narrativa principal e o CTA comercial.",
+        "Acompanhar rotas, secoes e readiness do pacote.",
+        "Validar o resumo antes de handoff ou deploy.",
+      ],
+    },
+    workspace: {
+      title: "Workspace Jetsales",
+      description:
+        "Edite branding, mensagem principal, escopo de paginas e checklist de publish do projeto.",
+      panels: [
+        {
+          key: "overview",
+          label: "Overview",
+          description: "Status geral da entrega",
+        },
+        {
+          key: "identity",
+          label: "Identidade",
+          description: "Marca, tema e posicionamento",
+        },
+        {
+          key: "content",
+          label: "Conteudo",
+          description: "Hero, CTA e narrativa",
+        },
+        {
+          key: "pages",
+          label: "Paginas",
+          description: "Rotas e secoes ativas",
+        },
+        {
+          key: "publish",
+          label: "Publish",
+          description: "Dominio e checklist final",
+        },
+      ],
+      checklist: [
+        "Marca e tema revisados.",
+        "Hero e CTA com mensagem clara.",
+        "Escopo de paginas confirmado.",
+        "Canal de contato definido.",
+        "Dominio e lancamento alinhados.",
+      ],
+      milestones: [
+        {
+          label: "Acesso liberado",
+          description: "Sessao ativa e workspace disponivel para revisao.",
+        },
+        {
+          label: "Narrativa revisada",
+          description: "Titulo, destaque e descricao principal validados.",
+        },
+        {
+          label: "Escopo fechado",
+          description: "Paginas e secoes essenciais definidas no pacote.",
+        },
+        {
+          label: "Publish encaminhado",
+          description: "Dominio, owner e observacoes finais preenchidos.",
+        },
+      ],
+    },
+  },
   docs: {
     hero: {
       eyebrow: "Base e compliance",
@@ -860,3 +945,4 @@ if (typeof window !== "undefined") {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = SITE_TEMPLATE_CONFIG;
 }
+

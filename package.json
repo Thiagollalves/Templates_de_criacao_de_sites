@@ -5,8 +5,9 @@
   "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
   "scripts": {
     "sync:content": "node scripts/sync-content.js",
-    "dev": "npm run sync:content && serve site",
-    "start": "npm run sync:content && serve site",
+    "dev:serve": "node scripts/dev-server.js",
+    "dev": "npm run sync:content && npm run dev:serve",
+    "start": "npm run sync:content && npm run dev:serve",
     "test": "node scripts/validate-template.js"
   },
   "keywords": [
