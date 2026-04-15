@@ -1,595 +1,525 @@
 const SITE_TEMPLATE_CONFIG = {
   theme: "studio",
   seo: {
-    siteName: "Jetsales Brasil",
-    defaultTitle: "Jetsales Brasil | Atendimento, automacao e vendas no WhatsApp oficial",
+    siteName: "Studio Suellen Rocha",
+    defaultTitle: "Studio Suellen Rocha | Micropigmentacao e Estetica em Aracaju",
     defaultDescription:
-      "A Jetsales organiza atendimento, automacao, IA aplicada e vendas no WhatsApp oficial com mais governanca, contexto comercial e controle operacional.",
-    baseUrl: "https://jetsalesbrasil.com.br",
+      "Micropigmentacao, estetica e cuidados com foco em naturalidade. Agende sua avaliacao no Studio Suellen Rocha (Atalaia, Aracaju/SE).",
+    baseUrl: "https://www.suellenrocha.com.br",
     favicon: "/assets/favicon.svg",
     ogImage: "/assets/og-template.svg",
     pages: {
       home: {
-        title: "Jetsales Brasil | Operacao comercial no WhatsApp oficial",
+        title: "Studio Suellen Rocha | Micropigmentacao e Estetica em Aracaju",
         description:
-          "Centralize atendimento, automacao, equipes e canais Meta em uma operacao mais clara, rastreavel e orientada a vendas.",
+          "Micropigmentacao, design e estetica com foco em naturalidade. Agende sua avaliacao.",
         path: "/",
       },
       landing: {
-        title: "Agende uma demonstracao | Jetsales Brasil",
+        title: "Agendar avaliacao | Studio Suellen Rocha",
         description:
-          "Converse com a Jetsales e veja como estruturar atendimento, IA e automacoes no WhatsApp oficial sem promessas cinzas.",
+          "Agende sua avaliacao pelo WhatsApp e tire duvidas sobre procedimentos, cuidados e prazos.",
         path: "/landing.html",
       },
       company: {
-        title: "Como a Jetsales opera | Jetsales Brasil",
+        title: "Sobre o studio | Studio Suellen Rocha",
         description:
-          "Conheca a operacao da Jetsales, os principios de governanca dos canais e a estrutura de onboarding para times comerciais.",
+          "Conheca o studio, o fluxo de atendimento e os cuidados antes e depois do procedimento.",
         path: "/pages/company.html",
       },
       showcase: {
-        title: "Solucoes e casos de uso | Jetsales Brasil",
+        title: "Procedimentos | Studio Suellen Rocha",
         description:
-          "Explore os fluxos que a Jetsales aplica em atendimento, automacao e vendas para diferentes segmentos e estruturas comerciais.",
+          "Conheca os principais procedimentos: micropigmentacao, design, extensao de cilios, remocao e cursos.",
         path: "/pages/showcase.html",
       },
       docs: {
-        title: "Politicas e base do projeto | Jetsales Brasil",
+        title: "Politicas e informacoes | Studio Suellen Rocha",
         description:
-          "Documentos usados como base para governanca de canal, ownership e mensagens no WhatsApp Business.",
+          "Documentos e informacoes usadas como base do projeto (politicas e briefing do cliente).",
         path: "/pages/docs.html",
       },
     },
   },
   brand: {
-    name: "Jetsales Brasil",
-    shortName: "Jetsales",
-    eyebrow: "WhatsApp oficial, IA aplicada e multiatendimento",
-    tagline: "Atendimento, automacao e vendas no WhatsApp oficial com mais governanca.",
+    name: "Studio Suellen Rocha",
+    shortName: "Suellen Rocha",
+    eyebrow: "Micropigmentacao e Estetica",
+    tagline: "Beleza e naturalidade com cuidados e orientacao.",
     summary:
-      "A Jetsales conecta canais, equipes, IA e operacao comercial em uma estrutura mais clara para atender, vender e acompanhar performance.",
-    location: "Aracaju, Sergipe - Brasil.",
-    legalName: "Jetsales Sistemas e Tecnologia Ltda.",
-    foundedLabel: "Desde 2021",
+      "Procedimentos de micropigmentacao, estetica e design, com avaliacao e orientacao de cuidados para um resultado mais natural.",
+    location: "Atalaia, Aracaju - SE.",
+    legalName: "Centro de Saude e Estetica Suellen Rocha LTDA (CNPJ 30.972.914/0001-85)",
+    foundedLabel: "Aracaju/SE",
     footerNote:
-      "Automacoes, campanhas e mensagens devem respeitar consentimento, templates aprovados, alternativas de suporte humano e governanca dos ativos Meta.",
+      "Atendimento mediante agendamento. Para duvidas, fale pelo WhatsApp. Evite enviar dados sensiveis por mensagem.",
   },
   navigation: {
     items: [
       { label: "Inicio", href: "/", page: "home", enabled: true },
-      { label: "Demonstracao", href: "/landing.html", page: "landing", enabled: true },
-      { label: "Operacao", href: "/pages/company.html", page: "company", enabled: true },
-      { label: "Solucoes", href: "/pages/showcase.html", page: "showcase", enabled: true },
+      { label: "Procedimentos", href: "/pages/showcase.html", page: "showcase", enabled: true },
+      { label: "Agendar", href: "/landing.html", page: "landing", enabled: true },
+      { label: "O Studio", href: "/pages/company.html", page: "company", enabled: true },
       { label: "Politicas", href: "/pages/docs.html", page: "docs", enabled: true },
     ],
     footerGroups: [
       {
-        title: "Produto",
+        title: "Procedimentos",
         items: [
-          { label: "Inicio", href: "/" },
-          { label: "Demonstracao", href: "/landing.html" },
-          { label: "Central de ajuda", href: "https://tutoriais.jetsalesbrasil.com.br/" },
+          { label: "Micropigmentacao", href: "/pages/showcase.html#micropigmentacao" },
+          { label: "Design e Cilios", href: "/pages/showcase.html#design" },
+          { label: "Remocao", href: "/pages/showcase.html#remocao" },
+          { label: "Cursos", href: "/pages/showcase.html#cursos" },
         ],
       },
       {
-        title: "Governanca",
+        title: "Studio",
         items: [
-          { label: "Operacao e onboarding", href: "/pages/company.html" },
-          { label: "Solucoes por segmento", href: "/pages/showcase.html" },
-          { label: "Politicas e base", href: "/pages/docs.html" },
-          { label: "Politica de cookies", href: "https://jetsalesbrasil.com.br/politica-de-cookies/" },
+          { label: "Sobre o studio", href: "/pages/company.html" },
+          { label: "Agendar avaliacao", href: "/landing.html" },
+          { label: "Politicas", href: "/pages/docs.html" },
         ],
       },
       {
         title: "Canais",
         items: [
-          { label: "Site oficial", href: "https://jetsalesbrasil.com.br/" },
-          { label: "LinkedIn", href: "https://www.linkedin.com/company/jetsales-brasil" },
-          { label: "Instagram", href: "https://www.instagram.com/jetsalesbrasil/" },
+          { label: "Site", href: "https://www.suellenrocha.com.br" },
+          { label: "Instagram", href: "https://www.instagram.com/suellenrochamicropigmentacao/" },
+          { label: "Facebook", href: "https://www.facebook.com/ssurocha" },
         ],
       },
     ],
     cta: {
-      label: "Agendar demonstracao",
+      label: "Agendar no WhatsApp",
       kind: "whatsapp",
-      message: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
+      message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
     },
   },
   home: {
     hero: {
-      eyebrow: "JetGO para operacao comercial em canais oficiais",
-      title: "Jetsales centraliza atendimento, automacao e vendas",
-      highlight: "sem perder governanca do canal.",
+      eyebrow: "Studio em Aracaju (Atalaia)",
+      title: "Micropigmentacao e estetica",
+      highlight: "com foco em naturalidade.",
       description:
-        "Organize WhatsApp oficial, Instagram, Facebook, webchat, IA e multiatendimento em uma operacao mais rastreavel, com mensagens consentidas e mais contexto para o time comercial.",
+        "Agende sua avaliacao e entenda qual procedimento faz sentido para voce, com orientacao de cuidados e retorno.",
       primaryCta: {
-        label: "Agendar demonstracao",
+        label: "Agendar no WhatsApp",
         kind: "whatsapp",
-        message: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
+        message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
       },
       secondaryCta: {
-        label: "Ver o fluxo comercial",
-        href: "/landing.html",
+        label: "Ver procedimentos",
+        href: "/pages/showcase.html",
       },
-      imageAlt: "Ilustracao da plataforma Jetsales com inbox, funis e indicadores",
+      imageAlt: "Foto do Studio Suellen Rocha",
       signals: [
         {
-          title: "API oficial da Meta",
-          detail: "WhatsApp Business, Instagram e Facebook conectados com mais previsibilidade operacional.",
+          title: "Avaliacao antes do procedimento",
+          detail: "Entendimento do objetivo, alinhamento de expectativas e orientacoes de preparo.",
         },
         {
-          title: "Equipe no mesmo fluxo",
-          detail: "Um unico numero, varios atendentes, departamentos e acompanhamento de desempenho.",
+          title: "Cuidados e retorno",
+          detail: "Orientacao de cuidados e retorno quando necessario, para manter o resultado.",
         },
         {
-          title: "IA e automacoes com contexto",
-          detail: "Fluxos pensados para organizar atendimento e vendas sem incentivar spam ou atalhos fora de politica.",
+          title: "Agenda e atendimento",
+          detail: "Atendimento mediante agendamento. Segunda a sabado (confirmar horarios).",
         },
       ],
     },
     statsIntro: {
-      eyebrow: "Estrutura operacional",
-      title: "Uma base para vender melhor e operar com menos ruido.",
+      eyebrow: "Principais frentes",
+      title: "Procedimentos e formacao em um unico lugar.",
       description:
-        "A plataforma combina canais oficiais, distribuicao de atendimento, automacoes e acompanhamento gerencial em um fluxo unico.",
+        "O studio atende com foco em resultado natural e tambem oferece cursos em micropigmentacao.",
     },
     stats: [
       {
-        value: "1",
-        label: "operacao central",
-        detail: "inbox, gestao e acompanhamento no mesmo ambiente",
+        value: "MP",
+        label: "micropigmentacao",
+        detail: "sobrancelhas e labios (avaliar tecnica ideal)",
       },
       {
-        value: "Meta",
-        label: "canais oficiais",
-        detail: "WhatsApp, Instagram e Facebook no mesmo desenho operacional",
+        value: "Design",
+        label: "sobrancelhas",
+        detail: "design e harmonizacao do olhar",
       },
       {
-        value: "IA",
-        label: "apoio ao atendimento",
-        detail: "triagem, ganho de velocidade e contexto para o proximo passo",
+        value: "Cilios",
+        label: "extensao",
+        detail: "alongamento e acabamento para o dia a dia",
       },
       {
-        value: "Times",
-        label: "multiusuario real",
-        detail: "departamentos, filas e visibilidade para a lideranca",
+        value: "Cursos",
+        label: "formacao",
+        detail: "cursos com acompanhamento (confirmar turmas)",
       },
     ],
     services: {
-      eyebrow: "Capacidades principais",
-      title: "A Jetsales estrutura a operacao do canal, nao apenas o envio da mensagem.",
+      eyebrow: "Procedimentos",
+      title: "O que voce encontra no Studio Suellen Rocha",
       description:
-        "A proposta combina tecnologia, atendimento e governanca para transformar o WhatsApp em um canal comercial mais previsivel.",
+        "A lista abaixo resume os principais servicos. Confirme detalhes e indicacao no atendimento.",
       items: [
         {
-          title: "Conexao oficial dos canais",
-          description:
-            "Conecte WhatsApp oficial, Instagram, Facebook e webchat a uma operacao unica, com menos troca de ferramenta e menos perda de contexto.",
+          title: "Micropigmentacao",
+          description: "Sobrancelhas e/ou labios, com avaliacao previa e orientacao de cuidados.",
         },
         {
-          title: "Automacoes com regra clara",
-          description:
-            "Organize respostas, jornadas, redistribuicao e funis respeitando consentimento, janela operacional e uso de templates aprovados.",
+          title: "Design de sobrancelhas",
+          description: "Design para valorizar formato e simetria, com acabamento natural.",
         },
         {
-          title: "Gestao do time de atendimento",
-          description:
-            "Acompanhe desempenho dos colaboradores, distribuicao entre departamentos e gargalos do fluxo comercial em um mesmo dashboard.",
+          title: "Extensao de cilios",
+          description: "Extensao para realcar o olhar, com orientacao de manutencao.",
         },
         {
-          title: "Operacao orientada a venda",
-          description:
-            "Transforme o atendimento em uma esteira mais profissional, com mais velocidade, padrao de resposta e visibilidade para o gestor.",
+          title: "Remocao",
+          description: "Avaliacao para entender o caso e indicar o melhor caminho de remocao.",
         },
       ],
     },
     portfolio: {
-      eyebrow: "Onde a operacao ganha forma",
-      title: "Do canal oficial ao acompanhamento do time, cada bloco responde a um problema real.",
+      eyebrow: "Vitrine",
+      title: "Resultados e bastidores do studio",
       description:
-        "A Jetsales trabalha a operacao comercial de ponta a ponta: conexao, atendimento, automacao, governanca e leitura de desempenho.",
+        "Veja exemplos e conteudo do studio nas redes sociais. Para fotos especificas, consulte no atendimento.",
       items: [
         {
-          eyebrow: "Canal oficial",
-          title: "WhatsApp, Instagram e Facebook no mesmo fluxo",
-          description:
-            "Centralize os pontos de contato mais usados pelo cliente sem perder historico, contexto nem visibilidade do atendimento.",
+          eyebrow: "Instagram",
+          title: "Conteudo e resultados",
+          description: "Acompanhe conteudos, resultados e atualizacoes do studio.",
+          metric: "@suellenrochamicropigmentacao",
           image: "/assets/gallery-narrative.svg",
-          alt: "Ilustracao de canais conectados na plataforma Jetsales",
-          link: {
-            label: "Entender a operacao",
-            href: "/pages/company.html",
+          alt: "Ilustracao de vitrine do studio",
+          cta: {
+            label: "Abrir Instagram",
+            href: "https://www.instagram.com/suellenrochamicropigmentacao/",
           },
         },
         {
-          eyebrow: "Governanca",
-          title: "Mensageria com mais controle e menos improviso",
+          eyebrow: "Agendamento",
+          title: "Atendimento pelo WhatsApp",
           description:
-            "Ownership da pagina, permissao correta, politicas do WhatsApp e configuracoes dos ativos entram no mesmo raciocinio de implantacao.",
-          image: "/assets/gallery-structure.svg",
-          alt: "Ilustracao de governanca e monitoramento de canais",
-          link: {
-            label: "Ver principios de operacao",
-            href: "/pages/company.html",
-          },
-        },
-        {
-          eyebrow: "Vendas",
-          title: "Automacao, IA e atendimento a servico da conversao",
-          description:
-            "A meta nao e automatizar por automatizar, e sim reduzir tempo de resposta, organizar follow-up e manter o time comercial mais responsivo.",
-          image: "/assets/gallery-launch.svg",
-          alt: "Ilustracao de funis e automacoes comerciais",
-          link: {
-            label: "Ver demonstracao comercial",
+            "Agende avaliacao e tire duvidas. Evite enviar dados sensiveis por mensagem.",
+          metric: "+55 (79) 99970-0199",
+          image: "/assets/gallery-conversion.svg",
+          alt: "Ilustracao de agendamento via WhatsApp",
+          cta: {
+            label: "Agendar agora",
             href: "/landing.html",
+          },
+        },
+        {
+          eyebrow: "Localizacao",
+          title: "Atalaia, Aracaju/SE",
+          description:
+            "Rocha Porto Empresarial - Av. Poeta Vinicius de Moraes, 70 - Atalaia.",
+          metric: "Aracaju/SE",
+          image: "/assets/gallery-structure.svg",
+          alt: "Ilustracao de localizacao do studio",
+          cta: {
+            label: "Ver no mapa",
+            href: "https://www.google.com/maps/search/?api=1&query=Rocha%20Porto%20Empresarial%20Av.%20Poeta%20Vinicius%20de%20Moraes%2C%2070%20Atalaia%20Aracaju%20SE",
           },
         },
       ],
     },
     process: {
-      eyebrow: "Da implantacao ao ganho de ritmo",
-      title: "Quatro etapas para sair do atendimento pulverizado para uma operacao comercial mais clara.",
+      eyebrow: "Como funciona",
+      title: "Um fluxo simples do contato ao pos.",
       description:
-        "A logica da implementacao precisa alinhar canais, permissao, times, regras de contato e acompanhamento de resultado.",
+        "O objetivo e alinhar expectativa, executar o procedimento com cuidado e orientar o pos.",
       steps: [
         {
-          step: "01",
-          title: "Diagnostico do canal e da jornada",
-          description:
-            "Mapear onde as conversas chegam, como as equipes respondem hoje e quais pontos geram perda de contexto, atraso ou retrabalho.",
+          step: "1",
+          title: "Contato e agendamento",
+          description: "Voce chama no WhatsApp e agenda a avaliacao.",
         },
         {
-          step: "02",
-          title: "Conexao oficial e ownership correto",
+          step: "2",
+          title: "Avaliacao",
           description:
-            "Estruturar canais Meta, ownership de paginas e acessos de parceiros sem deslocar a titularidade do ativo para terceiros.",
+            "Entendemos seu objetivo, orientamos preparo e alinhamos o procedimento indicado.",
         },
         {
-          step: "03",
-          title: "Fila, automacao e regra de mensagem",
-          description:
-            "Distribuir atendimento, configurar respostas, definir templates aprovados e desenhar opt-in, opt-out e janelas de contato.",
+          step: "3",
+          title: "Procedimento",
+          description: "Execucao do procedimento com foco em resultado natural.",
         },
         {
-          step: "04",
-          title: "Leitura de performance e melhoria continua",
+          step: "4",
+          title: "Cuidados e retorno",
           description:
-            "Acompanhar time, resposta, gargalos, qualidade do atendimento e oportunidades de venda para evoluir a operacao sem prometer o que a politica nao permite.",
+            "Orientacao de cuidados e retorno quando necessario, conforme o caso.",
         },
       ],
     },
     testimonials: {
-      eyebrow: "Sinais de confianca",
-      title: "",
-      description: "",
+      eyebrow: "Depoimentos",
+      title: "O que clientes comentam",
+      description:
+        "Ainda nao adicionamos depoimentos aqui. Se quiser, envie 3 a 6 depoimentos curtos para incluir.",
       items: [],
     },
     faq: {
-      eyebrow: "Perguntas que precisam estar claras",
-      title: "A operacao so escala quando a regra do canal tambem escala.",
+      eyebrow: "Perguntas frequentes",
+      title: "Duvidas comuns antes de agendar",
       description:
-        "A copy do site e a estrutura comercial precisam deixar evidente o que e permitido, o que exige aprovacao e o que depende de consentimento do usuario.",
+        "Cada caso e unico. A avaliacao e o melhor caminho para definir indicacao e prazos.",
       items: [
         {
-          question: "A Jetsales trabalha com mensagens fora das politicas do WhatsApp?",
+          question: "Quanto tempo dura um procedimento?",
           answer:
-            "Nao. O desenho correto envolve consentimento, uso de templates aprovados fora da janela permitida, opt-out claro e uma alternativa de suporte humano quando necessario.",
+            "Varia por procedimento e caso. Na avaliacao voce recebe uma estimativa e orientacoes de preparo.",
         },
         {
-          question: "Ownership de pagina e Instagram realmente importa para a operacao?",
+          question: "Precisa de retorno?",
           answer:
-            "Sim. Pagina, Instagram comercial e acessos de parceiros precisam seguir ownership coerente para evitar bloqueios, perda de controle e ruido em anuncios ou integracoes.",
+            "Pode existir retorno conforme o procedimento e o caso. Isso e alinhado no atendimento.",
         },
         {
-          question: "Automacao significa volume sem criterio?",
+          question: "Como agendar?",
           answer:
-            "Nao. A automacao precisa servir ao atendimento e ao funil com segmentacao, consentimento e governanca. Promessa vaga de volume sem criterio e atalho ruim para o negocio e para a plataforma.",
+            "Pelo WhatsApp. Envie uma mensagem com seu nome e o procedimento de interesse.",
         },
         {
-          question: "Como a API oficial entra nesse processo?",
+          question: "Quais cuidados devo ter?",
           answer:
-            "Ela e a base para integrar o canal oficial, organizar operacao e reduzir improviso tecnico. A implementacao ainda precisa respeitar politicas, limites e boas praticas da Meta.",
+            "Os cuidados variam por procedimento. O studio orienta o pos e o que evitar em cada caso.",
         },
       ],
     },
     cta: {
-      eyebrow: "Proximo passo",
-      title: "Se o WhatsApp ja e canal de venda, ele precisa de operacao a altura.",
+      eyebrow: "Agende sua avaliacao",
+      title: "Pronta(o) para cuidar do seu resultado?",
       description:
-        "Converse com a Jetsales para revisar canal oficial, distribuir atendimento, estruturar automacoes e ganhar mais leitura sobre o que acontece na jornada comercial.",
+        "Chame no WhatsApp e agende sua avaliacao. Evite enviar dados sensiveis por mensagem.",
       primaryCta: {
-        label: "Agendar demonstracao",
+        label: "Agendar no WhatsApp",
         kind: "whatsapp",
-        message: "Ola, quero agendar uma demonstracao da Jetsales.",
+        message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
       },
       secondaryCta: {
-        label: "Explorar solucoes",
+        label: "Ver procedimentos",
         href: "/pages/showcase.html",
       },
     },
     contact: {
-      eyebrow: "Fale com a Jet",
-      title: "Abra a conversa pelo WhatsApp e chegue com o contexto certo.",
+      eyebrow: "Contato",
+      title: "Fale com o studio",
       description:
-        "Use o formulario para iniciar um contato comercial. O envio abre o WhatsApp oficial com a mensagem preenchida para reduzir friccao no primeiro atendimento.",
-      asideTitle: "O que a conversa inicial normalmente cobre",
+        "Agende avaliacao e tire duvidas pelo WhatsApp. Se preferir, use telefone ou e-mail.",
+      asideTitle: "Antes de enviar",
       asidePoints: [
-        "Canal atual, ownership e permissao dos ativos Meta",
-        "Estrutura da equipe, filas, departamentos e tempo de resposta",
-        "Fluxos de automacao, templates e pontos de consentimento",
-        "Integracoes, acompanhamento de atendimento e objetivo comercial",
+        "Evite enviar dados sensiveis (documentos, cartoes, senhas).",
+        "Se precisar, podemos atender por telefone ou e-mail.",
+        "Confirme horarios e disponibilidade pelo WhatsApp.",
       ],
     },
   },
   landing: {
     hero: {
-      eyebrow: "Demonstracao comercial",
-      title: "Veja como a Jetsales organiza atendimento e vendas",
-      highlight: "no WhatsApp oficial.",
+      eyebrow: "Agendamento",
+      title: "Agende sua avaliacao",
+      highlight: "pelo WhatsApp.",
       description:
-        "A demonstracao foca em operacao real: canais conectados, distribuicao do time, automacoes, IA aplicada, governanca do ativo e proximos passos do seu fluxo comercial.",
+        "Envie uma mensagem com seu nome e o procedimento de interesse. O studio responde com horarios disponiveis.",
       primaryCta: {
-        label: "Falar no WhatsApp",
+        label: "Agendar agora",
         kind: "whatsapp",
-        message: "Ola, quero falar com a Jetsales sobre uma demonstracao.",
+        message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
       },
       secondaryCta: {
         label: "Voltar para a home",
         href: "/",
       },
-      imageAlt: "Ilustracao do fluxo comercial da Jetsales em uma tela escura",
+      imageAlt: "Foto do Studio Suellen Rocha",
       signals: [
-        {
-          title: "Mensagens consentidas",
-          detail: "O canal precisa crescer com opt-in, opt-out e uso correto de templates.",
-        },
-        {
-          title: "Time e IA no mesmo contexto",
-          detail: "Menos troca de ferramenta e mais clareza sobre quem atende, quando e por qual canal.",
-        },
+        { title: "Localizacao", detail: "Atalaia, Aracaju/SE" },
+        { title: "Horario", detail: "Seg a Sab, 07:00 - 20:00 (confirmar)" },
+        { title: "Atendimento", detail: "Mediante agendamento" },
       ],
     },
     proof: {
-      eyebrow: "Pontos que precisam estar no desenho",
-      title: "Nao basta responder mais rapido. E preciso responder com criterio operacional.",
+      eyebrow: "Antes de confirmar",
+      title: "Algumas informacoes ajudam o atendimento",
       description:
-        "A demonstracao mostra como a estrutura correta reduz ruido de atendimento e melhora a previsibilidade do canal.",
+        "Se puder, mande no WhatsApp: qual procedimento deseja, se ja fez antes e qual sua preferencia de horario.",
       items: [
-        {
-          value: "API",
-          label: "canal oficial",
-          detail: "integre o WhatsApp Business dentro de uma operacao mais consistente",
-        },
-        {
-          value: "24h",
-          label: "janela sensivel",
-          detail: "fora dela, a conversa exige uso correto de templates aprovados",
-        },
-        {
-          value: "Humano",
-          label: "rota de apoio",
-          detail: "automacao nao elimina a necessidade de um caminho claro para suporte real",
-        },
+        { value: "1", label: "procedimento", detail: "qual procedimento voce quer fazer" },
+        { value: "2", label: "historico", detail: "se ja fez algo parecido antes" },
+        { value: "3", label: "horarios", detail: "dias e horarios que prefere" },
+        { value: "4", label: "duvidas", detail: "principais duvidas para a avaliacao" },
       ],
     },
     offer: {
-      eyebrow: "O que a conversa precisa cobrir",
-      title: "Uma demonstracao util parte da operacao, nao do discurso.",
+      eyebrow: "Como funciona",
+      title: "Do WhatsApp ao retorno",
       description:
-        "Cada bloco abaixo representa uma camada que precisa fazer sentido ao mesmo tempo para a operacao ganhar ritmo.",
+        "Um fluxo simples para alinhar expectativa, orientar cuidados e executar o procedimento.",
       items: [
         {
-          badge: "Canal",
-          title: "Conexao e ownership",
-          description:
-            "Revisar pagina, Instagram comercial, acessos e ownership dos ativos para nao construir em cima de um risco estrutural.",
+          title: "Mensagem e agendamento",
+          description: "Voce chama no WhatsApp e escolhe o melhor horario disponivel.",
         },
         {
-          badge: "Equipe",
-          title: "Filas, departamentos e SLA",
-          description:
-            "Desenhar como as conversas entram, quem assume, quando redistribuir e como acompanhar performance do time.",
+          title: "Avaliacao e orientacao",
+          description: "Orientamos preparo, cuidados e indicacao do procedimento.",
         },
         {
-          badge: "Fluxo",
-          title: "Automacao com regra de negocio",
-          description:
-            "Usar IA, gatilhos e templates quando isso melhora a jornada, sem apelos vagos a volume cego ou contato fora de contexto.",
+          title: "Procedimento e pos",
+          description: "Executamos o procedimento e orientamos cuidados e retorno.",
         },
       ],
     },
     outcomes: {
-      eyebrow: "O que melhora quando a base esta certa",
-      title: "Atendimento menos disperso. Conversa mais rastreavel. Time com mais contexto.",
+      eyebrow: "Objetivo",
+      title: "Resultado mais natural com cuidado no processo",
       description:
-        "A operacao fica mais legivel para quem atende, para quem lidera e para quem depende do canal para vender.",
+        "Cada caso e unico. O foco e alinhar objetivo e orientar cuidados para manter o resultado.",
       items: [
-        {
-          title: "Visibilidade da operacao",
-          description:
-            "Acompanhe onde a conversa entrou, quem respondeu e quais filas precisam de atencao.",
-          image: "/assets/gallery-signal.svg",
-          alt: "Ilustracao de indicadores e monitoramento",
-        },
-        {
-          title: "Fluxo comercial mais organizado",
-          description:
-            "Menos improviso entre primeiro contato, qualificacao, atendimento e follow-up.",
-          image: "/assets/gallery-grid.svg",
-          alt: "Ilustracao de pipeline comercial e distribuicao de conversas",
-        },
-        {
-          title: "Governanca desde a mensagem",
-          description:
-            "Ownership, permissao, templates e privacidade deixam de ser detalhe e entram no desenho principal.",
-          image: "/assets/gallery-conversion.svg",
-          alt: "Ilustracao de governanca e mensagens autorizadas",
-        },
+        { title: "Avaliacao", detail: "alinhamento e orientacao antes" },
+        { title: "Cuidado", detail: "execucao com tecnica e atencao" },
+        { title: "Orientacao", detail: "cuidados e pos bem explicados" },
+        { title: "Retorno", detail: "quando necessario, conforme o caso" },
       ],
     },
     faq: {
-      eyebrow: "Antes de marcar",
-      title: "A conversa comercial precisa partir dos riscos e das metas corretas.",
+      eyebrow: "Duvidas rapidas",
+      title: "Perguntas comuns sobre agendamento",
       description:
-        "Essas perguntas ajudam a separar curiosidade de diagnostico serio da operacao.",
+        "Se algo nao ficar claro, pergunte no WhatsApp. A avaliacao detalha o seu caso.",
       items: [
         {
-          question: "A demonstracao serve so para quem ja usa a API oficial?",
+          question: "O studio atende sem agendamento?",
           answer:
-            "Nao. Ela tambem ajuda empresas que ainda estao reorganizando canal, ownership de pagina ou estrutura do time antes da conexao oficial.",
+            "O atendimento principal e por agendamento. Chame no WhatsApp para confirmar disponibilidade.",
         },
         {
-          question: "A Jetsales promete volume de mensagens sem restricao?",
+          question: "Posso tirar duvidas antes?",
           answer:
-            "Nao. O trabalho serio precisa considerar consentimento, qualidade do contato, uso correto de templates e limites das politicas do WhatsApp Business.",
-        },
-        {
-          question: "Posso levar meu time para a conversa?",
-          answer:
-            "Sim. Quanto mais cedo comercial, atendimento e operacao alinham a expectativa, melhor fica o desenho do fluxo.",
+            "Sim. Envie sua duvida no WhatsApp e diga qual procedimento voce quer fazer.",
         },
       ],
     },
     cta: {
-      eyebrow: "Conversar com contexto",
-      title: "Leve seu canal atual, seus gargalos e sua meta comercial para a mesa.",
+      eyebrow: "Vamos marcar?",
+      title: "Agende sua avaliacao no WhatsApp",
       description:
-        "A melhor demonstracao e a que sai com clareza sobre ownership, canais, equipe, automacoes e proximo passo tecnico.",
+        "Envie uma mensagem e conte rapidamente o que voce deseja. Evite dados sensiveis.",
       primaryCta: {
-        label: "Abrir WhatsApp da Jetsales",
+        label: "Agendar no WhatsApp",
         kind: "whatsapp",
-        message: "Ola, quero agendar uma demonstracao da Jetsales para revisar minha operacao.",
+        message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
       },
       secondaryCta: {
-        label: "Ver como a operacao funciona",
-        href: "/pages/company.html",
+        label: "Ver procedimentos",
+        href: "/pages/showcase.html",
       },
-    },
-    contact: {
-      eyebrow: "Contato comercial",
-      title: "Inicie pelo WhatsApp oficial da Jetsales.",
-      description:
-        "O formulario prepara a conversa com nome, empresa e contexto do seu fluxo atual para o primeiro atendimento.",
     },
   },
   pages: {
     company: {
       hero: {
-        eyebrow: "Operacao, onboarding e confianca institucional",
-        title: "Software, canais oficiais e rotina comercial no mesmo desenho operacional.",
+        eyebrow: "O Studio",
+        title: "Um espaco pensado para cuidado e orientacao",
         description:
-          "A Jetsales atua como plataforma de software para organizar atendimento, automacao e vendas via WhatsApp, com base em ownership correto, operacao clara e governanca dos canais.",
+          "Conheca o fluxo de atendimento e como funciona do contato ao pos-procedimento.",
         primaryCta: {
-          label: "Agendar demonstracao",
+          label: "Agendar no WhatsApp",
           kind: "whatsapp",
-          message: "Ola, quero entender como a Jetsales estrutura a operacao comercial.",
+          message: "Ola, gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
         },
         secondaryCta: {
-          label: "Ver solucoes por segmento",
+          label: "Ver procedimentos",
           href: "/pages/showcase.html",
         },
       },
-      intro: {
-        eyebrow: "Como a base se sustenta",
-        title: "A operacao precisa ser confiavel para o cliente, para o time e para o canal.",
+      highlightsIntro: {
+        eyebrow: "Antes do procedimento",
+        title: "Alinhar expectativa e orientar cuidados faz parte do resultado.",
         description:
-          "A pagina institucional aprofunda os pilares operacionais que nao cabem na home: ownership, onboarding, time, politica de mensagem e responsabilidade sobre os ativos digitais.",
+          "Na avaliacao, o studio entende o objetivo e orienta o que e indicado para o seu caso.",
       },
       highlights: [
+        { title: "Avaliacao", detail: "entender objetivo e indicar o caminho" },
+        { title: "Cuidados", detail: "orientacao clara antes e depois" },
+        { title: "Retorno", detail: "quando necessario, conforme o caso" },
+      ],
+      principlesIntro: {
+        eyebrow: "Como trabalhamos",
+        title: "Cuidado, tecnica e comunicacao simples.",
+        description:
+          "O objetivo e um resultado mais natural, com orientacao e acompanhamento quando necessario.",
+      },
+      principles: [
         {
-          title: "Empresa de software com foco em WhatsApp",
-          description:
-            "A Jetsales se apresenta publicamente como plataforma de gestao, automacao e vendas pelo WhatsApp, com sede em Aracaju e atuacao voltada a operacao comercial.",
+          title: "Naturalidade",
+          description: "O foco e valorizar seus tracos e buscar um acabamento mais natural.",
         },
         {
-          title: "Canal oficial e configuracao coerente",
-          description:
-            "Conexao tecnica, ownership de pagina, relacionamento com parceiros e coerencia entre pagina e Instagram comercial precisam ser tratados como parte do mesmo problema.",
+          title: "Orientacao",
+          description: "Cuidados e retorno sao alinhados para voce manter o resultado.",
         },
         {
-          title: "Atendimento com visibilidade gerencial",
-          description:
-            "Acompanhamento do rendimento dos colaboradores, departamentos e filas ajuda a profissionalizar o atendimento e orientar a melhoria continua.",
+          title: "Transparencia",
+          description: "O studio explica indicacoes e o que esperar de cada procedimento.",
+        },
+        {
+          title: "Atendimento com hora marcada",
+          description: "Agendamento para dar atencao e tempo adequado a cada caso.",
         },
       ],
       valuesIntro: {
-        eyebrow: "Principios de operacao",
-        title: "Tecnologia sem regra de canal vira risco. Regra sem operacao vira gargalo.",
+        eyebrow: "O que voce ganha",
+        title: "Mais clareza antes, mais tranquilidade depois.",
         description:
-          "Os principios abaixo conectam o que a plataforma promete com o que as politicas da Meta e do WhatsApp exigem.",
+          "Quando o processo e bem explicado, voce sabe como se preparar e como cuidar do pos.",
       },
       values: [
-        {
-          title: "Ownership correto dos ativos",
-          description:
-            "Paginas, Instagram comercial e acessos de parceiros precisam permanecer sob titularidade correta para evitar perda de controle do ativo.",
-        },
-        {
-          title: "Mensagens com consentimento",
-          description:
-            "Opt-in, opt-out, templates aprovados e canal humano de apoio nao sao detalhe juridico; sao parte do desenho da experiencia.",
-        },
-        {
-          title: "Boas praticas de API e governanca",
-          description:
-            "Versionamento, testes, sandbox, leitura de erros e uso eficiente das chamadas ajudam a construir uma operacao mais resiliente.",
-        },
+        { title: "Expectativa alinhada", detail: "voce entende o que e indicado para voce" },
+        { title: "Orientacao de cuidados", detail: "pos explicado de forma simples" },
+        { title: "Agenda organizada", detail: "atendimento com hora marcada" },
+        { title: "Cuidado com detalhes", detail: "acabamento e atencao no processo" },
       ],
       timelineIntro: {
-        eyebrow: "Ritmo de implantacao",
-        title: "Do diagnostico ao acompanhamento, a operacao precisa evoluir em fases claras.",
-        description:
-          "Essa linha mostra o tipo de conversa que precisa acontecer para que o canal oficial funcione com menos friccao e mais contexto.",
+        eyebrow: "Etapas",
+        title: "Do contato ao retorno",
+        description: "Um roteiro simples para voce saber o que esperar.",
       },
       timeline: [
-        {
-          label: "Descoberta",
-          description:
-            "Mapear canais ativos, ownership, estrutura de equipe, pontos de contato e metas comerciais antes de qualquer configuracao.",
-        },
-        {
-          label: "Conexao",
-          description:
-            "Organizar canais oficiais, permissoes, ownership de paginas e integracoes sem deixar o ativo principal nas maos erradas.",
-        },
-        {
-          label: "Orquestracao",
-          description:
-            "Distribuir atendimento, desenhar filas, automacoes, templates e transbordo para humano com regras compreensiveis para o time.",
-        },
-        {
-          label: "Acompanhamento",
-          description:
-            "Ler performance, gargalos, qualidade do atendimento e oportunidades de venda para melhorar a operacao sem violar politicas do canal.",
-        },
+        { title: "Agendar", detail: "chame no WhatsApp e combine o horario" },
+        { title: "Avaliacao", detail: "orientacao e indicacao do procedimento" },
+        { title: "Procedimento", detail: "execucao com cuidado e tecnica" },
+        { title: "Pos e retorno", detail: "cuidados e retorno quando necessario" },
       ],
       closing: {
-        eyebrow: "Quando a operacao amadurece",
-        title: "O canal deixa de ser improvisado e passa a ser um ativo comercial gerenciavel.",
+        eyebrow: "Agendar avaliacao",
+        title: "Vamos conversar sobre o seu caso?",
         description:
-          "Essa maturidade depende tanto de tecnologia quanto de ownership, politica de mensagem, fila, time e disciplina de acompanhamento.",
+          "Chame no WhatsApp e diga qual procedimento voce quer fazer e sua preferencia de horario.",
         primaryCta: {
-          label: "Falar com a Jetsales",
+          label: "Agendar no WhatsApp",
           kind: "whatsapp",
-          message: "Ola, quero conversar com a Jetsales sobre ownership, canais e atendimento.",
+          message: "Ola, gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
         },
         secondaryCta: {
-          label: "Explorar solucoes",
+          label: "Ver procedimentos",
           href: "/pages/showcase.html",
         },
       },
     },
     showcase: {
       hero: {
-        eyebrow: "Solucoes por segmento e caso de uso",
-        title: "A estrutura do canal muda de setor para setor, mas a governanca precisa continuar forte.",
+        eyebrow: "Procedimentos",
+        title: "Conheca os principais procedimentos do studio",
         description:
-          "A Jetsales apresenta solucoes para contextos comerciais diferentes, sempre com o mesmo nucleo: canal oficial, contexto de atendimento, automacao com regra e leitura de performance.",
+          "Micropigmentacao, design, extensao de cilios, remocao e cursos. A avaliacao define indicacao e detalhes.",
         primaryCta: {
-          label: "Agendar demonstracao",
+          label: "Agendar avaliacao",
           kind: "whatsapp",
-          message: "Ola, quero ver como a Jetsales se aplica ao meu segmento.",
+          message: "Ola, gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
         },
         secondaryCta: {
           label: "Voltar para a home",
@@ -597,119 +527,122 @@ const SITE_TEMPLATE_CONFIG = {
         },
       },
       intro: {
-        eyebrow: "Casos de uso",
-        title: "Segmentos diferentes exigem combinacoes diferentes de fila, contexto, follow-up e automacao.",
+        eyebrow: "Lista de procedimentos",
+        title: "Escolha um tema e veja os detalhes",
         description:
-          "Os blocos abaixo nao sao pacotes prontos. Eles mostram como a mesma base operacional se adapta a contextos comerciais distintos.",
+          "Use os filtros para navegar. Os detalhes finais e a indicacao sao alinhados na avaliacao.",
       },
-      filters: ["Todos", "Atendimento", "Automacao", "Governanca", "Setores"],
+      filters: ["Todos", "Micropigmentacao", "Design", "Cilios", "Remocao", "Cursos"],
       items: [
         {
-          category: "Setores",
-          title: "Industria e producao",
+          category: "Micropigmentacao",
+          title: "Micropigmentacao de sobrancelhas",
           description:
-            "Operacoes com volume, distribuicao entre equipes e necessidade de historico claro para atendimento, cotacao e follow-up.",
-          metric: "Fila + contexto",
+            "Avaliacao para definir tecnica e orientar cuidados para um resultado mais natural.",
+          metric: "Avaliacao + cuidados",
           image: "/assets/gallery-grid.svg",
-          alt: "Ilustracao de operacao industrial com filas de atendimento",
-          cta: {
-            label: "Ver como a operacao se organiza",
-            href: "/pages/company.html",
-          },
+          alt: "Ilustracao de micropigmentacao de sobrancelhas",
+          cta: { label: "Agendar avaliacao", href: "/landing.html" },
         },
         {
-          category: "Setores",
-          title: "Seguros e financas",
-          description:
-            "Fluxos mais sensiveis pedem criterio de mensagem, ownership bem resolvido e acompanhamento forte sobre qualidade do atendimento.",
-          metric: "Regra + registro",
-          image: "/assets/gallery-conversion.svg",
-          alt: "Ilustracao de operacao financeira com governanca de mensagem",
-          cta: {
-            label: "Agendar demonstracao",
-            href: "/landing.html",
-          },
-        },
-        {
-          category: "Setores",
-          title: "Servicos profissionais",
-          description:
-            "Escritorios, consultorias e operacoes B2B ganham velocidade quando centralizam conversa, qualificacao e proximo passo em um fluxo menos fragmentado.",
-          metric: "Qualificacao + follow-up",
+          category: "Micropigmentacao",
+          title: "Micropigmentacao labial",
+          description: "Procedimento para labios com orientacao de preparo e cuidados no pos.",
+          metric: "Preparo + pos",
           image: "/assets/gallery-signal.svg",
-          alt: "Ilustracao de funil para servicos profissionais",
-          cta: {
-            label: "Ver jornada comercial",
-            href: "/landing.html",
-          },
+          alt: "Ilustracao de micropigmentacao labial",
+          cta: { label: "Agendar avaliacao", href: "/landing.html" },
         },
         {
-          category: "Setores",
-          title: "Saude e bem-estar",
-          description:
-            "Times de atendimento precisam de ritmo, padrao de resposta e governanca de canal para nao transformar demanda em caos operacional.",
-          metric: "SLA + distribuicao",
+          category: "Design",
+          title: "Design de sobrancelhas",
+          description: "Design e acabamento para harmonizar e valorizar o olhar.",
+          metric: "Simetria + acabamento",
+          image: "/assets/gallery-narrative.svg",
+          alt: "Ilustracao de design de sobrancelhas",
+          cta: { label: "Falar no WhatsApp", kind: "whatsapp" },
+        },
+        {
+          category: "Cilios",
+          title: "Extensao de cilios",
+          description: "Extensao com orientacao de manutencao e cuidados no dia a dia.",
+          metric: "Manutencao + cuidados",
           image: "/assets/gallery-structure.svg",
-          alt: "Ilustracao de operacao de atendimento em saude e bem-estar",
-          cta: {
-            label: "Falar com a Jetsales",
-            href: "/landing.html",
-          },
+          alt: "Ilustracao de extensao de cilios",
+          cta: { label: "Falar no WhatsApp", kind: "whatsapp" },
+        },
+        {
+          category: "Remocao",
+          title: "Remocao (avaliacao)",
+          description: "Avaliacao para entender o caso e orientar o melhor caminho.",
+          metric: "Avaliacao",
+          image: "/assets/gallery-conversion.svg",
+          alt: "Ilustracao de remocao",
+          cta: { label: "Agendar avaliacao", href: "/landing.html" },
+        },
+        {
+          category: "Cursos",
+          title: "Cursos",
+          description: "Cursos em micropigmentacao. Consulte disponibilidade e turmas.",
+          metric: "Turmas (confirmar)",
+          image: "/assets/gallery-launch.svg",
+          alt: "Ilustracao de cursos",
+          cta: { label: "Falar no WhatsApp", kind: "whatsapp" },
         },
       ],
       closing: {
-        eyebrow: "Adaptacao com criterio",
-        title: "O setor muda. O compromisso com ownership, consentimento e clareza operacional nao.",
+        eyebrow: "Ainda com duvidas?",
+        title: "Agende uma avaliacao e alinhe seu caso",
         description:
-          "Se o seu canal comercial depende de WhatsApp, vale revisar como a Jetsales organiza equipe, automacao e governanca para o seu contexto.",
+          "O melhor caminho para definir indicacao e detalhes e a avaliacao. Chame no WhatsApp.",
         primaryCta: {
-          label: "Agendar demonstracao",
+          label: "Agendar no WhatsApp",
           kind: "whatsapp",
-          message: "Ola, quero entender como a Jetsales se aplica ao meu segmento.",
+          message: "Ola, gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
         },
         secondaryCta: {
-          label: "Voltar para a home",
-          href: "/",
+          label: "Agendar pelo site",
+          href: "/landing.html",
         },
       },
     },
   },
   docs: {
     hero: {
-      eyebrow: "Base e compliance",
-      title: "Documentos que guiam ownership, API e mensagens no WhatsApp.",
+      eyebrow: "Base do projeto",
+      title: "Politicas e informacoes do cliente",
       description:
-        "Esta pagina renderiza arquivos sincronizados de `docs/` e `docs/client-info/docs/` para manter a construcao do site alinhada com boas praticas e politicas.",
+        "Esta pagina renderiza arquivos sincronizados de `docs/` e `docs/client-info/docs/` para manter o projeto organizado.",
       primaryCta: {
-        label: "Abrir WhatsApp",
+        label: "Agendar no WhatsApp",
         kind: "whatsapp",
-        message: "Ola, quero revisar politicas e governanca do meu canal antes de avancar.",
+        message: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
       },
       secondaryCta: {
-        label: "Ver operacao",
-        href: "/pages/company.html",
+        label: "Ver procedimentos",
+        href: "/pages/showcase.html",
       },
     },
     documents: [
       {
         id: "whatsapp",
-        eyebrow: "WhatsApp Business",
+        eyebrow: "WhatsApp",
         title: "Politica de mensagens",
-        description: "Regras de qualidade, consentimento, templates e restricoes por setor.",
+        description: "Base de mensagens, consentimento e boas praticas.",
         src: "/content/policies/politica-mensagens-whatsapp.md",
       },
       {
         id: "page-ownership",
-        eyebrow: "Meta Business",
-        title: "Ownership de Pagina",
-        description: "Boas praticas de titularidade, parcerias e coerencia de ativos.",
+        eyebrow: "Meta",
+        title: "Ownership de pagina",
+        description: "Boas praticas de titularidade e parceria.",
         src: "/content/policies/facebook-page-ownership-best-practices.md",
       },
       {
         id: "marketing-api",
         eyebrow: "Marketing API",
         title: "Melhores praticas",
-        description: "Paginacao, ETags, sandbox, batches e governanca de integracao.",
+        description: "Notas de integracao e governanca.",
         src: "/content/policies/facebook-marketing-api-best-practices.md",
       },
       {
@@ -722,108 +655,99 @@ const SITE_TEMPLATE_CONFIG = {
     ],
   },
   contact: {
-    email: "",
-    phoneLabel: "+55 (79) 99747-4816",
-    address: "Aracaju, Sergipe - Brasil",
-    availability: "Atendimento comercial e demonstracoes sob consulta.",
+    email: "osmario.porto@me.com",
+    phoneLabel: "+55 (79) 99970-0199",
+    address:
+      "Rocha Porto Empresarial - Av. Poeta Vinicius de Moraes, 70 - Atalaia, Aracaju - SE, 49037-490",
+    availability: "Seg a Sab, 07:00 - 20:00 (confirmar).",
     whatsapp: {
-      phone: "5579997474816",
-      defaultMessage: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
+      phone: "5579999700199",
+      defaultMessage: "Ola, vim pelo site e gostaria de agendar uma avaliacao no Studio Suellen Rocha.",
     },
     channels: [
       {
-        label: "WhatsApp oficial",
-        value: "+55 (79) 99747-4816",
-        href: "https://wa.me/5579997474816",
+        label: "WhatsApp",
+        value: "+55 (79) 99970-0199",
+        href: "https://wa.me/5579999700199",
       },
       {
-        label: "Site oficial",
-        value: "jetsalesbrasil.com.br",
-        href: "https://jetsalesbrasil.com.br/",
+        label: "Telefone",
+        value: "+55 (79) 3019-0199",
+        href: "tel:+557930190199",
       },
       {
-        label: "LinkedIn",
-        value: "Jetsales Brasil",
-        href: "https://www.linkedin.com/company/jetsales-brasil",
+        label: "E-mail",
+        value: "osmario.porto@me.com",
+        href: "mailto:osmario.porto@me.com",
       },
       {
         label: "Instagram",
-        value: "@jetsalesbrasil",
-        href: "https://www.instagram.com/jetsalesbrasil/",
+        value: "@suellenrochamicropigmentacao",
+        href: "https://www.instagram.com/suellenrochamicropigmentacao/",
+      },
+      {
+        label: "Facebook",
+        value: "ssurocha",
+        href: "https://www.facebook.com/ssurocha",
+      },
+      {
+        label: "Site",
+        value: "suellenrocha.com.br",
+        href: "https://www.suellenrocha.com.br",
       },
     ],
     footerItems: [
       {
-        label: "WhatsApp oficial",
-        value: "+55 (79) 99747-4816",
-        href: "https://wa.me/5579997474816",
+        label: "WhatsApp",
+        value: "+55 (79) 99970-0199",
+        href: "https://wa.me/5579999700199",
       },
       {
-        label: "Base publica",
-        value: "Aracaju, Sergipe - Brasil",
+        label: "Endereco",
+        value: "Atalaia, Aracaju - SE",
       },
       {
-        label: "Site",
-        value: "jetsalesbrasil.com.br",
-        href: "https://jetsalesbrasil.com.br/",
+        label: "Instagram",
+        value: "@suellenrochamicropigmentacao",
+        href: "https://www.instagram.com/suellenrochamicropigmentacao/",
       },
     ],
     form: {
       mode: "whatsapp",
       endpoint: "",
       method: "POST",
-      introMessage: "Ola, vim pelo site da Jetsales e quero agendar uma demonstracao.",
+      introMessage: "Ola, vim pelo site e gostaria de agendar uma avaliacao.",
       successMessage: "Mensagem preparada. Abra o WhatsApp para concluir o envio.",
-      errorMessage:
-        "Nao foi possivel abrir o WhatsApp agora. Revise os campos e tente novamente.",
-      submitLabel: "Quero falar com a Jet",
+      errorMessage: "Nao foi possivel abrir o WhatsApp agora. Revise os campos e tente novamente.",
+      submitLabel: "Agendar avaliacao",
       fields: {
-        name: {
-          label: "Nome",
-          placeholder: "Seu nome",
-        },
-        email: {
-          label: "Email",
-          placeholder: "voce@empresa.com",
-        },
-        company: {
-          label: "Empresa",
-          placeholder: "Empresa, area ou contexto comercial",
-        },
+        name: { label: "Nome", placeholder: "Seu nome" },
+        email: { label: "E-mail", placeholder: "voce@email.com" },
+        company: { label: "Procedimento", placeholder: "Qual procedimento voce quer fazer?" },
         message: {
-          label: "Contexto",
-          placeholder:
-            "Conte rapidamente como seu atendimento funciona hoje. Evite incluir dados sensiveis (cartoes, documentos, senhas).",
+          label: "Mensagem",
+          placeholder: "Conte rapidamente o que voce deseja e sua preferencia de horario.",
         },
         consent: {
           label:
-            "Autorizo receber contato da Jetsales no WhatsApp e entendo que posso recusar/bloquear a qualquer momento.",
+            "Autorizo receber contato do Studio Suellen Rocha no WhatsApp e entendo que posso recusar/bloquear a qualquer momento.",
         },
       },
     },
   },
   social: {
     links: [
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/company/jetsales-brasil",
-      },
-      {
-        label: "Instagram",
-        href: "https://www.instagram.com/jetsalesbrasil/",
-      },
-      {
-        label: "Ajuda",
-        href: "https://tutoriais.jetsalesbrasil.com.br/",
-      },
+      { label: "Instagram", href: "https://www.instagram.com/suellenrochamicropigmentacao/" },
+      { label: "Facebook", href: "https://www.facebook.com/ssurocha" },
+      { label: "Site", href: "https://www.suellenrocha.com.br" },
     ],
   },
   assets: {
     logos: {
-      mark: "/assets/logo-mark.svg",
+      mark: "/assets/logo-suellen-rocha.png",
     },
-    heroPrimary: "/assets/hero-primary.svg",
-    heroSecondary: "/assets/hero-secondary.svg",
+    heroPrimary: "/assets/hero-suellen-rocha.jpeg",
+    heroSecondary: "/assets/hero-suellen-rocha.jpeg",
     gallery: [
       "/assets/gallery-narrative.svg",
       "/assets/gallery-grid.svg",
