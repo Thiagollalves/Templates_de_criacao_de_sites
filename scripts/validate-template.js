@@ -76,8 +76,8 @@ for (const group of requiredGroups) {
   assert(group in config, `Grupo obrigatorio ausente no config: ${group}.`);
 }
 
-const allowedThemes = ["editorial", "studio", "corporate"];
-const allowedFormModes = ["whatsapp", "http"];
+const allowedThemes = ["editorial", "studio", "corporate", "magalu"];
+const allowedFormModes = ["whatsapp", "http", "link"];
 
 assert(
   allowedThemes.includes(config.theme),
@@ -86,7 +86,7 @@ assert(
 
 assert(
   allowedFormModes.includes(config.contact?.form?.mode),
-  `Modo de formulario invalido: ${config.contact?.form?.mode}. Use whatsapp ou http.`
+  `Modo de formulario invalido: ${config.contact?.form?.mode}. Use whatsapp, http ou link.`
 );
 
 const expectedFiles = [

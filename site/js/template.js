@@ -657,6 +657,13 @@ document.addEventListener("DOMContentLoaded", () => {
           if (status) {
             status.textContent = config.contact.form.successMessage;
           }
+        } else if (mode === "link") {
+          const href = config.contact.form.href || config.contact.form.endpoint || "#";
+          window.open(href, "_blank", "noopener");
+          form.reset();
+          if (status) {
+            status.textContent = config.contact.form.successMessage || "Abrindo atendimento...";
+          }
         } else {
           const response = await fetch(config.contact.form.endpoint, {
             method: config.contact.form.method || "POST",
