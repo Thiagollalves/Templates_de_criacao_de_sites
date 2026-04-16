@@ -76,8 +76,8 @@ for (const group of requiredGroups) {
   assert(group in config, `Grupo obrigatorio ausente no config: ${group}.`);
 }
 
-const allowedThemes = ["editorial", "studio", "corporate"];
-const allowedFormModes = ["whatsapp", "http"];
+const allowedThemes = ["editorial", "studio", "corporate", "magalu", "retail"];
+const allowedFormModes = ["whatsapp", "http", "link", "internal"];
 
 assert(
   allowedThemes.includes(config.theme),
@@ -86,7 +86,7 @@ assert(
 
 assert(
   allowedFormModes.includes(config.contact?.form?.mode),
-  `Modo de formulario invalido: ${config.contact?.form?.mode}. Use whatsapp ou http.`
+  `Modo de formulario invalido: ${config.contact?.form?.mode}. Use whatsapp, http, link ou internal.`
 );
 
 const expectedFiles = [
@@ -127,7 +127,8 @@ for (const assetPath of possibleAssetPaths) {
     continue;
   }
 
-  const diskPath = path.join(siteDir, assetPath.replace(/^\//, "").replace(/\//g, path.sep));
+  const cleanPath = assetPath.split("#")[0].split("?")[0];
+  const diskPath = path.join(siteDir, cleanPath.replace(/^\//, "").replace(/\//g, path.sep));
   const isLikelyFile = path.extname(diskPath) !== "";
   if (isLikelyFile) {
     assert(fs.existsSync(diskPath), `Caminho referenciado no config nao existe: ${assetPath}.`);

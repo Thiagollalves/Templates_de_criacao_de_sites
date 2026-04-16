@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function isExternalLink(href) {
-    return /^https?:\/\//i.test(href);
+    return /^(https?:)?\/\//i.test(href) || /^(https?:|mailto:|tel:)/i.test(href);
   }
 
   function buildWhatsAppLink(message) {
@@ -57,18 +57,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return {
         label: cta.label || "Abrir WhatsApp",
         href: buildWhatsAppLink(cta.message),
-        target: "_blank",
-        rel: "noopener",
+        target: "_self",
+        rel: "",
       };
     }
 
     const href = cta.href || "#";
-    const target = cta.target || (isExternalLink(href) ? "_blank" : "_self");
+    const target = "_self";
     return {
       label: cta.label || "Abrir link",
       href,
       target,
-      rel: target === "_blank" ? "noopener" : "",
+      rel: "",
     };
   }
 
@@ -140,9 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const items = group.items
           .map(
             (item) => `
-              <li><a href="${escapeHtml(item.href)}" ${
-                isExternalLink(item.href) ? 'target="_blank" rel="noopener"' : ""
-              }>${escapeHtml(item.label)}</a></li>
+              <li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a></li>
             `
           )
           .join("");
@@ -159,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const socialLinks = config.social.links
       .map(
         (link) => `
-          <a class="social-pill" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">
+          <a class="social-pill" href="${escapeHtml(link.href)}">
             ${escapeHtml(link.label)}
           </a>
         `
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return `
             <li>
               <span>${escapeHtml(item.label)}:</span>
-              <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener">${escapeHtml(
+              <a href="${escapeHtml(item.href)}">${escapeHtml(
             item.value
           )}</a>
             </li>
@@ -263,13 +261,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const cta = getValue(element.dataset.cta);
       const resolved = resolveCta(cta);
       element.textContent = resolved.label;
-      element.setAttribute("href", resolved.href);
+      const safeHref =
+        config.policy?.disallowExternalLinks && isExternalLink(resolved.href) ? "#" : resolved.href;
+      element.setAttribute("href", safeHref);
       element.setAttribute("target", resolved.target);
 
       if (resolved.rel) {
         element.setAttribute("rel", resolved.rel);
       } else {
         element.removeAttribute("rel");
+      }
+
+      if (safeHref === "#" && resolved.href && resolved.href !== "#") {
+        element.setAttribute("aria-disabled", "true");
+        element.classList.add("is-disabled");
+      } else {
+        element.removeAttribute("aria-disabled");
+        element.classList.remove("is-disabled");
       }
     });
   }
@@ -320,7 +328,9 @@ document.addEventListener("DOMContentLoaded", () => {
         (item) => `
           <article class="portfolio-card panel" data-animate>
             <div class="portfolio-card__media">
-              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
+              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(
+          item.alt
+        )}" loading="lazy" decoding="async" width="720" height="480" />
             </div>
             <div class="portfolio-card__body">
               <span class="eyebrow">${escapeHtml(item.eyebrow)}</span>
@@ -390,12 +400,23 @@ document.addEventListener("DOMContentLoaded", () => {
         (item) => `
           <li class="contact-channel" data-animate>
             <span>${escapeHtml(item.label)}</span>
-            <a href="${escapeHtml(item.href)}" ${
-          /^(https?:|mailto:)/i.test(item.href) ? 'target="_blank" rel="noopener"' : ""
-        }>
+            <a href="${escapeHtml(item.href)}">
               ${escapeHtml(item.value)}
             </a>
           </li>
+        `
+      )
+      .join("");
+  }
+
+  function renderCategoryRail(items) {
+    return items
+      .map(
+        (item) => `
+          <a class="category-chip" href="${escapeHtml(item.href)}" data-animate>
+            <span class="category-chip__dot" aria-hidden="true"></span>
+            <span>${escapeHtml(item.label)}</span>
+          </a>
         `
       )
       .join("");
@@ -456,7 +477,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(
         (item) => `
           <article class="outcome-card panel" data-animate>
-            <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
+            <img src="${escapeHtml(item.image)}" alt="${escapeHtml(
+          item.alt
+        )}" loading="lazy" decoding="async" width="720" height="480" />
             <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.description)}</p>
           </article>
@@ -481,9 +504,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-          <article class="showcase-card panel" data-animate>
+          <article class="showcase-card panel" data-animate ${item.id ? `id="${escapeHtml(item.id)}"` : ""}>
             <div class="showcase-card__media">
-              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" />
+              <img src="${escapeHtml(item.image)}" alt="${escapeHtml(
+          item.alt
+        )}" loading="lazy" decoding="async" width="720" height="480" />
             </div>
             <div class="showcase-card__body">
               <div class="showcase-card__topline">
@@ -502,6 +527,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const renderMap = {
     "home.hero.signals": () => renderHeroSignals(config.home.hero.signals),
+    "home.categoryRail": () => renderCategoryRail(config.home.categoryRail || []),
     "home.stats": () => renderStatCards(config.home.stats),
     "home.services.items": () => renderSimpleCards(config.home.services.items),
     "home.portfolio.items": () => renderPortfolioCards(config.home.portfolio.items),
@@ -518,6 +544,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "pages.company.highlights": () => renderHighlights(config.pages.company.highlights),
     "pages.company.values": () => renderHighlights(config.pages.company.values),
     "pages.company.timeline": () => renderTimeline(config.pages.company.timeline),
+    "pages.support.highlights": () => renderHighlights(config.pages.support.highlights),
+    "pages.security.highlights": () => renderHighlights(config.pages.security.highlights),
     "pages.showcase.filters": () => renderShowcaseFilters(config.pages.showcase.filters),
     "pages.showcase.items": () => renderShowcaseItems(config.pages.showcase.items),
   };
@@ -586,6 +614,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setupAnimations(root = document) {
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      root.querySelectorAll("[data-animate]").forEach((element) => {
+        element.classList.add("is-visible");
+      });
+      return;
+    }
+
     const animated = root.querySelectorAll("[data-animate]");
     if (!animated.length) {
       return;
@@ -608,6 +647,33 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     animated.forEach((element) => observer.observe(element));
+  }
+
+  function setupExternalLinkGuard() {
+    if (!config.policy?.disallowExternalLinks) {
+      return;
+    }
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        const anchor = event.target instanceof Element ? event.target.closest("a[href]") : null;
+        if (!anchor) {
+          return;
+        }
+
+        const href = anchor.getAttribute("href") || "";
+        if (!href) {
+          return;
+        }
+
+        if (isExternalLink(href)) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      },
+      true
+    );
   }
 
   function setupForm() {
@@ -651,8 +717,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        if (mode === "whatsapp") {
-          window.open(buildWhatsAppLink(messageLines.join("\n")), "_blank", "noopener");
+        if (mode === "internal") {
+          form.reset();
+          if (status) {
+            status.textContent = config.contact.form.successMessage || "Recebido. Obrigado!";
+          }
+        } else if (mode === "whatsapp") {
+          if (config.policy?.disallowExternalLinks) {
+            throw new Error("External links are disabled by policy.");
+          }
+          window.open(buildWhatsAppLink(messageLines.join("\n")), "_self");
           form.reset();
           if (status) {
             status.textContent = config.contact.form.successMessage;
@@ -692,12 +766,11 @@ document.addEventListener("DOMContentLoaded", () => {
   bindTextContent();
   bindCtas();
   renderDynamicSections();
-  bindTextContent();
-  bindCtas();
   applySectionVisibility();
   bindYear();
   setupFaq();
   setupNavigation();
   setupAnimations();
+  setupExternalLinkGuard();
   setupForm();
 });
