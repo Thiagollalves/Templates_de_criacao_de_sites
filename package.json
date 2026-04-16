@@ -5,6 +5,7 @@
   "description": "Template estatico reutilizavel para sites institucionais e landing pages.",
   "scripts": {
     "sync:content": "node scripts/sync-content.js",
+    "collect:magalu": "node scripts/collect-magalu.js",
     "dev": "npm run sync:content && serve site",
     "start": "npm run sync:content && serve site",
     "test": "node scripts/validate-template.js"

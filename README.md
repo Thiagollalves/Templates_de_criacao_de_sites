@@ -42,6 +42,9 @@ Base estatica reutilizavel para criar landing pages e sites institucionais em HT
 - `npm run dev`: sobe a pasta `site` localmente.
 - `npm test`: valida config, arquivos esperados e referencias legadas fora da pasta de exemplo.
 
+## Coleta de referencias (clientes grandes)
+- `npm run collect:magalu`: gera um snapshot simples (title/h1/links/destaques) em `output/magalu/` para apoiar o preenchimento de briefing e ajustes do template.
+
 ## Publicacao
 - O repositorio continua compativel com Vercel usando `vercel.json`.
 - A raiz publicada permanece o novo template em `site/`.
