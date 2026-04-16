@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-page="support">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <link rel="canonical" href="" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <script src="/js/site.config.js"></script>
+    <script src="/js/head.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page-ambient" aria-hidden="true">
+      <div class="page-ambient__orb page-ambient__orb--one"></div>
+      <div class="page-ambient__orb page-ambient__orb--two"></div>
+      <div class="page-ambient__grid"></div>
+    </div>
+
+    <header class="site-header" data-header></header>
+
+    <main class="page-main">
+      <section class="page-hero section-shell">
+        <span class="eyebrow" data-text="pages.support.hero.eyebrow"></span>
+        <h1 data-text="pages.support.hero.title" data-animate></h1>
+        <p class="page-hero__description" data-text="pages.support.hero.description" data-animate></p>
+        <div class="hero__actions" data-animate>
+          <a class="button button-primary" data-cta="pages.support.hero.primaryCta" href="#"></a>
+          <a class="button button-secondary" data-cta="pages.support.hero.secondaryCta" href="#"></a>
+        </div>
+      </section>
+
+      <section class="section-shell section-block section-block--split">
+        <div class="section-heading section-heading--left">
+          <span class="eyebrow" data-text="pages.support.intro.eyebrow"></span>
+          <h2 data-text="pages.support.intro.title"></h2>
+          <p data-text="pages.support.intro.description"></p>
+        </div>
+        <div class="stack-grid" data-render="pages.support.highlights"></div>
+      </section>
+
+      <section class="section-shell section-block contact-layout contact-layout--single" id="form">
+        <div class="section-heading section-heading--left">
+          <span class="eyebrow">Formulario interno</span>
+          <h2>Envie uma mensagem</h2>
+          <p>Este template nao redireciona para fora. O envio e apenas demonstrativo.</p>
+        </div>
+
+        <form class="contact-form panel" data-contact-form data-animate>
+          <div class="contact-form__grid">
+            <label class="field">
+              <span data-text="contact.form.fields.name.label"></span>
+              <input
+                type="text"
+                name="name"
+                data-placeholder="contact.form.fields.name.placeholder"
+                placeholder=""
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span data-text="contact.form.fields.email.label"></span>
+              <input
+                type="email"
+                name="email"
+                data-placeholder="contact.form.fields.email.placeholder"
+                placeholder=""
+                required
+              />
+            </label>
+
+            <label class="field field--full">
+              <span data-text="contact.form.fields.company.label"></span>
+              <input
+                type="text"
+                name="company"
+                data-placeholder="contact.form.fields.company.placeholder"
+                placeholder=""
+              />
+            </label>
+
+            <label class="field field--full">
+              <span data-text="contact.form.fields.message.label"></span>
+              <textarea
+                name="message"
+                rows="5"
+                data-placeholder="contact.form.fields.message.placeholder"
+                placeholder=""
+                required
+              ></textarea>
+            </label>
+
+            <label class="field field--full field--consent">
+              <span class="field__consent">
+                <input type="checkbox" name="consent" required />
+                <span data-text="contact.form.fields.consent.label"></span>
+              </span>
+            </label>
+          </div>
+
+          <div class="contact-form__footer">
+            <button class="button button-primary" type="submit" data-text="contact.form.submitLabel"></button>
+            <p class="contact-form__status" data-form-status></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="section-shell section-cta panel" data-animate>
+        <div>
+          <span class="eyebrow" data-text="pages.support.closing.eyebrow"></span>
+          <h2 data-text="pages.support.closing.title"></h2>
+          <p data-text="pages.support.closing.description"></p>
+        </div>
+        <div class="section-cta__actions">
+          <a class="button button-primary" data-cta="pages.support.closing.primaryCta" href="#"></a>
+          <a class="button button-secondary" data-cta="pages.support.closing.secondaryCta" href="#"></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" data-footer></footer>
+    <script src="/js/template.js" defer></script>
+  </body>
+</html>
