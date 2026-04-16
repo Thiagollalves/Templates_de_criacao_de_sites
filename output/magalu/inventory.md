@@ -1,0 +1,174 @@
+# Inventario Magalu (snapshot)
+
+- Gerado em: 2026-04-16T21:54:57.261Z
+- Total de paginas visitadas: 25
+- Amostras de produto: 17
+
+## Seeds
+
+- https://www.magazineluiza.com.br/
+- https://www.magazineluiza.com.br/celulares-e-smartphones/l/te/
+- https://www.magazineluiza.com.br/tv-e-video/l/et/
+- https://www.magazineluiza.com.br/eletrodomesticos/l/ed/
+- https://www.magazineluiza.com.br/moveis/l/mo/
+- https://especiais.magazineluiza.com.br/seguranca/
+- https://especiais.magazineluiza.com.br/seguranca/sites-oficiais/
+- https://www.magazineluiza.com.br/busca/fale%2Bconosco/
+
+## Paginas (titulo / H1 / destaques)
+
+- URL: https://www.magazineluiza.com.br/
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza | Pra você é Magalu!
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/celulares-e-smartphones/l/te/
+  - title: Celular: iPhone, Samsung, Xiaomi e mais | Magalu
+  - h1: Celulares e Smartphones
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/tv-e-video/l/et/
+  - title: TV e Vídeo | Magalu
+  - h1: TV e Vídeo
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/eletrodomesticos/l/ed/
+  - title: Eletrodomésticos
+  - h1: Eletrodomésticos
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/moveis/l/mo/
+  - title: Móveis: Armários, Sofás, Mesas e Bancadas
+  - h1: Móveis
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://especiais.magazineluiza.com.br/seguranca/
+  - title: Segurança da Informação | Magazine Luiza
+  - h1: Você e o Grupo Magalu sempre seguros
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://especiais.magazineluiza.com.br/seguranca/sites-oficiais/
+  - title: Sites Oficiais do Grupo Magalu
+  - h1: Como evitar fraudes
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/busca/fale%2Bconosco/
+  - title: Fale Conosco em Promoção no Magazine Luiza
+  - h1: fale conosco
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/smartwatch-samsung-galaxy-watch8-40mm-grafite-32gb-bluetooth/p/240351900/te/gaw8/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/celular-samsung-galaxy-s25-fe-5g-128gb-8gb-ram-camera-tripla-de-50-12-8-tela-grande-de-6-7/p/jbheg5677k/te/g25f/?ads=patrocinado&seller_id=samsung
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/apple-iphone-16e-512gb-branco-61-48mp-ios-5g/p/240060100/te/i16e/?seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/smartphone-realme-c75x-8gb-ram-256gb-dual-sim-nfc-tela-6-67-prova-d-agua-resistente-a-queda-azul/p/df0gg9j8d5/te/r75x/?seller_id=smartconnectinfo
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/relogio-smart-watch-digital-d20-masculino-feminino-fone-bluetooth-sem-fio-01smart/p/hg44058f22/te/smtw/?seller_id=01esporte
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/smart-tv-43-samsung-4k-uhd-crystal-uhd-un43u8600fgxzd-tizen-bixby-3-hdmi/p/240147300/et/tvcr/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/smart-tv-50-samsung-uhd-4k-crystal-uhd-u8600f-un50u8600fgxzd-tizen-crystal-4k-bixby-e-alexa-3-hdmi/p/240147400/et/elit/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/controle-tv-remoto-philco-smart-todas-prime-video-netlix-globoplay-mb/p/df7gc0j482/et/cttv/?seller_id=gabijovi
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/controle-remoto-smart-tv-4k-compativel-com-samsung/p/kgb91hbbb0/et/cttv/?seller_id=kiddostore-br
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/antena-interna-para-tv-digital-amplificada-1080-hdtv-cabo-3m-lelong/p/hc1e16d0h0/et/elis/?seller_id=bidalaexpresstore
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/cervejeira-midea-smart-inverter-3-em-1-mdrx150fgggl03-vertical-preta-82l-frost-free/p/240430000/ed/cedo/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/lava-e-seca-midea-slim-11kg-healthguard-smart-inverter-agua-fria-e-quente-titanium-mf201d110wbgk02/p/240112400/ed/ela1/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/forno-eletrico-philco-50l-pfe52p-dupla-resistencia/p/gdaeech4e9/ed/frne/?seller_id=carrefouroficial
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/geladeira-duplex-294l-cycle-defrost-branca-midea/p/egja8hab5h/ed/ref2/?seller_id=mideacarrier
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/lavadora-de-roupas-electrolux-15kg-cesto-inox-11-programas-de-lavagem-branco-premium-care-jet-clean-e-time-control-lec15/p/238284500/ed/lava/?seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/mesa-alvorada-180-tp-mdf-vidro-canto-reto-6-cadeiras-rufato/p/ae45h3h5eh/mo/ms6l/?ads=patrocinado&seller_id=modernamobilia2
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+- URL: https://www.magazineluiza.com.br/cozinha-completa-madesa-reims-310002-com-armario-e-balcao-branco/p/gk6f53k1a4/mo/mocz/?ads=patrocinado&seller_id=madesamoveis
+  - title: Magazine Luiza | Pra você é Magalu!
+  - h1: Magazine Luiza
+  - notable: cnpj=47.960.950/1088-36 | phone=0800 773 3838 | cep=CEP 14.403-471 | address=Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471 | hours=Seg. à Dom. exceto feriados das 8h às 20h
+
+## Produtos (amostra de campos)
+
+- URL: https://www.magazineluiza.com.br/smartwatch-samsung-galaxy-watch8-40mm-grafite-32gb-bluetooth/p/240351900/te/gaw8/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240351900","prices":["R$ 2.999,00","R$ 2.249,10","R$ 2.499,00","R$ 249,90","R$ 2.374,05","R$ 1.249,50","R$ 833,00","R$ 624,75"],"ratingSnippet":"4.9 (49)"}
+- URL: https://www.magazineluiza.com.br/celular-samsung-galaxy-s25-fe-5g-128gb-8gb-ram-camera-tripla-de-50-12-8-tela-grande-de-6-7/p/jbheg5677k/te/g25f/?ads=patrocinado&seller_id=samsung
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"jbheg5677k","prices":["R$ 4.999,00","R$ 2.899,00","R$ 3.221,11","R$ 322,11","R$ 1.610,56","R$ 1.073,70","R$ 805,28","R$ 644,22"],"ratingSnippet":"4.7 (52)"}
+- URL: https://www.magazineluiza.com.br/apple-iphone-16e-512gb-branco-61-48mp-ios-5g/p/240060100/te/i16e/?seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240060100","prices":["R$ 8.099,00","R$ 4.899,00","R$ 5.443,33","R$ 544,33","R$ 5.171,16","R$ 2.721,67","R$ 1.814,44","R$ 1.360,83"],"ratingSnippet":"4.9 (2385)"}
+- URL: https://www.magazineluiza.com.br/smartphone-realme-c75x-8gb-ram-256gb-dual-sim-nfc-tela-6-67-prova-d-agua-resistente-a-queda-azul/p/df0gg9j8d5/te/r75x/?seller_id=smartconnectinfo
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"df0gg9j8d5","prices":["R$ 1.500,00","R$ 1.313,97","R$ 1.459,97","R$ 146,00","R$ 729,99","R$ 486,66","R$ 364,99","R$ 291,99"],"ratingSnippet":"4.8 (58)"}
+- URL: https://www.magazineluiza.com.br/relogio-smart-watch-digital-d20-masculino-feminino-fone-bluetooth-sem-fio-01smart/p/hg44058f22/te/smtw/?seller_id=01esporte
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"hg44058f22","prices":["R$ 153,90","R$ 48,27","R$ 51,90","R$ 26,87","R$ 53,74","R$ 18,07","R$ 54,21","R$ 13,67"],"ratingSnippet":"3.5 (814)"}
+- URL: https://www.magazineluiza.com.br/smart-tv-43-samsung-4k-uhd-crystal-uhd-un43u8600fgxzd-tizen-bixby-3-hdmi/p/240147300/et/tvcr/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240147300","prices":["R$ 3.140,81","R$ 2.184,05","R$ 2.299,00","R$ 229,90","R$ 1.149,50","R$ 766,33","R$ 574,75","R$ 459,80"],"ratingSnippet":"4.9 (3799)"}
+- URL: https://www.magazineluiza.com.br/smart-tv-50-samsung-uhd-4k-crystal-uhd-u8600f-un50u8600fgxzd-tizen-crystal-4k-bixby-e-alexa-3-hdmi/p/240147400/et/elit/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240147400","prices":["R$ 3.682,80","R$ 2.659,05","R$ 2.799,00","R$ 279,90","R$ 1.399,50","R$ 933,00","R$ 699,75","R$ 559,80"],"ratingSnippet":"4.9 (2552)"}
+- URL: https://www.magazineluiza.com.br/controle-tv-remoto-philco-smart-todas-prime-video-netlix-globoplay-mb/p/df7gc0j482/et/cttv/?seller_id=gabijovi
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"df7gc0j482","prices":["R$ 9,99","R$ 9,29","R$ 5,07","R$ 10,14","R$ 3,40","R$ 10,19","R$ 2,56","R$ 10,24"],"ratingSnippet":"4.8 (73)"}
+- URL: https://www.magazineluiza.com.br/controle-remoto-smart-tv-4k-compativel-com-samsung/p/kgb91hbbb0/et/cttv/?seller_id=kiddostore-br
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"kgb91hbbb0","prices":["R$ 26,14","R$ 23,74","R$ 12,94","R$ 25,87","R$ 8,70","R$ 26,10","R$ 6,58","R$ 26,33"],"ratingSnippet":"4.7 (92)"}
+- URL: https://www.magazineluiza.com.br/antena-interna-para-tv-digital-amplificada-1080-hdtv-cabo-3m-lelong/p/hc1e16d0h0/et/elis/?seller_id=bidalaexpresstore
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"hc1e16d0h0","prices":["R$ 78,00","R$ 57,65","R$ 67,82","R$ 35,11","R$ 70,22","R$ 23,61","R$ 70,84","R$ 17,87"],"ratingSnippet":"4.2 (223)"}
+- URL: https://www.magazineluiza.com.br/cervejeira-midea-smart-inverter-3-em-1-mdrx150fgggl03-vertical-preta-82l-frost-free/p/240430000/ed/cedo/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240430000","prices":["R$ 3.599,00","R$ 2.024,10","R$ 2.249,00","R$ 224,90","R$ 1.124,50","R$ 749,67","R$ 562,25","R$ 449,80"],"ratingSnippet":"4.5 (16)"}
+- URL: https://www.magazineluiza.com.br/lava-e-seca-midea-slim-11kg-healthguard-smart-inverter-agua-fria-e-quente-titanium-mf201d110wbgk02/p/240112400/ed/ela1/?ads=patrocinado&seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"240112400","prices":["R$ 5.209,00","R$ 3.699,00","R$ 3.893,68","R$ 389,37","R$ 185,41","R$ 1.946,84","R$ 1.297,89","R$ 973,42"],"ratingSnippet":"4.8 (386)"}
+- URL: https://www.magazineluiza.com.br/forno-eletrico-philco-50l-pfe52p-dupla-resistencia/p/gdaeech4e9/ed/frne/?seller_id=carrefouroficial
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"gdaeech4e9","prices":["R$ 485,20","R$ 436,68","R$ 60,65","R$ 242,60","R$ 161,73","R$ 121,30","R$ 97,04","R$ 80,87"],"ratingSnippet":"4.7 (161)"}
+- URL: https://www.magazineluiza.com.br/geladeira-duplex-294l-cycle-defrost-branca-midea/p/egja8hab5h/ed/ref2/?seller_id=mideacarrier
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"egja8hab5h","prices":["R$ 2.899,00","R$ 2.429,00","R$ 242,90","R$ 1.214,50","R$ 809,67","R$ 607,25","R$ 485,80","R$ 404,83"],"ratingSnippet":"4.7 (291)"}
+- URL: https://www.magazineluiza.com.br/lavadora-de-roupas-electrolux-15kg-cesto-inox-11-programas-de-lavagem-branco-premium-care-jet-clean-e-time-control-lec15/p/238284500/ed/lava/?seller_id=magazineluiza
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"238284500","prices":["R$ 2.659,00","R$ 2.091,57","R$ 2.249,00","R$ 224,90","R$ 1.124,50","R$ 749,67","R$ 562,25","R$ 449,80"],"ratingSnippet":"4.8 (6398)"}
+- URL: https://www.magazineluiza.com.br/mesa-alvorada-180-tp-mdf-vidro-canto-reto-6-cadeiras-rufato/p/ae45h3h5eh/mo/ms6l/?ads=patrocinado&seller_id=modernamobilia2
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"ae45h3h5eh","prices":["R$ 1.874,89","R$ 1.649,90","R$ 187,49","R$ 937,45","R$ 624,96","R$ 468,72","R$ 374,98","R$ 312,48"],"ratingSnippet":"4.5 (3377)"}
+- URL: https://www.magazineluiza.com.br/cozinha-completa-madesa-reims-310002-com-armario-e-balcao-branco/p/gk6f53k1a4/mo/mocz/?ads=patrocinado&seller_id=madesamoveis
+  - title: Magazine Luiza | Pra você é Magalu!
+  - fields: {"codigo":"gk6f53k1a4","prices":["R$ 1.999,99","R$ 1.529,99","R$ 1.799,99","R$ 180,00","R$ 900,00","R$ 600,00","R$ 450,00","R$ 360,00"],"ratingSnippet":"4.6 (424)"}
+
